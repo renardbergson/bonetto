@@ -5,15 +5,17 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="h-full">
+    <div className="flex min-h-screen flex-col">
       <Header />
 
-      <main className="flex h-full flex-col">
+      <main className="flex flex-1 flex-col">
         <video
           className="h-96 w-full bg-[var(--primary-color)] shadow-2xl"
           src="/home-video.MP4"
           autoPlay
           muted
+          playsInline
+          preload="auto"
         />
 
         <div className="mx-auto w-[80%] flex-1 space-y-20 p-4 text-center font-light text-[var(--secondary-color)]">
