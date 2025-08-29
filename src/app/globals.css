@@ -1,7 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+:root {
+  --primary-color: #1e1d1d;
+  --secondary-color: #f4e8d8;
+  --tertiary-color: #282828;
+}
+
 body {
   font-family: sans-serif;
-  background: #e5d4bc;
+  background: var(--primary-color);
 }

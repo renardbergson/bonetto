@@ -25,11 +25,18 @@ export const Header = () => {
 
   return (
     <>
-      <Menubar className="flex h-16 items-center border-0 bg-[#E5D4BC] p-3 text-[#562c17] shadow-md/25 shadow-black">
+      <Menubar className="flex h-[75px] items-center overflow-hidden border-0 bg-[var(--primary-color)] p-3 text-[var(--secondary-color)] shadow-md/25 shadow-black/60">
         <MenubarMenu>
-          <div className="flex items-center">
-            <Image src={"/B.png"} alt="Teste" width={30} height={30} />
-            <h1 className="ml-[2px] text-2xl font-bold">Bonetto</h1>
+          <div className="flex items-center justify-between">
+            <Image
+              src={"/B.png"}
+              alt="Logo"
+              width={35}
+              height={30}
+              className="mt-[-5px] mr-1"
+            />
+
+            <h1 className="text-start text-2xl font-bold">Bonetto</h1>
           </div>
 
           <div className="flex-1"></div>
@@ -41,7 +48,7 @@ export const Header = () => {
       </Menubar>
 
       <Sheet open={sheetIsOpen} onOpenChange={setSheetIsOpen}>
-        <SheetContent className="border-0 bg-[#e5d4bc] text-[#562c17]">
+        <SheetContent className="border-0 bg-[var(--primary-color)] text-[var(--secondary-color)]">
           <SheetHeader className="flex flex-col">
             <VisuallyHidden>
               <SheetTitle>Menu Mobile</SheetTitle>
@@ -54,7 +61,7 @@ export const Header = () => {
                 </Link>
               </div>
 
-              <Separator className="!m-4 my-4 !ml-0 bg-[#d7c7b0]" />
+              <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
 
               <div>
                 <Link href={"#"} rel="Sobre Nós">
@@ -62,7 +69,7 @@ export const Header = () => {
                 </Link>
               </div>
 
-              <Separator className="!m-4 my-4 !ml-0 bg-[#d7c7b0]" />
+              <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
 
               <div>
                 <Link href={"#"} rel="Sobre Nós">
@@ -70,7 +77,7 @@ export const Header = () => {
                 </Link>
               </div>
 
-              <Separator className="!m-4 my-4 !ml-0 bg-[#d7c7b0]" />
+              <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
 
               <div>
                 <Link href={"#"} rel="Sobre Nós">
