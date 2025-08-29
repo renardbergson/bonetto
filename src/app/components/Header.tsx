@@ -25,7 +25,7 @@ export const Header = () => {
 
   return (
     <>
-      <Menubar className="flex h-[75px] items-center overflow-hidden border-0 bg-[var(--primary-color)] p-3 text-[var(--secondary-color)] shadow-md/25 shadow-black/60">
+      <Menubar className="flex h-[75px] items-center overflow-hidden border-0 bg-[var(--primary-color)] p-3 text-[var(--secondary-color)] shadow-md/25 shadow-white/50">
         <MenubarMenu>
           <div className="flex items-center justify-between">
             <Image
@@ -65,6 +65,14 @@ export const Header = () => {
 
               <div>
                 <Link href={"#"} rel="Sobre Nós">
+                  <h1 className="text-lg font-bold">Categorias</h1>
+                </Link>
+              </div>
+
+              <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
+
+              <div>
+                <Link href={"#"} rel="Sobre Nós">
                   <h1 className="text-lg font-bold">Monte seu design</h1>
                 </Link>
               </div>
@@ -74,14 +82,6 @@ export const Header = () => {
               <div>
                 <Link href={"#"} rel="Sobre Nós">
                   <h1 className="text-lg font-bold">Fale Conosco</h1>
-                </Link>
-              </div>
-
-              <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
-
-              <div>
-                <Link href={"#"} rel="Sobre Nós">
-                  <h1 className="text-lg font-bold">Quem Somos</h1>
                 </Link>
               </div>
             </div>
