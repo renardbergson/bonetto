@@ -20,8 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>{children}</body>
+    <html lang="pt-BR" className="h-full overflow-hidden">
+      <body className={`${poppins.variable} h-full antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

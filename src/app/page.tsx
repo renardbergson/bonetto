@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div>
+    <div className="h-full">
       <Header />
 
       <main className="flex h-full flex-col">
