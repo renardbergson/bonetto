@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "aos/dist/aos.css";
 
 :root {
   /* --primary-color: #1e1d1d; */

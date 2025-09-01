@@ -24,7 +24,7 @@ export const Header = () => {
   }
 
   return (
-    <>
+    <header>
       <Menubar className="flex h-[75px] items-center overflow-hidden border-0 bg-[var(--primary-color)] p-3 text-[var(--secondary-color)] shadow-md/25 shadow-white/50">
         <MenubarMenu>
           <div className="flex items-center justify-between">
@@ -54,7 +54,7 @@ export const Header = () => {
               <SheetTitle>Menu Mobile</SheetTitle>
             </VisuallyHidden>
 
-            <div className="mt-12 p-4">
+            <nav className="mt-12 p-4">
               <div>
                 <Link href={"#"} rel="Home Page">
                   <h1 className="text-lg font-bold">Página Inicial</h1>
@@ -84,10 +84,10 @@ export const Header = () => {
                   <h1 className="text-lg font-bold">Fale Conosco</h1>
                 </Link>
               </div>
-            </div>
+            </nav>
           </SheetHeader>
         </SheetContent>
       </Sheet>
-    </>
+    </header>
   );
 };

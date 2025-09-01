@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { AOSProvider } from "./components/AOSProvider";
+
+import { Header } from "./components/Header";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -20,9 +23,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="h-full">
+    <html lang="pt-BR" className="h-screen">
       <body className={`${poppins.variable} h-full antialiased`}>
-        {children}
+        <AOSProvider>
+          <Header />
+          <main className="h-full">{children}</main>
+        </AOSProvider>
       </body>
     </html>
   );
