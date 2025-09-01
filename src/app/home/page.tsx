@@ -2,7 +2,9 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Article from "./components/article";
 import Carousel from "./components/carousel";
+import OpinionCart from "./components/opinion-cart";
 
 const Home = () => {
   return (
@@ -46,167 +48,160 @@ const Home = () => {
 
       <section
         id="section-2"
-        className="space-y-16 bg-[var(--secondary-color)] p-6 text-[var(--primary-color)]"
+        className="space-y-16 bg-[var(--secondary-color)] px-6 py-12 text-[var(--primary-color)]"
       >
         {/* Por que escolher a Bonetto? */}
-        <div
-          className="mt-12 text-center"
-          data-aos="fade-right"
-          data-aos-duration="800"
-          data-aos-anchor-placement="center-bottom"
-        >
-          <div className="bg-[var(--primary-color)] p-4 text-[var(--secondary-color)]">
-            <h3 className="text-center text-2xl">
-              Por que escolher a Bonetto?
-            </h3>
-          </div>
-
-          <p className="mx-auto mt-6 w-[80%] text-center font-extralight">
-            Na Bonetto, transformamos sua identidade visual em bonés
+        <article>
+          <Article
+            title="Por que escolher a Bonetto?"
+            description="Na Bonetto, transformamos sua identidade visual em bonés
             sofisticados e exclusivos, unindo design inteligente e materiais
-            premium para fortalecer o branding da sua marca.
-          </p>
-
-          <div className="relative mt-6 h-[377px] w-full overflow-hidden">
-            <Image
-              src={"/whi-bonetto.avif"}
-              alt="Bonetto"
-              fill
-              className="h-auto w-full object-cover"
-            />
-          </div>
-        </div>
+            premium para fortalecer o branding da sua marca."
+            content={
+              <div className="relative mt-6 h-[377px] w-full overflow-hidden">
+                <Image
+                  src={"/whi-bonetto.avif"}
+                  alt="Bonetto"
+                  fill
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+            }
+          />
+        </article>
 
         {/* Modelos Exclusivos */}
-        <div
-          data-aos="fade-left"
-          data-aos-duration="800"
-          data-aos-anchor-placement="center-bottom"
-        >
-          <div className="bg-[var(--primary-color)] p-4 text-[var(--secondary-color)]">
-            <h3 className="text-center text-2xl">Modelos Exclusivos</h3>
-          </div>
+        <article>
+          <Article
+            title="Modelos Exclusivos"
+            description="Não é só um boné. É um veículo de conexão, lembrança e crescimento."
+            content={
+              <div className="mt-6">
+                <Carousel delay={3000}>
+                  <Link href={"#"} className="mt-10 w-full">
+                    <h4 className="mb-2 text-center font-bold">Promocional</h4>
+                    <Image
+                      src={"/promotional.avif"}
+                      alt="Bonetto"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="h-auto w-full"
+                    />
+                  </Link>
 
-          <p className="mx-auto mt-6 w-[80%] text-center font-extralight">
-            Não é só um boné. É um veículo de conexão, lembrança e crescimento.
-          </p>
+                  <Link href={"#"} className="mt-10 w-full">
+                    <h4 className="mb-2 text-center font-bold">Trucker</h4>
+                    <Image
+                      src={"/trucker.jpg"}
+                      alt="Bonetto"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="h-auto w-full"
+                    />
+                  </Link>
 
-          <div className="mt-6">
-            <Carousel delay={3000}>
-              <Link href={"#"} className="mt-10 w-full">
-                <h4 className="mb-2 text-center font-bold">Promocional</h4>
-                <Image
-                  src={"/promotional.avif"}
-                  alt="Bonetto"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="h-auto w-full"
-                />
-              </Link>
+                  <Link href={"#"} className="mt-10 w-full">
+                    <h4 className="mb-2 text-center font-bold">Americano</h4>
+                    <Image
+                      src={"/american.avif"}
+                      alt="Bonetto"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="h-auto w-full"
+                    />
+                  </Link>
 
-              <Link href={"#"} className="mt-10 w-full">
-                <h4 className="mb-2 text-center font-bold">Trucker</h4>
-                <Image
-                  src={"/trucker.jpg"}
-                  alt="Bonetto"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="h-auto w-full"
-                />
-              </Link>
+                  <Link href={"#"} className="mt-10 w-full">
+                    <h4 className="mb-2 text-center font-bold">6 gomos</h4>
+                    <Image
+                      src={"/six-buds.avif"}
+                      alt="Bonetto"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="h-auto w-full"
+                    />
+                  </Link>
 
-              <Link href={"#"} className="mt-10 w-full">
-                <h4 className="mb-2 text-center font-bold">Americano</h4>
-                <Image
-                  src={"/american.avif"}
-                  alt="Bonetto"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="h-auto w-full"
-                />
-              </Link>
+                  <Link href={"#"} className="mt-10 w-full">
+                    <h4 className="mb-2 text-center font-bold">Dad Hat</h4>
+                    <Image
+                      src={"/dad-hat.avif"}
+                      alt="Bonetto"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="h-auto w-full"
+                    />
+                  </Link>
 
-              <Link href={"#"} className="mt-10 w-full">
-                <h4 className="mb-2 text-center font-bold">6 gomos</h4>
-                <Image
-                  src={"/six-buds.avif"}
-                  alt="Bonetto"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="h-auto w-full"
-                />
-              </Link>
+                  <Link href={"#"} className="mt-10 w-full">
+                    <h4 className="mb-2 text-center font-bold">Bucket</h4>
+                    <Image
+                      src={"/bucket.avif"}
+                      alt="Bonetto"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="h-auto w-full"
+                    />
+                  </Link>
 
-              <Link href={"#"} className="mt-10 w-full">
-                <h4 className="mb-2 text-center font-bold">Dad Hat</h4>
-                <Image
-                  src={"/dad-hat.avif"}
-                  alt="Bonetto"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="h-auto w-full"
-                />
-              </Link>
-
-              <Link href={"#"} className="mt-10 w-full">
-                <h4 className="mb-2 text-center font-bold">Bucket</h4>
-                <Image
-                  src={"/bucket.avif"}
-                  alt="Bonetto"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="h-auto w-full"
-                />
-              </Link>
-
-              <Link href={"#"} className="mt-10 w-full">
-                <h4 className="mb-2 text-center font-bold">
-                  Viseira Esportiva
-                </h4>
-                <Image
-                  src={"/headband.png"}
-                  alt="Bonetto"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="h-auto w-full"
-                />
-              </Link>
-            </Carousel>
-          </div>
-        </div>
+                  <Link href={"#"} className="mt-10 w-full">
+                    <h4 className="mb-2 text-center font-bold">
+                      Viseira Esportiva
+                    </h4>
+                    <Image
+                      src={"/headband.png"}
+                      alt="Bonetto"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      className="h-auto w-full"
+                    />
+                  </Link>
+                </Carousel>
+              </div>
+            }
+          />
+        </article>
 
         {/* Avaliações */}
-        <div
-          className="mt-12 text-center"
-          data-aos="fade-right"
-          data-aos-duration="800"
-          data-aos-anchor-placement="center-bottom"
-        >
-          <div className="bg-[var(--primary-color)] p-4 text-[var(--secondary-color)]">
-            <h3 className="text-center text-2xl">
-              Avaliação dos nossos clientes
-            </h3>
-          </div>
+        <article>
+          <Article
+            title="Avaliações dos nossos clientes"
+            description="Outros clientes já avaliaram a Bonetto como a opção certa para tornar a sua marca mais forte."
+            content={
+              <div className="mt-6 text-center">
+                <Carousel delay={6000}>
+                  <OpinionCart
+                    title="Satisfeita!"
+                    description="Superou minhas expectativas em qualidade e beleza. O atendimento ao cliente foi muito bom e a entrega foi bem rápida. Recomendo a todos!"
+                    imageSrc="/avatar-1.avif"
+                    name="Claryssa Cínthia"
+                  />
 
-          <p className="mx-auto mt-6 w-[80%] text-center font-extralight">
-            Outros clientes já avaliaram a Bonetto como a opção certa para
-            tornar a sua marca mais forte.
-          </p>
+                  <OpinionCart
+                    title="Top demais!"
+                    description="Personalização de qualidade, o bordado ficou exatamente como eu pedi e o mais importante: meus clientes elogiaram a qualidade do boné. A Bonetto entrega mais que um produto, entrega presença."
+                    imageSrc="/avatar-2.avif"
+                    name="Ricardo Soares Azevedo"
+                  />
 
-          <div className="mt-6">
-            <Carousel delay={5000}>
-              <div>TESTE</div>
-              <div>TESTE</div>
-            </Carousel>
-          </div>
-        </div>
+                  <OpinionCart
+                    title="Recomendo!"
+                    description="Os bonés ficaram incríveis! Ótima qualidade e design, estou satisfeito com o resultado."
+                    imageSrc="/avatar-3.avif"
+                    name="Bruno Cortez"
+                  />
+                </Carousel>
+              </div>
+            }
+          />
+        </article>
       </section>
     </>
   );
