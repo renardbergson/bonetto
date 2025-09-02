@@ -1,6 +1,6 @@
 interface ArticleProps {
   title: string;
-  description: string;
+  description?: string;
   content: React.ReactNode;
 }
 

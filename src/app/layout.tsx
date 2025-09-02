@@ -4,6 +4,7 @@ import "./globals.css";
 import { AOSProvider } from "./components/AOSProvider";
 
 import { Header } from "./components/Header";
+import Footer from "./components/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -24,10 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="h-screen">
-      <body className={`${poppins.variable} h-full antialiased`}>
+      <body
+        className={`${poppins.variable} flex min-h-screen flex-col antialiased`}
+      >
         <AOSProvider>
           <Header />
-          <main className="h-full">{children}</main>
+          <main className="flex-1">{children}</main>
+          <Footer />
         </AOSProvider>
       </body>
     </html>

@@ -34,7 +34,7 @@ const OpinionCart = ({
             <AvatarImage alt="Avatar do Cliente" src={imageSrc} />
             <AvatarFallback>NC</AvatarFallback>
           </Avatar>
-          <p className="font-sa- pt-2 text-xs font-extralight">{name}</p>
+          <p className="pt-2 text-xs font-extralight">{name}</p>
         </div>
       </CardFooter>
     </Card>

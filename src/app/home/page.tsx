@@ -1,10 +1,11 @@
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
+import Button from "../components/button";
 import Image from "next/image";
 import Article from "./components/article";
 import Carousel from "./components/carousel";
 import OpinionCart from "./components/opinion-cart";
+import Question from "./components/question";
 
 const Home = () => {
   return (
@@ -29,11 +30,7 @@ const Home = () => {
             Sua marca merece mais que <br /> um boné, ela merece um Bonetto
           </p>
 
-          <Button
-            className="text-1xl w-[60%] rounded-full py-5 hover:cursor-pointer hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)]"
-            variant="outline"
-            asChild
-          >
+          <Button variant="outline" asChild={true}>
             <Link href={"#"}>Conferir catálogo</Link>
           </Button>
 
@@ -63,7 +60,7 @@ const Home = () => {
                   src={"/whi-bonetto.avif"}
                   alt="Bonetto"
                   fill
-                  className="h-auto w-full object-cover"
+                  className="h-auto w-full rounded-lg object-cover shadow-xl shadow-black/30"
                 />
               </div>
             }
@@ -86,7 +83,7 @@ const Home = () => {
                       width={0}
                       height={0}
                       sizes="100vw"
-                      className="h-auto w-full"
+                      className="h-auto w-full rounded-lg"
                     />
                   </Link>
 
@@ -98,7 +95,7 @@ const Home = () => {
                       width={0}
                       height={0}
                       sizes="100vw"
-                      className="h-auto w-full"
+                      className="h-auto w-full rounded-lg"
                     />
                   </Link>
 
@@ -110,7 +107,7 @@ const Home = () => {
                       width={0}
                       height={0}
                       sizes="100vw"
-                      className="h-auto w-full"
+                      className="h-auto w-full rounded-lg"
                     />
                   </Link>
 
@@ -122,7 +119,7 @@ const Home = () => {
                       width={0}
                       height={0}
                       sizes="100vw"
-                      className="h-auto w-full"
+                      className="h-auto w-full rounded-lg"
                     />
                   </Link>
 
@@ -134,7 +131,7 @@ const Home = () => {
                       width={0}
                       height={0}
                       sizes="100vw"
-                      className="h-auto w-full"
+                      className="h-auto w-full rounded-lg"
                     />
                   </Link>
 
@@ -146,7 +143,7 @@ const Home = () => {
                       width={0}
                       height={0}
                       sizes="100vw"
-                      className="h-auto w-full"
+                      className="h-auto w-full rounded-lg"
                     />
                   </Link>
 
@@ -160,12 +157,53 @@ const Home = () => {
                       width={0}
                       height={0}
                       sizes="100vw"
-                      className="h-auto w-full"
+                      className="h-auto w-full rounded-lg"
                     />
                   </Link>
                 </Carousel>
               </div>
             }
+          />
+        </article>
+
+        {/* Soluções estratégicas */}
+        <article>
+          <Article
+            title="Soluções estratégicas"
+            content={
+              <ul className="mx-auto w-[80%] list-disc space-y-10 text-justify font-extralight">
+                <li>
+                  De acordo com a{" "}
+                  <strong className="font-bold">Harvard Business Review</strong>
+                  , marcas com identidade visual consistente aumentam a receita
+                  em até 33%.
+                </li>
+                <li>
+                  <strong className="font-bold">73% dos consumidores</strong>{" "}
+                  preferem marcas que entregam experiências personalizadas
+                  (Nielsen, 2020).
+                </li>
+                <li>
+                  Segundo a Forbes, empresas que integram{" "}
+                  <strong className="font-bold">brindes personalizados</strong>{" "}
+                  aumentam suas conversões de vendas em até 18%.
+                </li>
+                <li>
+                  Equipes com uniforme bem definido têm até{" "}
+                  <strong className="font-bold">50% mais engajamento</strong> e
+                  transmitem mais credibilidade ao consumidor (Gallup, 2021).
+                </li>
+              </ul>
+            }
+          />
+
+          <Image
+            src={"/bonetto-2.avif"}
+            alt="Soluções estratégicas"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="mt-6 h-auto w-full rounded-lg"
           />
         </article>
 
@@ -198,6 +236,52 @@ const Home = () => {
                     name="Bruno Cortez"
                   />
                 </Carousel>
+              </div>
+            }
+          />
+        </article>
+
+        {/* FAQ */}
+        <article>
+          <Article
+            title="Perguntas frequentes"
+            description=""
+            content={
+              <div className="space-y-10 text-center">
+                <Question
+                  question="Qual a quantidade mínima para pedido?"
+                  answer="Você pode pedir a partir de 30 unidades idênticas, sem nenhuma variação. Isso ocorre devido a nossa produção em série, que funciona com alta demanda de volumes."
+                />
+
+                <Question
+                  question="Vocês enviam para todo o Brasil?"
+                  answer="Sim! Entregamos em todo o território nacional, e o melhor: o frete é por nossa conta!"
+                />
+
+                <Question
+                  question="Como funciona o prazo de entrega?"
+                  answer="Após a fabricação, entraremos em contato para você efetuar o pagamento da segunda parcela. Em seguida, o prazo de envio aéreo de até 9 dias úteis para qualquer lugar do Brasil será iniciado."
+                />
+
+                <Question
+                  question="Qual é o preço por unidade?"
+                  answer="O preço unitário varia de acordo com cada pedido, modelo ou adicionais escolhidos. Há modelos promocionais no valor de R$ 14,00 por unidade."
+                />
+
+                <Question
+                  question="Quais são as formas de pagamento?"
+                  answer="O pagamento pode ser feito via PIX, boleto, transferência ou cartão de crédito. No caso de PIX, boleto ou transferência, o pagamento poderá ser dividido em dois momentos, 50% no ato do pedido e 50% na finalização da fabricação. Já na opção de cartão de crédito, é apenas na opção “crédito” com adicional de taxas e 100% no ato do pedido."
+                />
+
+                <Question
+                  question="Como funciona o prazo de fabricação?"
+                  answer="O prazo de fabricação se inicia quando o orçamento é aprovado e o cliente paga a 1ª parcela. A partir desse dia, conta-se apenas 14 dias úteis até o seu pedido estar pronto para envio. Após a fabricação e pagamento da 2ª parcela, seu pedido será despachado."
+                />
+
+                <Question
+                  question="Como funciona todo o processo?"
+                  answer="Nosso orçamento é feito via WhatsApp, em que um de nossos consultores comerciais irá entender a sua necessidade e tirar qualquer dúvida, em seguida iremos preparar seu mockup (layout do boné). Após a a aprovação do cliente, encaminhamos o pedido para produção e, quando finalizado, entramos em contato informando que o pedido está sendo enviado."
+                />
               </div>
             }
           />

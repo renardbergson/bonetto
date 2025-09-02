@@ -1,7 +1,6 @@
 "use client";
 
 import { Menubar, MenubarMenu } from "@/components/ui/menubar";
-import Image from "next/image";
 import { Menu } from "lucide-react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
@@ -16,6 +15,8 @@ import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 import Link from "next/link";
 
+import Logo from "./Logo";
+
 export const Header = () => {
   const [sheetIsOpen, setSheetIsOpen] = useState(false);
 
@@ -27,23 +28,11 @@ export const Header = () => {
     <header>
       <Menubar className="flex h-[75px] items-center overflow-hidden border-0 bg-[var(--primary-color)] p-3 text-[var(--secondary-color)] shadow-md/25 shadow-white/50">
         <MenubarMenu>
-          <div className="flex items-center justify-between">
-            <Image
-              src={"/B.png"}
-              alt="Logo"
-              width={35}
-              height={30}
-              className="mt-[-5px] mr-1"
-            />
-
-            <h1 className="text-start text-2xl font-bold">Bonetto</h1>
-          </div>
+          <Logo />
 
           <div className="flex-1"></div>
 
-          <button onClick={handleMobileMenuClick}>
-            <Menu />
-          </button>
+          <button onClick={handleMobileMenuClick}>{<Menu />}</button>
         </MenubarMenu>
       </Menubar>
 
