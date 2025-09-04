@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="h-screen">
+    <html lang="pt-BR" className="h-screen scroll-smooth">
       <body
         className={`${poppins.variable} flex min-h-screen flex-col antialiased`}
       >

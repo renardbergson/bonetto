@@ -30,8 +30,8 @@ const Home = () => {
             Sua marca merece mais que <br /> um boné, ela merece um Bonetto
           </p>
 
-          <MyButton variant="primary" asChild={true}>
-            <Link href={"#"}>Conferir catálogo</Link>
+          <MyButton variant="primary" asChild>
+            <Link href={"#exclusive-models"}>Conferir catálogo</Link>
           </MyButton>
 
           <div>
@@ -68,7 +68,7 @@ const Home = () => {
         </article>
 
         {/* Modelos Exclusivos */}
-        <article>
+        <article id="exclusive-models">
           <Article
             title="Modelos Exclusivos"
             description="Não é só um boné. É um veículo de conexão, lembrança e crescimento."
@@ -216,6 +216,7 @@ const Home = () => {
         {/* Avaliações */}
         <article>
           <Article
+            anchorPlacement="center-bottom"
             title="Avaliações dos nossos clientes"
             description="Outros clientes já avaliaram a Bonetto como a opção certa para tornar a sua marca mais forte."
             content={
@@ -250,6 +251,7 @@ const Home = () => {
         {/* FAQ */}
         <article>
           <Article
+            anchorPlacement="center-bottom"
             title="Perguntas frequentes"
             description=""
             content={
