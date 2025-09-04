@@ -1,5 +1,5 @@
-import Button from "./button";
 import Logo from "./Logo";
+import ContactForm from "@/app/home/components/contactForm";
 
 import {
   FacebookOutlined,
@@ -29,30 +29,7 @@ const Footer = () => {
         <p className="font-extralight">+55 84 99624-7281</p>
       </div>
 
-      <form className="mx-auto block w-[70%] text-center">
-        <label
-          htmlFor="email"
-          className="block text-center font-extralight text-[var(--secondary-color)]"
-        >
-          Insira seu e-mail aqui
-        </label>
-
-        <input
-          id="email"
-          type="email"
-          placeholder="Seu e-mail para contato"
-          className="mt-2 w-full rounded-lg bg-[var(--secondary-color)] p-2 text-center font-extralight text-[var(--primary-color)]"
-        />
-
-        <Button
-          variant="outline"
-          asChild={false}
-          className="mx-auto mt-4"
-          type="submit"
-        >
-          <span>Enviar contato</span>
-        </Button>
-      </form>
+      <ContactForm />
 
       <div className="text-center">
         <p className="font-extralight">

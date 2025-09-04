@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Button from "../components/button";
+import { MyButton } from "../components/MyButton";
 import Image from "next/image";
 import Article from "./components/article";
 import Carousel from "./components/carousel";
@@ -30,9 +30,9 @@ const Home = () => {
             Sua marca merece mais que <br /> um boné, ela merece um Bonetto
           </p>
 
-          <Button variant="outline" asChild={true}>
+          <MyButton variant="primary" asChild={true}>
             <Link href={"#"}>Conferir catálogo</Link>
-          </Button>
+          </MyButton>
 
           <div>
             <span>★★★★★</span>
@@ -48,11 +48,7 @@ const Home = () => {
         className="space-y-16 bg-[var(--secondary-color)] px-6 py-12 text-[var(--primary-color)]"
       >
         {/* Por que escolher a Bonetto? */}
-        <article
-          data-aos="fade-right"
-          data-aos-duration="500"
-          data-aos-anchor-placement="center-bottom"
-        >
+        <article>
           <Article
             title="Por que escolher a Bonetto?"
             description="Na Bonetto, transformamos sua identidade visual em bonés
@@ -72,11 +68,7 @@ const Home = () => {
         </article>
 
         {/* Modelos Exclusivos */}
-        <article
-          data-aos="fade-left"
-          data-aos-duration="500"
-          data-aos-anchor-placement="center-bottom"
-        >
+        <article>
           <Article
             title="Modelos Exclusivos"
             description="Não é só um boné. É um veículo de conexão, lembrança e crescimento."
@@ -175,56 +167,54 @@ const Home = () => {
         </article>
 
         {/* Soluções estratégicas */}
-        <article
-          data-aos="flip-right"
-          data-aos-duration="500"
-          data-aos-anchor-placement="center-bottom"
-        >
+        <article>
           <Article
             title="Soluções estratégicas"
             content={
-              <ul className="mx-auto w-[80%] list-disc space-y-10 text-justify font-extralight">
-                <li>
-                  De acordo com a{" "}
-                  <strong className="font-bold">Harvard Business Review</strong>
-                  , marcas com identidade visual consistente aumentam a receita
-                  em até 33%.
-                </li>
-                <li>
-                  <strong className="font-bold">73% dos consumidores</strong>{" "}
-                  preferem marcas que entregam experiências personalizadas
-                  (Nielsen, 2020).
-                </li>
-                <li>
-                  Segundo a Forbes, empresas que integram{" "}
-                  <strong className="font-bold">brindes personalizados</strong>{" "}
-                  aumentam suas conversões de vendas em até 18%.
-                </li>
-                <li>
-                  Equipes com uniforme bem definido têm até{" "}
-                  <strong className="font-bold">50% mais engajamento</strong> e
-                  transmitem mais credibilidade ao consumidor (Gallup, 2021).
-                </li>
-              </ul>
+              <>
+                <ul className="mx-auto w-[80%] list-disc space-y-10 text-justify font-extralight">
+                  <li>
+                    De acordo com a{" "}
+                    <strong className="font-bold">
+                      Harvard Business Review
+                    </strong>
+                    , marcas com identidade visual consistente aumentam a
+                    receita em até 33%.
+                  </li>
+                  <li>
+                    <strong className="font-bold">73% dos consumidores</strong>{" "}
+                    preferem marcas que entregam experiências personalizadas
+                    (Nielsen, 2020).
+                  </li>
+                  <li>
+                    Segundo a Forbes, empresas que integram{" "}
+                    <strong className="font-bold">
+                      brindes personalizados
+                    </strong>{" "}
+                    aumentam suas conversões de vendas em até 18%.
+                  </li>
+                  <li>
+                    Equipes com uniforme bem definido têm até{" "}
+                    <strong className="font-bold">50% mais engajamento</strong>{" "}
+                    e transmitem mais credibilidade ao consumidor (Gallup,
+                    2021).
+                  </li>
+                </ul>
+                <Image
+                  src={"/bonetto-2.avif"}
+                  alt="Soluções estratégicas"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  className="mt-6 h-auto w-full rounded-lg"
+                />
+              </>
             }
-          />
-
-          <Image
-            src={"/bonetto-2.avif"}
-            alt="Soluções estratégicas"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="mt-6 h-auto w-full rounded-lg"
           />
         </article>
 
         {/* Avaliações */}
-        <article
-          data-aos="flip-left"
-          data-aos-duration="600"
-          data-aos-anchor-placement="bottom-bottom"
-        >
+        <article>
           <Article
             title="Avaliações dos nossos clientes"
             description="Outros clientes já avaliaram a Bonetto como a opção certa para tornar a sua marca mais forte."
@@ -258,12 +248,7 @@ const Home = () => {
         </article>
 
         {/* FAQ */}
-        <article
-          data-aos="zoom-out"
-          data-aos-duration="500"
-          data-aos-delay="400"
-          data-aos-anchor-placement="center-bottom"
-        >
+        <article>
           <Article
             title="Perguntas frequentes"
             description=""
