@@ -44,22 +44,23 @@ const ContactForm = () => {
   return (
     <>
       <form
-        className="mx-auto block w-[70%] text-center"
+        className="mx-auto block w-[80%] text-center"
         onSubmit={handleSubmitEmail}
       >
         <div>
-          <Label
-            htmlFor="contact-email"
-            className="block text-base font-extralight text-[var(--secondary-color)]"
-          >
-            Insira seu e-mail aqui
-          </Label>
+          <p className="block text-sm font-extralight text-[var(--secondary-color)]">
+            Precisa de um orçamento personalizado?
+          </p>
+
+          <p className="block text-sm font-extralight text-[var(--secondary-color)]">
+            Nós entramos em contato com você!
+          </p>
 
           <Input
             id="contact-email"
             type="email"
-            placeholder="Seu melhor e-mail"
-            className="mt-2 bg-[var(--secondary-color)] text-center font-extralight text-[var(--primary-color)] focus-visible:ring-1 focus-visible:ring-[var(--secondary-color)]"
+            placeholder="Insira seu melhor e-mail"
+            className="mt-3 bg-[var(--secondary-color)] text-center font-extralight text-[var(--primary-color)] focus-visible:ring-1 focus-visible:ring-[var(--secondary-color)]"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
