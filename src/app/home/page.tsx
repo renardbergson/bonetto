@@ -63,7 +63,7 @@ const Home = () => {
 
           <div
             data-aos="fade-up"
-            data-aos-delay="1600"
+            data-aos-delay="1500"
             data-aos-duration="800"
             data-aos-easing="ease-out"
           >
