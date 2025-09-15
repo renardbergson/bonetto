@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 import {
   Dialog,
@@ -14,11 +14,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useMask } from "@react-input/mask";
 import { toast } from "sonner";
+import validator from "validator";
 
 import { MyButton } from "@/app/components/MyButton";
 
 const ContactForm = () => {
-  const inputRef = useMask({
+  const nameRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useMask({
     mask: "+55 (__) _____-____",
     replacement: { _: /\d/ },
     showMask: true,
@@ -26,6 +28,22 @@ const ContactForm = () => {
   });
   const [email, setEmail] = useState("");
   const [dialogIsOpen, setDialogIsOpen] = useState(false);
+  const emailIsValid = validator.isEmail(email);
+
+  function handleInvalidName() {
+    toast.error("Por favor, informe seu nome corretamente!");
+    return;
+  }
+
+  function handleInvalidEmail() {
+    toast.error("Por favor, insira um endereço de e-mail válido!");
+    return;
+  }
+
+  function handleInvalidPhone() {
+    toast.error("Por favor, insira um número de telefone válido!");
+    return;
+  }
 
   function handleOpenDialog() {
     setDialogIsOpen((prevState) => !prevState);
@@ -33,22 +51,45 @@ const ContactForm = () => {
 
   function handleSubmitEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    toast("Por favor, insira um endereço de e-mail válido!");
-    // handleOpenDialog(); // TODO: Uncomment this when the form is ready
+
+    if (!emailIsValid) {
+      handleInvalidEmail();
+      return;
+    }
+
+    handleOpenDialog();
   }
 
   function handleSubmitForm(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
+    const nameValue = nameRef.current?.value?.trim() || "";
+    const nameIsValid = nameValue.length >= 3;
+    if (!nameValue || !nameIsValid) {
+      handleInvalidName();
+      return;
+    }
+
+    const phoneValue = phoneRef.current?.value?.trim() || "";
+    const numbersOnly = phoneValue.replace(/\D/g, "");
+    if (!validator.isMobilePhone(numbersOnly, ["pt-BR"])) {
+      handleInvalidPhone();
+      return;
+    }
+
     setEmail("");
     handleOpenDialog();
+    toast.success("Seus dados foram enviados com sucesso!");
   }
 
   return (
     <>
+      {/* E-MAIL FORM */}
       <form
+        id="contact-form"
         className="mx-auto block w-[80%] text-center"
         onSubmit={handleSubmitEmail}
+        noValidate
       >
         <div>
           <p className="block text-sm font-extralight text-[var(--secondary-color)]">
@@ -79,9 +120,10 @@ const ContactForm = () => {
         </MyButton>
       </form>
 
+      {/* DIALOG FORM */}
       <Dialog open={dialogIsOpen} onOpenChange={handleOpenDialog}>
         <DialogContent className="bg-[var(--secondary-color)] sm:max-w-[425px]">
-          <form onSubmit={handleSubmitForm}>
+          <form onSubmit={handleSubmitForm} noValidate>
             <DialogHeader>
               <DialogTitle className="text-[var(--primary-color)]">
                 Quase lá!
@@ -97,9 +139,11 @@ const ContactForm = () => {
               <div className="grid gap-3 text-[var(--primary-color)]">
                 <Label htmlFor="name">Nome</Label>
                 <Input
+                  ref={nameRef}
                   id="name"
                   name="name"
                   type="text"
+                  placeholder="Insira seu nome"
                   className="font-extralight focus-visible:ring-1 focus-visible:ring-[var(--tertiary-color)]"
                 />
               </div>
@@ -107,12 +151,12 @@ const ContactForm = () => {
               <div className="grid gap-3 text-[var(--primary-color)]">
                 <Label htmlFor="email">E-mail</Label>
                 <Input
+                  readOnly
                   id="email"
                   name="email"
                   type="email"
                   className="font-extralight focus-visible:ring-1 focus-visible:ring-[var(--tertiary-color)]"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
@@ -123,7 +167,7 @@ const ContactForm = () => {
                   name="phone"
                   type="tel"
                   className="font-extralight focus-visible:ring-1 focus-visible:ring-[var(--tertiary-color)]"
-                  ref={inputRef}
+                  ref={phoneRef}
                 />
               </div>
             </div>
