@@ -87,24 +87,26 @@ const ContactForm = () => {
       {/* E-MAIL FORM */}
       <form
         id="contact-form"
-        className="mx-auto block w-[80%] text-center"
+        className="mx-auto block w-[80%] space-y-3 text-center"
         onSubmit={handleSubmitEmail}
         noValidate
       >
-        <div>
-          <p className="block text-sm font-extralight text-[var(--secondary-color)]">
-            Precisa de um orçamento personalizado?
-          </p>
+        <div className="space-y-4">
+          <div>
+            <p className="block text-base font-extralight text-[var(--secondary-color)]">
+              Precisa de um orçamento personalizado?
+            </p>
 
-          <p className="block text-sm font-extralight text-[var(--secondary-color)]">
-            Nós entramos em contato com você!
-          </p>
+            <p className="block text-base font-extralight text-[var(--secondary-color)]">
+              Nós entramos em contato com você!
+            </p>
+          </div>
 
           <Input
             id="contact-email"
             type="email"
             placeholder="Insira seu melhor e-mail"
-            className="mt-3 bg-[var(--secondary-color)] text-center font-extralight text-[var(--primary-color)] focus-visible:ring-1 focus-visible:ring-[var(--secondary-color)]"
+            className="bg-[var(--secondary-color)] text-center text-base font-extralight text-[var(--primary-color)] focus-visible:ring-1 focus-visible:ring-[var(--secondary-color)]"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -123,20 +125,22 @@ const ContactForm = () => {
       {/* DIALOG FORM */}
       <Dialog open={dialogIsOpen} onOpenChange={handleOpenDialog}>
         <DialogContent className="bg-[var(--secondary-color)] sm:max-w-[425px]">
-          <form onSubmit={handleSubmitForm} noValidate>
-            <DialogHeader>
-              <DialogTitle className="text-[var(--primary-color)]">
-                Quase lá!
-              </DialogTitle>
+          <form onSubmit={handleSubmitForm} noValidate className="space-y-8">
+            <div>
+              <DialogHeader>
+                <DialogTitle className="font-extrabold text-[var(--primary-color)]">
+                  Quase lá!
+                </DialogTitle>
 
-              <DialogDescription className="mx-auto w-[70%] font-extralight text-[var(--primary-color)]">
-                Complete seus dados e entraremos em contato o mais breve
-                possível.
-              </DialogDescription>
-            </DialogHeader>
+                <DialogDescription className="mx-auto w-[80%] text-base font-extralight text-[var(--primary-color)]">
+                  Complete seus dados e entraremos em contato o mais breve
+                  possível.
+                </DialogDescription>
+              </DialogHeader>
+            </div>
 
-            <div className="grid gap-4">
-              <div className="grid gap-3 text-[var(--primary-color)]">
+            <div className="space-y-4">
+              <div className="space-y-1 text-[var(--primary-color)]">
                 <Label htmlFor="name">Nome</Label>
                 <Input
                   ref={nameRef}
@@ -148,7 +152,7 @@ const ContactForm = () => {
                 />
               </div>
 
-              <div className="grid gap-3 text-[var(--primary-color)]">
+              <div className="space-y-1 text-[var(--primary-color)]">
                 <Label htmlFor="email">E-mail</Label>
                 <Input
                   readOnly
@@ -160,7 +164,7 @@ const ContactForm = () => {
                 />
               </div>
 
-              <div className="grid gap-3 text-[var(--primary-color)]">
+              <div className="space-y-1 text-[var(--primary-color)]">
                 <Label htmlFor="phone">Telefone / Whatsapp</Label>
                 <Input
                   id="phone"
@@ -172,8 +176,8 @@ const ContactForm = () => {
               </div>
             </div>
 
-            <DialogFooter className="mt-4 block text-center">
-              <MyButton asChild={false} variant="secondary" type="submit">
+            <DialogFooter className="mt-6 block text-center">
+              <MyButton asChild={false} variant="primary" type="submit">
                 Enviar
               </MyButton>
             </DialogFooter>

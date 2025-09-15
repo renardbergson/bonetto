@@ -5,7 +5,7 @@ import Image from "next/image";
 import Article from "./components/article";
 import Carousel from "./components/carousel";
 import OpinionCart from "./components/opinion-cart";
-import Question from "./components/question";
+import Accordion from "./components/accordion";
 
 const Home = () => {
   return (
@@ -22,24 +22,26 @@ const Home = () => {
 
         <div className="mx-auto w-[70%] flex-1 space-y-10 p-4 text-center font-light text-[var(--secondary-color)]">
           <p
-            className="text-sm"
+            className="text-base"
             data-aos="fade-down"
-            data-aos-delay="100"
-            data-aos-duration="2000"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+            data-aos-easing="ease-out"
           >
-            Sua marca merece mais que <br /> um boné, ela merece um Bonetto
+            Sua marca merece mais que <br /> um boné, ela merece um Bonetto!
           </p>
 
           <div>
             <div
-              data-aos="fade-down"
-              data-aos-delay="500"
-              data-aos-duration="2000"
+              data-aos="fade-up"
+              data-aos-delay="1000"
+              data-aos-duration="800"
+              data-aos-easing="ease-out"
             >
               <MyButton
                 variant="secondary"
                 asChild
-                className="animate-bounce delay-[4s]"
+                className="animate-bounce delay-[3000ms]"
               >
                 <Link href={"https://wa.me/5584996247281"} target="_blank">
                   Solicitar Orçamento
@@ -48,9 +50,10 @@ const Home = () => {
             </div>
 
             <div
-              data-aos="fade-down"
-              data-aos-delay="1000"
-              data-aos-duration="2000"
+              data-aos="fade-up"
+              data-aos-delay="1200"
+              data-aos-duration="800"
+              data-aos-easing="ease-out"
             >
               <MyButton variant="primary" asChild className="mt-8">
                 <Link href={"#exclusive-models"}>Conferir catálogo</Link>
@@ -59,9 +62,10 @@ const Home = () => {
           </div>
 
           <div
-            data-aos="fade-down"
-            data-aos-delay="1500"
-            data-aos-duration="2000"
+            data-aos="fade-up"
+            data-aos-delay="1600"
+            data-aos-duration="800"
+            data-aos-easing="ease-out"
           >
             <span>★★★★★</span>
             <p className="mt-3 text-xs text-[var(--secondary-color)] uppercase">
@@ -71,11 +75,11 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Por que escolher a Bonetto? */}
       <section
         id="section-2"
         className="space-y-16 bg-[var(--secondary-color)] px-6 py-12 text-[var(--primary-color)]"
       >
-        {/* Por que escolher a Bonetto? */}
         <article>
           <Article
             title="Por que escolher a Bonetto?"
@@ -94,8 +98,13 @@ const Home = () => {
             }
           />
         </article>
+      </section>
 
-        {/* Modelos Exclusivos */}
+      {/* Modelos Exclusivos */}
+      <section
+        id="section-2"
+        className="space-y-16 bg-[var(--secondary-color)] px-6 py-12 text-[var(--primary-color)]"
+      >
         <article id="exclusive-models">
           <Article
             title="Modelos Exclusivos"
@@ -193,8 +202,13 @@ const Home = () => {
             }
           />
         </article>
+      </section>
 
-        {/* Soluções estratégicas */}
+      {/* Soluções estratégicas */}
+      <section
+        id="section-2"
+        className="space-y-16 bg-[var(--secondary-color)] px-6 py-12 text-[var(--primary-color)]"
+      >
         <article>
           <Article
             title="Soluções estratégicas"
@@ -245,8 +259,13 @@ const Home = () => {
             }
           />
         </article>
+      </section>
 
-        {/* Avaliações */}
+      {/* Avaliações */}
+      <section
+        id="section-2"
+        className="space-y-16 bg-[var(--secondary-color)] px-6 py-12 text-[var(--primary-color)]"
+      >
         <article>
           <Article
             anchorPlacement="top-center"
@@ -278,50 +297,58 @@ const Home = () => {
             }
           />
         </article>
+      </section>
 
-        {/* FAQ */}
+      {/* FAQ */}
+      <section
+        id="section-2"
+        className="space-y-16 bg-[var(--secondary-color)] px-6 py-12 text-[var(--primary-color)]"
+      >
         <article>
           <Article
             anchorPlacement="top-center"
             title="Perguntas frequentes"
             description=""
             content={
-              <div className="space-y-10 text-center">
-                <Question
-                  question="Qual a quantidade mínima para pedido?"
-                  answer="A partir de 30 unidades idênticas, devido à nossa produção em série, que funciona com alta demanda de volumes."
-                />
-
-                <Question
-                  question="Envia para todo o Brasil?"
-                  answer="Sim! Entregamos em todo o território nacional, e o melhor: o frete é por nossa conta!"
-                />
-
-                <Question
-                  question="Como funciona o prazo de entrega?"
-                  answer="Após a fabricação, entraremos em contato para que o cliente efetue o pagamento da segunda parcela. Em seguida, o prazo de envio aéreo de até 9 dias úteis para qualquer lugar do Brasil será iniciado."
-                />
-
-                <Question
-                  question="Qual é o preço por unidade?"
-                  answer="O preço unitário varia de acordo com cada pedido, modelo ou adicionais escolhidos. Há modelos promocionais no valor de R$ 14,00 por unidade."
-                />
-
-                <Question
-                  question="Quais são as formas de pagamento?"
-                  answer="Aceitamos PIX, boleto, transferência ou cartão de crédito. No caso de PIX, boleto ou transferência, o pagamento poderá ser dividido em dois momentos, 50% no ato do pedido e 50% na finalização da fabricação. A opção de cartão de crédito possui taxas adicionais e é paga 100% no ato do pedido."
-                />
-
-                <Question
-                  question="Como funciona o prazo de fabricação?"
-                  answer="O prazo de fabricação se inicia quando o orçamento é aprovado e o cliente paga a 1ª parcela. A partir desse dia, conta-se apenas 14 dias úteis até o seu pedido estar pronto para envio. Após a fabricação e o pagamento da 2ª parcela, o pedido será despachado."
-                />
-
-                <Question
-                  question="Como funciona todo o processo?"
-                  answer="Nosso orçamento é feito via WhatsApp, de modo que um de nossos consultores comerciais irá entender a necessidade do cliente e sanar eventuais dúvidas, em seguida iremos preparar o mockup (layout do boné). Após a aprovação do cliente, encaminhamos o pedido para produção e, quando finalizado, entramos em contato, informando que o pedido está pronto para envio."
-                />
-              </div>
+              <Accordion
+                items={[
+                  {
+                    title: "Qual a quantidade mínima para pedido?",
+                    content:
+                      "A partir de 30 unidades idênticas, devido à nossa produção em série, que funciona com alta demanda de volumes.",
+                  },
+                  {
+                    title: "Envia para todo o Brasil?",
+                    content:
+                      "Sim! Entregamos em todo o território nacional, e o melhor: o frete é por nossa conta!",
+                  },
+                  {
+                    title: "Como funciona o prazo de entrega?",
+                    content:
+                      "Após a fabricação, entraremos em contato para que o cliente efetue o pagamento da segunda parcela. Em seguida, o prazo de envio aéreo de até 9 dias úteis para qualquer lugar do Brasil será iniciado.",
+                  },
+                  {
+                    title: "Qual é o preço por unidade?",
+                    content:
+                      "O preço unitário varia de acordo com cada pedido, modelo ou adicionais escolhidos. Há modelos promocionais no valor de R$ 14,00 por unidade.",
+                  },
+                  {
+                    title: "Quais são as formas de pagamento?",
+                    content:
+                      "Aceitamos PIX, boleto, transferência ou cartão de crédito. No caso de PIX, boleto ou transferência, o pagamento poderá ser dividido em dois momentos, 50% no ato do pedido e 50% na finalização da fabricação. A opção de cartão de crédito possui taxas adicionais e é paga 100% no ato do pedido.",
+                  },
+                  {
+                    title: "Como funciona o prazo de fabricação?",
+                    content:
+                      "O prazo de fabricação se inicia quando o orçamento é aprovado e o cliente paga a 1ª parcela. A partir desse dia, conta-se apenas 14 dias úteis até o seu pedido estar pronto para envio. Após a fabricação e o pagamento da 2ª parcela, o pedido será despachado.",
+                  },
+                  {
+                    title: "Como funciona todo o processo?",
+                    content:
+                      "Nosso orçamento é feito via WhatsApp, de modo que um de nossos consultores comerciais irá entender a necessidade do cliente e sanar eventuais dúvidas, em seguida iremos preparar o mockup (layout do boné). Após a aprovação do cliente, encaminhamos o pedido para produção e, quando finalizado, entramos em contato, informando que o pedido está pronto para envio.",
+                  },
+                ]}
+              />
             }
           />
         </article>

@@ -10,13 +10,12 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-const CarouselComponent = ({
-  children,
-  delay,
-}: {
+interface CarouselComponentProps {
   children: React.ReactNode[];
   delay: number;
-}) => {
+}
+
+const CarouselComponent = ({ children, delay }: CarouselComponentProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
