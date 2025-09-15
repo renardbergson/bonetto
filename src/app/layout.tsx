@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { AOSProvider } from "./components/AOSProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 import { Header } from "./components/Header";
 import Footer from "./components/Footer";
@@ -31,6 +32,7 @@ export default function RootLayout({
         <AOSProvider>
           <Header />
           <main className="flex-1">{children}</main>
+          <Toaster />
           <Footer />
         </AOSProvider>
       </body>

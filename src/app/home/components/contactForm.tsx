@@ -13,6 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useMask } from "@react-input/mask";
+import { toast } from "sonner";
 
 import { MyButton } from "@/app/components/MyButton";
 
@@ -32,11 +33,13 @@ const ContactForm = () => {
 
   function handleSubmitEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    handleOpenDialog();
+    toast("Por favor, insira um endereço de e-mail válido!");
+    // handleOpenDialog(); // TODO: Uncomment this when the form is ready
   }
 
   function handleSubmitForm(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
     setEmail("");
     handleOpenDialog();
   }

@@ -13,3 +13,8 @@ body {
   font-family: sans-serif;
   background: var(--primary-color);
 }
+
+[data-sonner-toaster] {
+  --normal-bg: var(--secondary-color) !important;
+  --normal-text: var(--primary-color) !important;
+}
