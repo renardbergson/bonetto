@@ -1,10 +1,7 @@
 interface ArticleProps {
   title: string;
   description?: string;
-  content: React.ReactNode;
-  animation?: string;
-  duration?: number;
-  delay?: number;
+  content?: React.ReactNode;
   anchorPlacement?: string;
 }
 
@@ -12,30 +9,44 @@ const Article = ({
   title,
   description,
   content,
-  animation,
-  duration,
-  delay,
   anchorPlacement,
 }: ArticleProps) => {
   return (
-    <>
-      <div className="bg-[var(--primary-color)] p-4 text-[var(--secondary-color)]">
+    <div className="space-y-6">
+      {/* Título - Primeira animação */}
+      <div
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="500"
+        data-aos-anchor-placement={anchorPlacement || "top-bottom"}
+        className="bg-[var(--primary-color)] p-4 text-[var(--secondary-color)]"
+      >
         <h3 className="text-center text-2xl">{title}</h3>
       </div>
 
-      <div
-        data-aos={`${animation ?? "fade-up"}`}
-        data-aos-duration={`${duration ?? 400}`}
-        data-aos-delay={`${delay ?? 100}`}
-        data-aos-anchor-placement={`${anchorPlacement ?? "top-bottom"}`}
-      >
-        <p className="mx-auto mt-6 w-[80%] text-center font-extralight">
+      {/* Descrição - Segunda animação */}
+      {description && (
+        <p
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="500"
+          data-aos-anchor-placement={anchorPlacement || "top-bottom"}
+          className="mx-auto w-[80%] text-center font-extralight"
+        >
           {description}
         </p>
+      )}
 
+      {/* Conteúdo - Terceira animação */}
+      <div
+        data-aos="fade-up"
+        data-aos-delay="400"
+        data-aos-duration="500"
+        data-aos-anchor-placement={anchorPlacement || "top-bottom"}
+      >
         {content}
       </div>
-    </>
+    </div>
   );
 };
 

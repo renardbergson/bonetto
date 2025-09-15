@@ -21,7 +21,7 @@ const MyButton = ({
 }: MyButtonProps) => {
   return (
     <Button
-      className={`text-1xl w-[60%] rounded-full py-4 hover:cursor-pointer ${variant === "primary" ? "bg-[var(--primary-color)] text-[var(--secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)]" : "bg-[var(--secondary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-[var(--secondary-color)]"} ${className}`}
+      className={`text-1xl w-[70%] rounded-full py-4 hover:cursor-pointer ${variant === "primary" ? "bg-[var(--primary-color)] text-[var(--secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)]" : "bg-[var(--secondary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-[var(--secondary-color)]"} ${className}`}
       variant="outline"
       asChild={asChild ? true : false}
       type={type}

@@ -20,21 +20,49 @@ const Home = () => {
           preload="auto"
         />
 
-        <div
-          className="mx-auto w-[70%] flex-1 space-y-16 p-4 text-center font-light text-[var(--secondary-color)]"
-          data-aos="fade-down"
-          data-aos-delay="350"
-          data-aos-duration="3000"
-        >
-          <p className="text-sm">
+        <div className="mx-auto w-[70%] flex-1 space-y-10 p-4 text-center font-light text-[var(--secondary-color)]">
+          <p
+            className="text-sm"
+            data-aos="fade-down"
+            data-aos-delay="100"
+            data-aos-duration="2000"
+          >
             Sua marca merece mais que <br /> um boné, ela merece um Bonetto
           </p>
 
-          <MyButton variant="primary" asChild>
-            <Link href={"#exclusive-models"}>Conferir catálogo</Link>
-          </MyButton>
-
           <div>
+            <div
+              data-aos="fade-down"
+              data-aos-delay="500"
+              data-aos-duration="2000"
+            >
+              <MyButton
+                variant="secondary"
+                asChild
+                className="animate-bounce delay-[4s]"
+              >
+                <Link href={"https://wa.me/5584996247281"} target="_blank">
+                  Solicitar Orçamento
+                </Link>
+              </MyButton>
+            </div>
+
+            <div
+              data-aos="fade-down"
+              data-aos-delay="1000"
+              data-aos-duration="2000"
+            >
+              <MyButton variant="primary" asChild className="mt-8">
+                <Link href={"#exclusive-models"}>Conferir catálogo</Link>
+              </MyButton>
+            </div>
+          </div>
+
+          <div
+            data-aos="fade-down"
+            data-aos-delay="1500"
+            data-aos-duration="2000"
+          >
             <span>★★★★★</span>
             <p className="mt-3 text-xs text-[var(--secondary-color)] uppercase">
               Qualidade excepcional e design exclusivo
@@ -200,7 +228,12 @@ const Home = () => {
                     2021).
                   </li>
                 </ul>
+
                 <Image
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  data-aos-duration="600"
+                  data-aos-anchor-placement="top-bottom"
                   src={"/bonetto-2.avif"}
                   alt="Soluções estratégicas"
                   width={0}
@@ -216,34 +249,32 @@ const Home = () => {
         {/* Avaliações */}
         <article>
           <Article
-            anchorPlacement="center-bottom"
+            anchorPlacement="top-center"
             title="Avaliações dos nossos clientes"
             description="Outros clientes já avaliaram a Bonetto como a opção certa para tornar a sua marca mais forte."
             content={
-              <div className="mt-6 text-center">
-                <Carousel delay={6000}>
-                  <OpinionCart
-                    title="Satisfeita!"
-                    description="Superou minhas expectativas em qualidade e beleza. O atendimento ao cliente foi muito bom e a entrega foi bem rápida. Recomendo a todos!"
-                    imageSrc="/avatar-1.avif"
-                    name="Claryssa Cínthia"
-                  />
+              <Carousel delay={6000}>
+                <OpinionCart
+                  title="Satisfeita!"
+                  description="Superou minhas expectativas em qualidade e beleza. O atendimento ao cliente foi muito bom e a entrega foi bem rápida. Recomendo a todos!"
+                  imageSrc="/avatar-1.avif"
+                  name="Claryssa Cínthia"
+                />
 
-                  <OpinionCart
-                    title="Top demais!"
-                    description="Personalização de qualidade, o bordado ficou exatamente como eu pedi e o mais importante: meus clientes elogiaram a qualidade do boné. A Bonetto entrega mais que um produto, entrega presença."
-                    imageSrc="/avatar-2.avif"
-                    name="Ricardo Soares Azevedo"
-                  />
+                <OpinionCart
+                  title="Top demais!"
+                  description="Personalização de qualidade, o bordado ficou exatamente como eu pedi e o mais importante: meus clientes elogiaram a qualidade do boné. A Bonetto entrega mais que um produto, entrega presença."
+                  imageSrc="/avatar-2.avif"
+                  name="Ricardo Soares Azevedo"
+                />
 
-                  <OpinionCart
-                    title="Recomendo!"
-                    description="Os bonés ficaram incríveis! Ótima qualidade e design, estou satisfeito com o resultado."
-                    imageSrc="/avatar-3.avif"
-                    name="Bruno Cortez"
-                  />
-                </Carousel>
-              </div>
+                <OpinionCart
+                  title="Recomendo!"
+                  description="Os bonés ficaram incríveis! Ótima qualidade e design, estou satisfeito com o resultado."
+                  imageSrc="/avatar-3.avif"
+                  name="Bruno Cortez"
+                />
+              </Carousel>
             }
           />
         </article>
@@ -251,7 +282,7 @@ const Home = () => {
         {/* FAQ */}
         <article>
           <Article
-            anchorPlacement="center-bottom"
+            anchorPlacement="top-center"
             title="Perguntas frequentes"
             description=""
             content={
@@ -295,6 +326,8 @@ const Home = () => {
           />
         </article>
       </section>
+
+      {/* <section></section> */}
     </>
   );
 };
