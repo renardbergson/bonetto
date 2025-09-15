@@ -27,6 +27,7 @@ const Home = () => {
             data-aos-delay="300"
             data-aos-duration="1000"
             data-aos-easing="ease-out"
+            data-aos-anchor-placement="center-bottom"
           >
             Sua marca merece mais que <br /> um boné, ela merece um Bonetto!
           </p>
@@ -37,6 +38,7 @@ const Home = () => {
               data-aos-delay="1000"
               data-aos-duration="800"
               data-aos-easing="ease-out"
+              data-aos-anchor-placement="center-bottom"
             >
               <MyButton
                 variant="secondary"
@@ -54,6 +56,7 @@ const Home = () => {
               data-aos-delay="1200"
               data-aos-duration="800"
               data-aos-easing="ease-out"
+              data-aos-anchor-placement="center-bottom"
             >
               <MyButton variant="primary" asChild className="mt-8">
                 <Link href={"#exclusive-models"}>Conferir catálogo</Link>
@@ -66,6 +69,7 @@ const Home = () => {
             data-aos-delay="1500"
             data-aos-duration="800"
             data-aos-easing="ease-out"
+            data-aos-anchor-placement="center-bottom"
           >
             <span>★★★★★</span>
             <p className="mt-3 text-xs text-[var(--secondary-color)] uppercase">

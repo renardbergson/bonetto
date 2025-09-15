@@ -9,7 +9,7 @@ export const AOSProvider = ({ children }: { children: React.ReactNode }) => {
       duration: 800,
       easing: "ease-in-out",
       once: true,
-      offset: window.innerWidth > 768 ? 50 : 100,
+      offset: 100,
     });
   }, []);
 
