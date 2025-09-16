@@ -114,95 +114,105 @@ const Home = () => {
             title="Modelos Exclusivos"
             description="Não é só um boné. É um veículo de conexão, lembrança e crescimento."
             content={
-              <div className="mt-6">
-                <Carousel delay={3000}>
-                  <Link href={"#"} className="mt-10 w-full">
-                    <h4 className="mb-2 text-center font-bold">Promocional</h4>
-                    <Image
-                      src={"/promotional.avif"}
-                      alt="Bonetto"
-                      width={0}
-                      height={0}
-                      sizes="100vw"
-                      className="h-auto w-full rounded-lg"
-                    />
-                  </Link>
+              <Carousel fade autoplaySpeed={3000}>
+                <Link href={"#"} className="mt-10 w-full">
+                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
+                    Promocional
+                  </h4>
+                  <Image
+                    src={"/promotional.avif"}
+                    alt="Bonetto"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="h-auto w-full rounded-lg"
+                  />
+                </Link>
 
-                  <Link href={"#"} className="mt-10 w-full">
-                    <h4 className="mb-2 text-center font-bold">Trucker</h4>
-                    <Image
-                      src={"/trucker.jpg"}
-                      alt="Bonetto"
-                      width={0}
-                      height={0}
-                      sizes="100vw"
-                      className="h-auto w-full rounded-lg"
-                    />
-                  </Link>
+                <Link href={"#"} className="mt-10 w-full">
+                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
+                    Trucker
+                  </h4>
+                  <Image
+                    src={"/trucker.jpg"}
+                    alt="Bonetto"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="h-auto w-full rounded-lg"
+                  />
+                </Link>
 
-                  <Link href={"#"} className="mt-10 w-full">
-                    <h4 className="mb-2 text-center font-bold">Americano</h4>
-                    <Image
-                      src={"/american.avif"}
-                      alt="Bonetto"
-                      width={0}
-                      height={0}
-                      sizes="100vw"
-                      className="h-auto w-full rounded-lg"
-                    />
-                  </Link>
+                <Link href={"#"} className="mt-10 w-full">
+                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
+                    Americano
+                  </h4>
+                  <Image
+                    src={"/american.avif"}
+                    alt="Bonetto"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="h-auto w-full rounded-lg"
+                  />
+                </Link>
 
-                  <Link href={"#"} className="mt-10 w-full">
-                    <h4 className="mb-2 text-center font-bold">6 gomos</h4>
-                    <Image
-                      src={"/six-buds.avif"}
-                      alt="Bonetto"
-                      width={0}
-                      height={0}
-                      sizes="100vw"
-                      className="h-auto w-full rounded-lg"
-                    />
-                  </Link>
+                <Link href={"#"} className="mt-10 w-full">
+                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
+                    6 gomos
+                  </h4>
+                  <Image
+                    src={"/six-buds.avif"}
+                    alt="Bonetto"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="h-auto w-full rounded-lg"
+                  />
+                </Link>
 
-                  <Link href={"#"} className="mt-10 w-full">
-                    <h4 className="mb-2 text-center font-bold">Dad Hat</h4>
-                    <Image
-                      src={"/dad-hat.avif"}
-                      alt="Bonetto"
-                      width={0}
-                      height={0}
-                      sizes="100vw"
-                      className="h-auto w-full rounded-lg"
-                    />
-                  </Link>
+                <Link href={"#"} className="mt-10 w-full">
+                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
+                    Dad Hat
+                  </h4>
+                  <Image
+                    src={"/dad-hat.avif"}
+                    alt="Bonetto"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="h-auto w-full rounded-lg"
+                  />
+                </Link>
 
-                  <Link href={"#"} className="mt-10 w-full">
-                    <h4 className="mb-2 text-center font-bold">Bucket</h4>
-                    <Image
-                      src={"/bucket.avif"}
-                      alt="Bonetto"
-                      width={0}
-                      height={0}
-                      sizes="100vw"
-                      className="h-auto w-full rounded-lg"
-                    />
-                  </Link>
+                <Link href={"#"} className="mt-10 w-full">
+                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
+                    Bucket
+                  </h4>
+                  <Image
+                    src={"/bucket.avif"}
+                    alt="Bonetto"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="h-auto w-full rounded-lg"
+                  />
+                </Link>
 
-                  <Link href={"#"} className="mt-10 w-full">
-                    <h4 className="mb-2 text-center font-bold">
-                      Viseira Esportiva
-                    </h4>
-                    <Image
-                      src={"/headband.png"}
-                      alt="Bonetto"
-                      width={0}
-                      height={0}
-                      sizes="100vw"
-                      className="h-auto w-full rounded-lg"
-                    />
-                  </Link>
-                </Carousel>
-              </div>
+                <Link href={"#"} className="mt-10 w-full">
+                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
+                    Viseira Esportiva
+                  </h4>
+                  <Image
+                    src={"/headband.png"}
+                    alt="Bonetto"
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    className="h-auto w-full rounded-lg"
+                  />
+                </Link>
+              </Carousel>
             }
           />
         </article>
@@ -276,7 +286,7 @@ const Home = () => {
             title="Avaliações dos nossos clientes"
             description="Outros clientes já avaliaram a Bonetto como a opção certa para tornar a sua marca mais forte."
             content={
-              <Carousel delay={6000}>
+              <Carousel autoplaySpeed={8000}>
                 <OpinionCart
                   title="Satisfeita!"
                   description="Superou minhas expectativas em qualidade e beleza. O atendimento ao cliente foi muito bom e a entrega foi bem rápida. Recomendo a todos!"

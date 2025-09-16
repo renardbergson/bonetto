@@ -23,11 +23,13 @@ const OpinionCart = ({
 }: OpinionCartProps) => {
   return (
     <Card className="m-0.5 grid h-[375px] items-center border-transparent shadow-sm shadow-black/30">
-      <CardHeader>
+      <CardHeader className="text-center">
         <CardDescription>★★★★★</CardDescription>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className="font-extrabold">{title}</CardTitle>
       </CardHeader>
-      <CardContent className="font-extralight">{description}</CardContent>
+      <CardContent className="text-base font-extralight">
+        {description}
+      </CardContent>
       <CardFooter className="justify-center">
         <div className="flex flex-col items-center">
           <Avatar className="h-10 w-10">

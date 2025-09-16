@@ -6,6 +6,7 @@
   --primary-color: #030708;
   --secondary-color: #f4e8d8;
   --tertiary-color: #282828;
+  --quaternary-color: #8e8e8ec5;
 }
 
 body {
@@ -13,7 +14,26 @@ body {
   background: var(--primary-color);
 }
 
+/* toaster */
 [data-sonner-toaster] {
   --normal-bg: var(--secondary-color) !important;
   --normal-text: var(--primary-color) !important;
+}
+
+/* slides controls */
+.slick-prev {
+  color: var(--quaternary-color) !important;
+}
+
+.slick-next {
+  color: var(--quaternary-color) !important;
+}
+
+.slick-dots li {
+  border: 0.01px solid var(--quaternary-color) !important;
+  background: #b5b5b597 !important;
+}
+
+.slick-dots li.slick-active::after {
+  background: var(--secondary-color) !important;
 }
