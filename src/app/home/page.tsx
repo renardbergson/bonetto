@@ -6,13 +6,14 @@ import Article from "./components/article";
 import Carousel from "./components/carousel";
 import OpinionCart from "./components/opinion-cart";
 import Accordion from "./components/accordion";
+import Section from "../components/Section";
 
 const Home = () => {
   return (
-    <>
-      <section id="section-1" className="flex h-[calc(100vh-75px)] flex-col">
+    <div className="space-y-16 bg-[var(--secondary-color)] pb-16">
+      <Section variant="primary" className="flex h-[calc(100vh-75px)] flex-col">
         <video
-          className="h-96 w-full bg-[var(--primary-color)] shadow-2xl"
+          className="mb-0 h-[22rem] w-full bg-[var(--primary-color)] shadow-2xl"
           src="/home-video.MP4"
           autoPlay
           muted
@@ -77,13 +78,10 @@ const Home = () => {
             </p>
           </div>
         </div>
-      </section>
+      </Section>
 
       {/* Por que escolher a Bonetto? */}
-      <section
-        id="section-2"
-        className="space-y-16 bg-[var(--secondary-color)] px-6 py-12 text-[var(--primary-color)]"
-      >
+      <Section variant="secondary">
         <article>
           <Article
             title="Por que escolher a Bonetto?"
@@ -102,14 +100,11 @@ const Home = () => {
             }
           />
         </article>
-      </section>
+      </Section>
 
       {/* Modelos Exclusivos */}
-      <section
-        id="section-2"
-        className="space-y-16 bg-[var(--secondary-color)] px-6 py-12 text-[var(--primary-color)]"
-      >
-        <article id="exclusive-models">
+      <Section variant="secondary" id="exclusive-models">
+        <article>
           <Article
             title="Modelos Exclusivos"
             description="Não é só um boné. É um veículo de conexão, lembrança e crescimento."
@@ -216,13 +211,10 @@ const Home = () => {
             }
           />
         </article>
-      </section>
+      </Section>
 
       {/* Soluções estratégicas */}
-      <section
-        id="section-2"
-        className="space-y-16 bg-[var(--secondary-color)] px-6 py-12 text-[var(--primary-color)]"
-      >
+      <Section variant="secondary">
         <article>
           <Article
             title="Soluções estratégicas"
@@ -273,16 +265,12 @@ const Home = () => {
             }
           />
         </article>
-      </section>
+      </Section>
 
       {/* Avaliações */}
-      <section
-        id="section-2"
-        className="space-y-16 bg-[var(--secondary-color)] px-6 py-12 text-[var(--primary-color)]"
-      >
+      <Section variant="secondary">
         <article>
           <Article
-            anchorPlacement="top-center"
             title="Avaliações dos nossos clientes"
             description="Outros clientes já avaliaram a Bonetto como a opção certa para tornar a sua marca mais forte."
             content={
@@ -311,16 +299,12 @@ const Home = () => {
             }
           />
         </article>
-      </section>
+      </Section>
 
       {/* FAQ */}
-      <section
-        id="section-2"
-        className="space-y-16 bg-[var(--secondary-color)] px-6 py-12 text-[var(--primary-color)]"
-      >
+      <Section variant="secondary">
         <article>
           <Article
-            anchorPlacement="top-center"
             title="Perguntas frequentes"
             description=""
             content={
@@ -366,10 +350,10 @@ const Home = () => {
             }
           />
         </article>
-      </section>
+      </Section>
 
       {/* <section></section> */}
-    </>
+    </div>
   );
 };
 
