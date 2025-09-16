@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import {
   Dialog,
@@ -15,13 +15,14 @@ import { Label } from "@/components/ui/label";
 import { useMask } from "@react-input/mask";
 import { toast } from "sonner";
 import validator from "validator";
+import { UserOutlined, MailOutlined, MobileOutlined } from "@ant-design/icons";
 
 import { MyButton } from "@/app/components/MyButton";
 
 const ContactForm = () => {
   const nameRef = useRef<HTMLInputElement>(null);
   const phoneRef = useMask({
-    mask: "+55 (__) _____-____",
+    mask: "55 (__) _____-____",
     replacement: { _: /\d/ },
     showMask: true,
     separate: true,
@@ -29,6 +30,17 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [dialogIsOpen, setDialogIsOpen] = useState(false);
   const emailIsValid = validator.isEmail(email);
+
+  useEffect(() => {
+    if (dialogIsOpen) {
+      // Remove o foco de qualquer elemento ativo
+      setTimeout(() => {
+        if (document.activeElement instanceof HTMLElement) {
+          document.activeElement.blur();
+        }
+      }, 100);
+    }
+  }, [dialogIsOpen]);
 
   function handleInvalidName() {
     toast.error("Por favor, informe seu nome corretamente!");
@@ -72,7 +84,10 @@ const ContactForm = () => {
 
     const phoneValue = phoneRef.current?.value?.trim() || "";
     const numbersOnly = phoneValue.replace(/\D/g, "");
-    if (!validator.isMobilePhone(numbersOnly, ["pt-BR"])) {
+    const phoneIsValid =
+      validator.isMobilePhone(numbersOnly, ["pt-BR"]) &&
+      numbersOnly.length === 13;
+    if (!phoneIsValid) {
       handleInvalidPhone();
       return;
     }
@@ -80,6 +95,11 @@ const ContactForm = () => {
     setEmail("");
     handleOpenDialog();
     toast.success("Seus dados foram enviados com sucesso!");
+  }
+
+  function handleFocusPhone(e: React.MouseEvent<HTMLInputElement>) {
+    const target = e.target as HTMLInputElement;
+    target.setSelectionRange(4, 4);
   }
 
   return (
@@ -124,7 +144,7 @@ const ContactForm = () => {
 
       {/* DIALOG FORM */}
       <Dialog open={dialogIsOpen} onOpenChange={handleOpenDialog}>
-        <DialogContent className="bg-[var(--secondary-color)] sm:max-w-[425px]">
+        <DialogContent className="bg-[var(--secondary-color)] duration-300 ease-out sm:max-w-[425px]">
           <form onSubmit={handleSubmitForm} noValidate className="space-y-8">
             <div>
               <DialogHeader>
@@ -142,37 +162,47 @@ const ContactForm = () => {
             <div className="space-y-4">
               <div className="space-y-1 text-[var(--primary-color)]">
                 <Label htmlFor="name">Nome</Label>
-                <Input
-                  ref={nameRef}
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Insira seu nome"
-                  className="font-extralight focus-visible:ring-1 focus-visible:ring-[var(--tertiary-color)]"
-                />
+                <div className="relative">
+                  <UserOutlined className="absolute top-[11px] left-2" />
+                  <Input
+                    ref={nameRef}
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Insira seu nome"
+                    className="pl-8 font-extralight focus-visible:ring-1 focus-visible:ring-[var(--tertiary-color)]"
+                  />
+                </div>
               </div>
 
               <div className="space-y-1 text-[var(--primary-color)]">
                 <Label htmlFor="email">E-mail</Label>
-                <Input
-                  readOnly
-                  id="email"
-                  name="email"
-                  type="email"
-                  className="font-extralight focus-visible:ring-1 focus-visible:ring-[var(--tertiary-color)]"
-                  value={email}
-                />
+                <div className="relative">
+                  <MailOutlined className="absolute top-[11px] left-2" />
+                  <Input
+                    readOnly
+                    id="email"
+                    name="email"
+                    type="email"
+                    className="pl-8 font-extralight focus-visible:ring-1 focus-visible:ring-[var(--tertiary-color)]"
+                    value={email}
+                  />
+                </div>
               </div>
 
               <div className="space-y-1 text-[var(--primary-color)]">
-                <Label htmlFor="phone">Telefone / Whatsapp</Label>
-                <Input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  className="font-extralight focus-visible:ring-1 focus-visible:ring-[var(--tertiary-color)]"
-                  ref={phoneRef}
-                />
+                <Label htmlFor="phone">Celular / Whatsapp</Label>
+                <div className="relative">
+                  <MobileOutlined className="absolute top-[11px] left-2" />
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    className="pl-8 font-extralight focus-visible:ring-1 focus-visible:ring-[var(--tertiary-color)]"
+                    ref={phoneRef}
+                    onClick={handleFocusPhone}
+                  />
+                </div>
               </div>
             </div>
 
