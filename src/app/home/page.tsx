@@ -59,7 +59,12 @@ const Home = () => {
               data-aos-easing="ease-out"
               data-aos-anchor-placement="center-bottom"
             >
-              <MyButton variant="primary" asChild className="mt-8">
+              <MyButton
+                variant="primary"
+                asChild
+                className="mt-8"
+                sectionToScroll="exclusive-models"
+              >
                 <Link href={"#exclusive-models"}>Conferir catálogo</Link>
               </MyButton>
             </div>
