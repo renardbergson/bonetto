@@ -120,7 +120,7 @@ const Home = () => {
                     Promocional
                   </h4>
                   <Image
-                    src={"/promotional.avif"}
+                    src={"/caps/promotional/01.avif"}
                     alt="Bonetto"
                     width={0}
                     height={0}
@@ -134,7 +134,7 @@ const Home = () => {
                     Trucker
                   </h4>
                   <Image
-                    src={"/trucker.jpg"}
+                    src={"/caps/trucker/01.jpg"}
                     alt="Bonetto"
                     width={0}
                     height={0}
@@ -148,7 +148,7 @@ const Home = () => {
                     Americano
                   </h4>
                   <Image
-                    src={"/american.avif"}
+                    src={"/caps/american/01.avif"}
                     alt="Bonetto"
                     width={0}
                     height={0}
@@ -162,7 +162,7 @@ const Home = () => {
                     6 gomos
                   </h4>
                   <Image
-                    src={"/six-buds.avif"}
+                    src={"/caps/six-buds/01.avif"}
                     alt="Bonetto"
                     width={0}
                     height={0}
@@ -176,7 +176,7 @@ const Home = () => {
                     Dad Hat
                   </h4>
                   <Image
-                    src={"/dad-hat.avif"}
+                    src={"/caps/dad-hat/01.avif"}
                     alt="Bonetto"
                     width={0}
                     height={0}
@@ -190,7 +190,7 @@ const Home = () => {
                     Bucket
                   </h4>
                   <Image
-                    src={"/bucket.avif"}
+                    src={"/caps/bucket/01.avif"}
                     alt="Bonetto"
                     width={0}
                     height={0}
@@ -204,7 +204,7 @@ const Home = () => {
                     Viseira Esportiva
                   </h4>
                   <Image
-                    src={"/headband.png"}
+                    src={"/caps/headband/01.png"}
                     alt="Bonetto"
                     width={0}
                     height={0}
