@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import { MyButton } from "../components/MyButton";
 import Image from "next/image";
 import Article from "./components/article";
 import Carousel from "./components/carousel";
@@ -8,9 +7,11 @@ import OpinionCart from "./components/opinion-cart";
 import Accordion from "./components/accordion";
 import Section from "../components/Section";
 
+import { MyButton } from "../components/MyButton";
+
 const Home = () => {
   return (
-    <div className="space-y-16 bg-[var(--secondary-color)] pb-16">
+    <div className="space-y-18 bg-[var(--secondary-color)] pb-16">
       <Section variant="primary" className="flex h-[calc(100vh-75px)] flex-col">
         <video
           className="mb-0 h-[22rem] w-full bg-[var(--primary-color)] shadow-2xl"
@@ -112,7 +113,7 @@ const Home = () => {
         <article>
           <Article
             title="Modelos Exclusivos"
-            description="Não é só um boné. É um veículo de conexão, lembrança e crescimento."
+            description="Aqui você encontra os melhores modelos de bonés para dar um toque único e exclusivo à sua marca. Não é só um boné. É um veículo de conexão, lembrança e crescimento."
             content={
               <Carousel
                 fade
@@ -120,10 +121,16 @@ const Home = () => {
                 animationSpeed={800}
                 id="caps-carousel"
               >
-                <Link href={"#"} className="mt-10 w-full">
+                <div className="relative flex flex-col items-center justify-center">
+                  <Link
+                    href={"#"}
+                    className="absolute top-[12%] block h-[80%] w-[80%]"
+                  />
+
                   <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
                     Promocional
                   </h4>
+
                   <Image
                     src={"/caps/promotional/01.avif"}
                     alt="Bonetto"
@@ -132,7 +139,7 @@ const Home = () => {
                     sizes="100vw"
                     className="h-auto w-full rounded-lg"
                   />
-                </Link>
+                </div>
 
                 <Link href={"#"} className="mt-10 w-full">
                   <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
@@ -282,7 +289,7 @@ const Home = () => {
         <article>
           <Article
             title="Avaliações dos nossos clientes"
-            description="Outros clientes já avaliaram a Bonetto como a opção certa para tornar a sua marca mais forte."
+            description="Outros clientes já avaliaram a Bonetto como a opção certa para tornar suas marcas mais fortes."
             content={
               <Carousel id="opinions-carousel" autoplaySpeed={8000}>
                 <OpinionCart

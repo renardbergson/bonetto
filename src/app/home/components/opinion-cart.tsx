@@ -28,7 +28,7 @@ const OpinionCart = ({
         <CardTitle className="font-extrabold">{title}</CardTitle>
       </CardHeader>
       <CardContent className="text-base font-extralight">
-        {description}
+        <p className="text-justify">{description}</p>
       </CardContent>
       <CardFooter className="justify-center">
         <div className="flex flex-col items-center">

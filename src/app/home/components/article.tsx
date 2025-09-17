@@ -12,8 +12,7 @@ const Article = ({
   anchorPlacement,
 }: ArticleProps) => {
   return (
-    <div className="space-y-6">
-      {/* Título - Primeira animação */}
+    <div className="space-y-7">
       <div
         data-aos="fade-up"
         data-aos-delay="0"
@@ -25,21 +24,17 @@ const Article = ({
         <h3 className="text-center text-2xl">{title}</h3>
       </div>
 
-      {/* Descrição - Segunda animação */}
-      {description && (
-        <p
-          data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-duration="300"
-          data-aos-anchor-placement={anchorPlacement || "top-bottom"}
-          data-aos-easing="ease-out"
-          className="mx-auto w-[80%] text-center text-base font-extralight"
-        >
-          {description}
-        </p>
-      )}
+      <p
+        data-aos="fade-up"
+        data-aos-delay="200"
+        data-aos-duration="300"
+        data-aos-anchor-placement={anchorPlacement || "top-bottom"}
+        data-aos-easing="ease-out"
+        className="mx-auto w-[80%] text-justify text-base font-extralight"
+      >
+        {description}
+      </p>
 
-      {/* Conteúdo - Terceira animação */}
       <div
         data-aos="fade-up"
         data-aos-delay="400"
