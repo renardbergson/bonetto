@@ -6,7 +6,7 @@
   --primary-color: #030708;
   --secondary-color: #f4e8d8;
   --tertiary-color: #282828;
-  --quaternary-color: #8e8e8e;
+  --quaternary-color: #848484b8;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
   --normal-text: var(--primary-color) !important;
 }
 
-/* slides controls */
+/* carousel controls */
 .slick-prev {
   color: var(--quaternary-color) !important;
 }
@@ -29,11 +29,21 @@ body {
   color: var(--quaternary-color) !important;
 }
 
-.slick-dots li {
+/* caps carousel */
+#caps-carousel .slick-prev,
+#caps-carousel .slick-next {
+  color: var(--quaternary-color) !important;
+}
+#caps-carousel .slick-dots li {
+  background: var(--quaternary-color) !important;
+}
+
+/* opinions carousel */
+#opinions-carousel .slick-dots li {
   border: 0.01px solid var(--quaternary-color) !important;
   background: #b5b5b597 !important;
 }
 
-.slick-dots li.slick-active::after {
+#opinions-carousel .slick-dots li.slick-active::after {
   background: var(--secondary-color) !important;
 }

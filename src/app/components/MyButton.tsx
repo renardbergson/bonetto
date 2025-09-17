@@ -22,10 +22,10 @@ const MyButton = ({
   sectionToScroll,
 }: MyButtonProps) => {
   function handleScrollToSection(e: React.MouseEvent) {
-    e.preventDefault();
-    const modelsSection = document.getElementById(sectionToScroll || "");
-    if (modelsSection) {
-      modelsSection.scrollIntoView({ behavior: "smooth" });
+    if (onClick) {
+      e.preventDefault();
+      const modelsSection = document.getElementById(sectionToScroll || "");
+      modelsSection?.scrollIntoView({ behavior: "smooth" });
     }
   }
 

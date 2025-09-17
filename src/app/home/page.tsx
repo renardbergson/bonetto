@@ -114,7 +114,12 @@ const Home = () => {
             title="Modelos Exclusivos"
             description="Não é só um boné. É um veículo de conexão, lembrança e crescimento."
             content={
-              <Carousel fade autoplaySpeed={3000}>
+              <Carousel
+                fade
+                autoplaySpeed={3000}
+                animationSpeed={800}
+                id="caps-carousel"
+              >
                 <Link href={"#"} className="mt-10 w-full">
                   <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
                     Promocional
@@ -279,7 +284,7 @@ const Home = () => {
             title="Avaliações dos nossos clientes"
             description="Outros clientes já avaliaram a Bonetto como a opção certa para tornar a sua marca mais forte."
             content={
-              <Carousel autoplaySpeed={8000}>
+              <Carousel id="opinions-carousel" autoplaySpeed={8000}>
                 <OpinionCart
                   title="Satisfeita!"
                   description="Superou minhas expectativas em qualidade e beleza. O atendimento ao cliente foi muito bom e a entrega foi bem rápida. Recomendo a todos!"

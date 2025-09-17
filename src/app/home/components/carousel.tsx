@@ -8,6 +8,7 @@ interface CarouselComponentProps {
   fade?: boolean;
   autoplaySpeed?: number;
   animationSpeed?: number;
+  id?: string;
 }
 
 const CarouselComponent = ({
@@ -15,8 +16,10 @@ const CarouselComponent = ({
   fade,
   autoplaySpeed,
   animationSpeed,
+  id,
 }: CarouselComponentProps) => (
   <Carousel
+    id={id}
     autoplay={{ dotDuration: true }}
     autoplaySpeed={autoplaySpeed}
     arrows
