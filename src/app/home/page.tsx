@@ -7,6 +7,7 @@ import OpinionCart from "./components/opinion-cart";
 import Accordion from "./components/accordion";
 import Section from "../components/Section";
 
+import CapLink from "./components/cap-link";
 import { MyButton } from "../components/MyButton";
 
 const Home = () => {
@@ -121,109 +122,54 @@ const Home = () => {
                 animationSpeed={800}
                 id="caps-carousel"
               >
-                <div className="relative flex flex-col items-center justify-center">
-                  <Link
-                    href={"#"}
-                    className="absolute top-[12%] block h-[80%] w-[80%]"
-                  />
+                <CapLink
+                  href={"#"}
+                  title="Promocional"
+                  src={"/caps/promotional/01.avif"}
+                  alt="Boné modelo promocional"
+                />
 
-                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
-                    Promocional
-                  </h4>
+                <CapLink
+                  href={"#"}
+                  title="Trucker"
+                  src={"/caps/trucker/01.jpg"}
+                  alt="Boné modelo trucker"
+                />
 
-                  <Image
-                    src={"/caps/promotional/01.avif"}
-                    alt="Bonetto"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="h-auto w-full rounded-lg"
-                  />
-                </div>
+                <CapLink
+                  href={"#"}
+                  title="Americano"
+                  src={"/caps/american/01.avif"}
+                  alt="Boné modelo americano"
+                />
 
-                <Link href={"#"} className="mt-10 w-full">
-                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
-                    Trucker
-                  </h4>
-                  <Image
-                    src={"/caps/trucker/01.jpg"}
-                    alt="Bonetto"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="h-auto w-full rounded-lg"
-                  />
-                </Link>
+                <CapLink
+                  href={"#"}
+                  title="6 gomos"
+                  src={"/caps/six-buds/01.avif"}
+                  alt="Boné modelo 6 gomos"
+                />
 
-                <Link href={"#"} className="mt-10 w-full">
-                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
-                    Americano
-                  </h4>
-                  <Image
-                    src={"/caps/american/01.avif"}
-                    alt="Bonetto"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="h-auto w-full rounded-lg"
-                  />
-                </Link>
+                <CapLink
+                  href={"#"}
+                  title="Dad Hat"
+                  src={"/caps/dad-hat/01.avif"}
+                  alt="Boné modelo dad hat"
+                />
 
-                <Link href={"#"} className="mt-10 w-full">
-                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
-                    6 gomos
-                  </h4>
-                  <Image
-                    src={"/caps/six-buds/01.avif"}
-                    alt="Bonetto"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="h-auto w-full rounded-lg"
-                  />
-                </Link>
+                <CapLink
+                  href={"#"}
+                  title="Bucket"
+                  src={"/caps/bucket/01.avif"}
+                  alt="Boné modelo bucket"
+                />
 
-                <Link href={"#"} className="mt-10 w-full">
-                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
-                    Dad Hat
-                  </h4>
-                  <Image
-                    src={"/caps/dad-hat/01.avif"}
-                    alt="Bonetto"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="h-auto w-full rounded-lg"
-                  />
-                </Link>
-
-                <Link href={"#"} className="mt-10 w-full">
-                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
-                    Bucket
-                  </h4>
-                  <Image
-                    src={"/caps/bucket/01.avif"}
-                    alt="Bonetto"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="h-auto w-full rounded-lg"
-                  />
-                </Link>
-
-                <Link href={"#"} className="mt-10 w-full">
-                  <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
-                    Viseira Esportiva
-                  </h4>
-                  <Image
-                    src={"/caps/headband/01.png"}
-                    alt="Bonetto"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    className="h-auto w-full rounded-lg"
-                  />
-                </Link>
+                <CapLink
+                  href={"#"}
+                  title="Viseira Esportiva"
+                  src={"/caps/headband/01.png"}
+                  alt="Boné modelo viseira esportiva"
+                />
               </Carousel>
             }
           />

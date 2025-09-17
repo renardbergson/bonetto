@@ -16,14 +16,14 @@ interface AccordionComponentProps {
 
 const AccordionComponent = ({ items }: AccordionComponentProps) => {
   return (
-    <Accordion className="ml-1" type="single" collapsible>
+    <Accordion className="mx-1" type="single" collapsible>
       {items.map((item, index) => (
         <AccordionItem key={index} value={`item-${index}`}>
           <AccordionTrigger className="text-base font-bold">
             {item.title}
           </AccordionTrigger>
           <AccordionContent className="text-base font-extralight">
-            {item.content}
+            <p className="text-justify">{item.content}</p>
           </AccordionContent>
         </AccordionItem>
       ))}
