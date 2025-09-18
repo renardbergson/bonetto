@@ -12,6 +12,7 @@ interface MyButtonProps {
   onClick?: (e: React.MouseEvent) => void;
   sectionToScroll?: string;
   callback?: () => void;
+  disabled?: boolean;
 }
 
 const MyButton = ({
@@ -24,6 +25,7 @@ const MyButton = ({
   onClick,
   sectionToScroll,
   callback,
+  disabled,
 }: MyButtonProps) => {
   function handleScrollToSection(e: React.MouseEvent) {
     if (sectionToScroll) {
@@ -48,6 +50,7 @@ const MyButton = ({
       asChild={asChild ?? false}
       type={type}
       onClick={onClick ?? handleScrollToSection}
+      disabled={disabled ?? false}
     >
       {children}
     </Button>

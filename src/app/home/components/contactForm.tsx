@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useTransition } from "react";
 
 import {
   Dialog,
@@ -16,6 +16,7 @@ import { useMask } from "@react-input/mask";
 import { toast } from "sonner";
 import validator from "validator";
 import { UserOutlined, MailOutlined, MobileOutlined } from "@ant-design/icons";
+import { Loader2Icon } from "lucide-react";
 
 import { MyButton } from "@/app/components/MyButton";
 
@@ -41,6 +42,8 @@ const ContactForm = () => {
       }, 100);
     }
   }, [dialogIsOpen]);
+
+  const [isPending, startTransition] = useTransition();
 
   function handleInvalidName() {
     toast.error("Por favor, informe seu nome corretamente!");
@@ -72,7 +75,7 @@ const ContactForm = () => {
     handleOpenDialog();
   }
 
-  async function handleSubmitForm(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmitForm(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     const nameValue = nameRef.current?.value?.trim() || "";
@@ -98,22 +101,29 @@ const ContactForm = () => {
       celular: phoneValue,
     };
 
-    const request = await fetch("/api/customers/subscribe", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(customerData),
-    });
-    const response = await request.json();
+    startTransition(async () => {
+      try {
+        const request = await fetch("/api/customers/subscribe", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(customerData),
+        });
 
-    if (response.statusCode === 200) {
-      setEmailValue("");
-      handleOpenDialog();
-      toast.success("Seus dados foram enviados com sucesso!");
-    } else {
-      toast.error("Desculpe, ocorreu um erro ao enviar seus dados!");
-    }
+        if (!request.ok) {
+          toast.error("Desculpe! Ocorreu um erro na requisição.");
+          throw new Error("Ocorreu um erro na requisição!");
+        }
+
+        setEmailValue("");
+        handleOpenDialog();
+        toast.success("Seus dados foram enviados com sucesso!");
+      } catch (error) {
+        console.error(`Erro ao processar dados do cliente: ${error}`);
+        toast.error("Desculpe! Ocorreu um erro ao enviar seus dados.");
+      }
+    });
   }
 
   function handleFocusPhone(e: React.MouseEvent<HTMLInputElement>) {
@@ -234,8 +244,10 @@ const ContactForm = () => {
                 style="primary"
                 variant="outline"
                 type="submit"
+                disabled={isPending}
               >
-                Enviar
+                {isPending && <Loader2Icon className="size-4 animate-spin" />}
+                {isPending ? "Enviando..." : "Enviar"}
               </MyButton>
             </DialogFooter>
           </form>
