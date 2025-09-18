@@ -152,7 +152,8 @@ const ContactForm = () => {
         </div>
 
         <MyButton
-          variant="primary"
+          style="primary"
+          variant="outline"
           asChild={false}
           className="mx-auto mt-4"
           type="submit"
@@ -226,7 +227,12 @@ const ContactForm = () => {
             </div>
 
             <DialogFooter className="mt-6 block text-center">
-              <MyButton asChild={false} variant="primary" type="submit">
+              <MyButton
+                asChild={false}
+                style="primary"
+                variant="outline"
+                type="submit"
+              >
                 Enviar
               </MyButton>
             </DialogFooter>
