@@ -16,7 +16,12 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Bonetto - Manifeste a sua identidade",
-  description: "Manifeste a sua identidade",
+  description: "A opção certa para tornar a sua marca mais forte.",
+  icons: {
+    icon: "/B.ico",
+    shortcut: "/B.ico",
+    apple: "/B.ico",
+  },
 };
 
 export default function RootLayout({
