@@ -27,9 +27,9 @@ const ContactForm = () => {
     showMask: true,
     separate: true,
   });
-  const [email, setEmail] = useState("");
+  const [emailValue, setEmailValue] = useState("");
   const [dialogIsOpen, setDialogIsOpen] = useState(false);
-  const emailIsValid = validator.isEmail(email);
+  const emailIsValid = validator.isEmail(emailValue);
 
   useEffect(() => {
     if (dialogIsOpen) {
@@ -72,7 +72,7 @@ const ContactForm = () => {
     handleOpenDialog();
   }
 
-  function handleSubmitForm(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmitForm(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     const nameValue = nameRef.current?.value?.trim() || "";
@@ -92,9 +92,28 @@ const ContactForm = () => {
       return;
     }
 
-    setEmail("");
-    handleOpenDialog();
-    toast.success("Seus dados foram enviados com sucesso!");
+    const customerData = {
+      nome: nameValue,
+      email: emailValue,
+      celular: phoneValue,
+    };
+
+    const request = await fetch("/api/customers/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(customerData),
+    });
+    const response = await request.json();
+
+    if (response.statusCode === 200) {
+      setEmailValue("");
+      handleOpenDialog();
+      toast.success("Seus dados foram enviados com sucesso!");
+    } else {
+      toast.error("Desculpe, ocorreu um erro ao enviar seus dados!");
+    }
   }
 
   function handleFocusPhone(e: React.MouseEvent<HTMLInputElement>) {
@@ -127,8 +146,8 @@ const ContactForm = () => {
             type="email"
             placeholder="Insira seu melhor e-mail"
             className="bg-[var(--secondary-color)] text-center text-base font-extralight text-[var(--primary-color)] focus-visible:ring-1 focus-visible:ring-[var(--secondary-color)]"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={emailValue}
+            onChange={(e) => setEmailValue(e.target.value)}
           />
         </div>
 
@@ -185,7 +204,7 @@ const ContactForm = () => {
                     name="email"
                     type="email"
                     className="pl-8 font-extralight focus-visible:ring-1 focus-visible:ring-[var(--tertiary-color)]"
-                    value={email}
+                    value={emailValue}
                   />
                 </div>
               </div>

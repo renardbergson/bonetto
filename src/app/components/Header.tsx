@@ -16,11 +16,12 @@ import { useState } from "react";
 import Link from "next/link";
 
 import Logo from "./Logo";
+import { MyButton } from "./MyButton";
 
 export const Header = () => {
   const [sheetIsOpen, setSheetIsOpen] = useState(false);
 
-  function handleMobileMenuClick() {
+  function handleMobileMenu() {
     setSheetIsOpen((prevState) => !prevState);
   }
 
@@ -32,7 +33,7 @@ export const Header = () => {
 
           <div className="flex-1"></div>
 
-          <button onClick={handleMobileMenuClick}>{<Menu />}</button>
+          <button onClick={handleMobileMenu}>{<Menu />}</button>
         </MenubarMenu>
       </Menubar>
 
@@ -44,35 +45,52 @@ export const Header = () => {
             </VisuallyHidden>
 
             <nav className="mt-12 p-4">
-              <div>
-                <Link href={"#"} rel="Home Page">
-                  <h1 className="text-lg font-bold">Página Inicial</h1>
+              <MyButton
+                onClick={handleMobileMenu}
+                variant="ghost"
+                style="primary"
+                asChild
+              >
+                <Link href={"/"} rel="Página Inicial" className="w-full pl-0">
+                  <h1 className="w-full text-lg font-bold">Página Inicial</h1>
                 </Link>
-              </div>
+              </MyButton>
 
               <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
 
-              <div>
-                <Link href={"#"} rel="Sobre Nós">
-                  <h1 className="text-lg font-bold">Categorias</h1>
+              <MyButton
+                variant="ghost"
+                style="primary"
+                asChild
+                sectionToScroll="exclusive-models"
+                callback={handleMobileMenu}
+              >
+                <Link
+                  href={"#exclusive-models"}
+                  rel="Categorias"
+                  className="w-full pl-0"
+                >
+                  <h1 className="w-full text-lg font-bold">Modelos</h1>
                 </Link>
-              </div>
+              </MyButton>
 
               <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
 
-              <div>
-                <Link href={"#"} rel="Sobre Nós">
-                  <h1 className="text-lg font-bold">Monte seu design</h1>
+              <MyButton
+                onClick={handleMobileMenu}
+                variant="ghost"
+                style="primary"
+                asChild
+              >
+                <Link
+                  href={`https://wa.me/${process.env.NEXT_PUBLIC_COMPANY_WHATSAPP_NUMBER}`}
+                  target="_blank"
+                  rel="Fale Conosco"
+                  className="w-full pl-0"
+                >
+                  <h1 className="w-full text-lg font-bold">Fale Conosco</h1>
                 </Link>
-              </div>
-
-              <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
-
-              <div>
-                <Link href={"#"} rel="Sobre Nós">
-                  <h1 className="text-lg font-bold">Fale Conosco</h1>
-                </Link>
-              </div>
+              </MyButton>
             </nav>
           </SheetHeader>
         </SheetContent>

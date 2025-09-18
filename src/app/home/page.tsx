@@ -44,11 +44,15 @@ const Home = () => {
               data-aos-anchor-placement="center-bottom"
             >
               <MyButton
-                variant="secondary"
+                style="secondary"
+                variant="outline"
                 asChild
                 className="animate-bounce delay-[3000ms]"
               >
-                <Link href={"https://wa.me/5584996247281"} target="_blank">
+                <Link
+                  href={`https://wa.me/${process.env.NEXT_PUBLIC_COMPANY_WHATSAPP_NUMBER}`}
+                  target="_blank"
+                >
                   Solicitar Orçamento
                 </Link>
               </MyButton>
@@ -62,7 +66,8 @@ const Home = () => {
               data-aos-anchor-placement="center-bottom"
             >
               <MyButton
-                variant="primary"
+                style="primary"
+                variant="outline"
                 asChild
                 className="mt-8"
                 sectionToScroll="exclusive-models"
@@ -314,8 +319,6 @@ const Home = () => {
           />
         </article>
       </Section>
-
-      {/* <section></section> */}
     </div>
   );
 };

@@ -65,7 +65,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            href="https://wa.me/5584996247281"
+            href={`https://wa.me/${process.env.NEXT_PUBLIC_COMPANY_WHATSAPP_NUMBER}`}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
