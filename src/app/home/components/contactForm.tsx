@@ -191,6 +191,7 @@ const ContactForm = () => {
                     type="text"
                     placeholder="Insira seu nome"
                     className="pl-8 font-extralight focus-visible:ring-1 focus-visible:ring-[var(--tertiary-color)]"
+                    autoComplete="nope"
                   />
                 </div>
               </div>
@@ -221,6 +222,7 @@ const ContactForm = () => {
                     className="pl-8 font-extralight focus-visible:ring-1 focus-visible:ring-[var(--tertiary-color)]"
                     ref={phoneRef}
                     onClick={handleFocusPhone}
+                    autoComplete="nope"
                   />
                 </div>
               </div>
