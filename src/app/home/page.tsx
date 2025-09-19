@@ -1,12 +1,12 @@
 import Link from "next/link";
-
 import Image from "next/image";
+
+import Animation from "./components/animation";
 import Article from "./components/article";
 import Carousel from "./components/carousel";
 import OpinionCart from "./components/opinion-cart";
 import Accordion from "./components/accordion";
 import Section from "../components/Section";
-
 import CapLink from "./components/cap-link";
 import { MyButton } from "../components/MyButton";
 
@@ -14,14 +14,7 @@ const Home = () => {
   return (
     <div className="space-y-18 bg-[var(--secondary-color)] pb-16">
       <Section variant="primary" className="flex h-[calc(100vh-75px)] flex-col">
-        <video
-          className="mb-0 h-[22rem] w-full bg-[var(--primary-color)] shadow-2xl"
-          src="/home-video.MP4"
-          autoPlay
-          muted
-          playsInline
-          preload="auto"
-        />
+        <Animation />
 
         <div className="mx-auto w-[70%] flex-1 space-y-10 p-4 text-center font-light text-[var(--secondary-color)]">
           <p
@@ -239,6 +232,7 @@ const Home = () => {
       <Section variant="secondary">
         <article>
           <Article
+            anchorPlacement="center-bottom"
             title="Avaliações dos nossos clientes"
             description="Outros clientes já avaliaram a Bonetto como a opção certa para tornar suas marcas mais fortes."
             content={
@@ -273,6 +267,7 @@ const Home = () => {
       <Section variant="secondary">
         <article>
           <Article
+            anchorPlacement="center-bottom"
             title="Perguntas frequentes"
             description=""
             content={
