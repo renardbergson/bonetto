@@ -11,7 +11,6 @@ const HomePageAnimationComponent = () => {
       autoplay
       alt="Homepage bonetto animation"
       loop={false}
-      muted
       playsInline
       className="mb-0 h-[22rem] w-full bg-[var(--primary-color)] shadow-2xl"
     />

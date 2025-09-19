@@ -232,7 +232,6 @@ const Home = () => {
       <Section variant="secondary">
         <article>
           <Article
-            anchorPlacement="center-bottom"
             title="Avaliações dos nossos clientes"
             description="Outros clientes já avaliaram a Bonetto como a opção certa para tornar suas marcas mais fortes."
             content={
@@ -267,7 +266,6 @@ const Home = () => {
       <Section variant="secondary">
         <article>
           <Article
-            anchorPlacement="center-bottom"
             title="Perguntas frequentes"
             description=""
             content={

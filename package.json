@@ -2,6 +2,9 @@
   "name": "bonetto",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
@@ -10,7 +13,6 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.1",
-    "@lottiefiles/dotlottie-react": "^0.17.1",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-dialog": "^1.1.15",

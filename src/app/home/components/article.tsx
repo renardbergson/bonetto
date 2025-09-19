@@ -15,7 +15,7 @@ const Article = ({
     <div className="space-y-7">
       <div
         data-aos="fade-up"
-        data-aos-delay="0"
+        data-aos-delay="200"
         data-aos-duration="300"
         data-aos-anchor-placement={anchorPlacement || "top-bottom"}
         data-aos-easing="ease-out"
@@ -26,7 +26,7 @@ const Article = ({
 
       <p
         data-aos="fade-up"
-        data-aos-delay="200"
+        data-aos-delay="400"
         data-aos-duration="300"
         data-aos-anchor-placement={anchorPlacement || "top-bottom"}
         data-aos-easing="ease-out"
@@ -37,7 +37,7 @@ const Article = ({
 
       <div
         data-aos="fade-up"
-        data-aos-delay="400"
+        data-aos-delay="600"
         data-aos-duration="300"
         data-aos-anchor-placement={anchorPlacement || "top-bottom"}
         data-aos-easing="ease-out"
