@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Logo = ({ className }: { className?: string }) => {
   return (
-    <div className={`flex items-center justify-between ${className}`}>
+    <div className={`flex items-center justify-center ${className}`}>
       <Image
         src={"/B.png"}
         alt="Logo"

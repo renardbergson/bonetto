@@ -136,17 +136,14 @@ const ContactForm = () => {
       {/* E-MAIL FORM */}
       <form
         id="contact-form"
-        className="mx-auto block w-[80%] space-y-3 text-center"
+        className="mx-auto block w-72 max-w-full space-y-3 text-center sm:w-80"
         onSubmit={handleSubmitEmail}
         noValidate
       >
         <div className="space-y-4">
           <div>
-            <p className="block text-base font-extralight text-[var(--secondary-color)]">
-              Precisa de um orçamento personalizado?
-            </p>
-
-            <p className="block text-base font-extralight text-[var(--secondary-color)]">
+            <p className="block text-sm font-extralight -tracking-tight text-[var(--secondary-color)] sm:text-base">
+              Precisa de um orçamento personalizado? <br />
               Nós entramos em contato com você!
             </p>
           </div>
@@ -155,7 +152,7 @@ const ContactForm = () => {
             id="contact-email"
             type="email"
             placeholder="Insira seu melhor e-mail"
-            className="bg-[var(--secondary-color)] text-center text-base font-extralight text-[var(--primary-color)] focus-visible:ring-1 focus-visible:ring-[var(--secondary-color)]"
+            className="inline-block w-64 bg-[var(--secondary-color)] text-center text-base font-extralight -tracking-tight text-[var(--primary-color)] focus-visible:ring-1 focus-visible:ring-[var(--secondary-color)] sm:w-72"
             value={emailValue}
             onChange={(e) => setEmailValue(e.target.value)}
           />
@@ -165,7 +162,7 @@ const ContactForm = () => {
           style="primary"
           variant="outline"
           asChild={false}
-          className="mx-auto mt-4"
+          className="mx-auto mt-4 text-sm -tracking-tight sm:text-base"
           type="submit"
         >
           <span>Enviar contato</span>

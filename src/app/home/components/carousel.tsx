@@ -1,49 +1,75 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import { CarouselApi } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
-import { Carousel } from "antd";
 interface CarouselComponentProps {
-  children: React.ReactNode[];
-  fade?: boolean;
-  autoplaySpeed: number;
-  animationSpeed?: number;
-  id?: string;
+  children?: React.ReactNode[];
+  delay?: number;
+  props?: React.HTMLAttributes<HTMLDivElement>;
+  className?: string;
 }
 
 const CarouselComponent = ({
   children,
-  fade,
-  autoplaySpeed,
-  animationSpeed,
-  id,
+  delay,
+  className,
+  ...props
 }: CarouselComponentProps) => {
-  const [slideIsPlaying, setSlideIsPlaying] = useState(true);
+  const [api, setApi] = useState<CarouselApi>();
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  function handleTouchStart() {
-    setSlideIsPlaying(false);
+  useEffect(() => {
+    if (api) {
+      function handleSlideChange(index: number) {
+        setCurrentSlide(index);
+      }
 
-    setTimeout(() => {
-      setSlideIsPlaying(true);
-    }, autoplaySpeed);
+      api.on("select", () => handleSlideChange(api.selectedScrollSnap()));
+    }
+  }, [api]);
+
+  function handleGoToSlide(index: number) {
+    api?.scrollTo(index);
+    setCurrentSlide(index);
   }
 
   return (
-    <div onTouchStart={handleTouchStart}>
-      <Carousel
-        id={id}
-        autoplay={slideIsPlaying ? { dotDuration: true } : false}
-        autoplaySpeed={autoplaySpeed}
-        arrows
-        adaptiveHeight
-        fade={fade || false}
-        speed={animationSpeed || 500}
-      >
-        {children.map((item, index) => (
-          <div key={index}>{item}</div>
+    <Carousel
+      className={className}
+      {...props}
+      plugins={[
+        Autoplay({
+          delay: delay || 3000,
+          stopOnInteraction: true,
+        }),
+      ]}
+      setApi={setApi}
+    >
+      <CarouselContent className="-ml-6">
+        {children?.map((item, index) => (
+          <CarouselItem className="pl-6 sm:basis-2/3" key={index}>
+            {item}
+          </CarouselItem>
         ))}
-      </Carousel>
-    </div>
+      </CarouselContent>
+
+      <div className="mt-5 flex justify-center gap-2">
+        {children?.map((_, index) => (
+          <div
+            key={index}
+            className={`h-2 w-2 cursor-pointer rounded-full border-1 border-[var(--primary-color)] ${currentSlide === index && "bg-[var(--primary-color)]"}`}
+            onClick={() => handleGoToSlide(index)}
+          ></div>
+        ))}
+      </div>
+    </Carousel>
   );
 };
 

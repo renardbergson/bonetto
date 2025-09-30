@@ -15,15 +15,15 @@ const Footer = () => {
   return (
     <footer className="space-y-20 bg-[var(--primary-color)] px-6 py-12 text-[var(--secondary-color)]">
       <div className="text-center">
-        <Logo className="mx-auto w-[35%]" />
+        <Logo className="mx-auto" />
 
-        <p className="mx-auto block w-[60%] text-center text-base font-extralight">
-          Bonés personalizados que elevam sua identidade visual.
+        <p className="mx-auto block w-[60%] text-center text-sm leading-6 font-extralight -tracking-tight sm:text-base">
+          Bonés personalizados que <br /> elevam sua identidade visual.
         </p>
       </div>
 
       <div className="space-y-4">
-        <p className="block text-center text-base font-extralight">
+        <p className="block text-center text-sm font-extralight -tracking-tight sm:text-base">
           Estamos nas principais redes sociais!
         </p>
 
@@ -77,18 +77,18 @@ const Footer = () => {
 
       <div className="flex justify-center gap-4">
         <MailOutlined className="text-1xl" />
-        <p className="text-base font-extralight tracking-widest">
+        <p className="text-sm font-extralight tracking-widest sm:text-base">
           bonettocustomcaps@gmail.com
         </p>
       </div>
 
       <ContactForm />
 
-      <div className="text-center">
-        <p className="text-base font-extralight">
+      <div className="text-center text-sm -tracking-tight sm:text-base">
+        <p className="font-extralight">
           © 2025. Todos os direitos reservados.
         </p>
-        <p className="text-base font-extralight">CNPJ: 62.420.184/0001-04</p>
+        <p className="font-extralight">CNPJ: 62.420.184/0001-04</p>
       </div>
     </footer>
   );
