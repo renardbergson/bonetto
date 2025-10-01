@@ -6,18 +6,18 @@ import Image from "next/image";
 
 import ImageSkeleton from "./skeleton";
 
-interface CapLinkComponentProps {
+interface CarouselCapItemProps {
   href: string;
   title: string;
   src: string;
   alt: string;
 }
 
-const CapLinkComponent = ({
+const CarouselCapItemComponent = ({
   /* href, */ title,
   src,
   alt,
-}: CapLinkComponentProps) => {
+}: CarouselCapItemProps) => {
   const [imageIsLoading, setImageIsLoading] = useState(true);
 
   useEffect(() => {
@@ -60,4 +60,4 @@ const CapLinkComponent = ({
   );
 };
 
-export default CapLinkComponent;
+export default CarouselCapItemComponent;

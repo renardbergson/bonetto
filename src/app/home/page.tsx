@@ -8,7 +8,8 @@ import Carousel from "./components/carousel";
 import OpinionCart from "./components/opinion-cart";
 import Accordion from "./components/accordion";
 import Section from "../components/Section";
-import CapLink from "./components/cap-link";
+import CarouselCapItem from "./components/carousel-cap-item";
+import CapModelSticker from "./components/cap-model-sticker";
 import { MyButton } from "../components/MyButton";
 
 const Home = () => {
@@ -30,7 +31,7 @@ const Home = () => {
       >
         <Animation />
 
-        <div className="mx-auto flex w-[75%] flex-1 flex-col justify-between px-6 py-8 text-center font-light text-[var(--secondary-color)] sm:w-[55%] sm:py-12 lg:w-[50%] xl:w-[45%] xl:py-16">
+        <div className="mx-auto flex w-full flex-1 flex-col justify-between px-6 py-8 text-center font-light text-[var(--secondary-color)] xl:py-16">
           <p
             data-aos="fade-down"
             data-aos-delay="300"
@@ -171,49 +172,49 @@ const Home = () => {
           </div>
 
           <Carousel className="mt-8" {...aosParams}>
-            <CapLink
+            <CarouselCapItem
               href={"#"}
               title="Promocional"
               src={"/caps/promotional/01.avif"}
               alt="Boné modelo promocional"
             />
 
-            <CapLink
+            <CarouselCapItem
               href={"#"}
               title="Trucker"
               src={"/caps/trucker/01.jpg"}
               alt="Boné modelo trucker"
             />
 
-            <CapLink
+            <CarouselCapItem
               href={"#"}
               title="Americano"
               src={"/caps/american/01.avif"}
               alt="Boné modelo americano"
             />
 
-            <CapLink
+            <CarouselCapItem
               href={"#"}
               title="6 gomos"
               src={"/caps/six-buds/01.avif"}
               alt="Boné modelo 6 gomos"
             />
 
-            <CapLink
+            <CarouselCapItem
               href={"#"}
               title="Dad Hat"
               src={"/caps/dad-hat/01.avif"}
               alt="Boné modelo dad hat"
             />
 
-            <CapLink
+            <CarouselCapItem
               href={"#"}
               title="Bucket"
               src={"/caps/bucket/01.avif"}
               alt="Boné modelo bucket"
             />
 
-            <CapLink
+            <CarouselCapItem
               href={"#"}
               title="Viseira Esportiva"
               src={"/caps/headband/01.png"}
@@ -233,123 +234,55 @@ const Home = () => {
 
           <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-16">
             {/* Bordado */}
-            <div {...aosParams}>
-              <Image
-                src={"/front-logos/bordado.png"}
-                alt="Bonetto"
-                width={150}
-                height={150}
-                className="mx-auto rounded-lg object-cover shadow-md shadow-black/30"
-              />
-              <div className="relative mx-auto mt-4 w-32">
-                <div className="absolute z-0 h-full w-full bg-[var(--primary-color)] blur-md" />
-                <h4 className="relative mt-2 py-1 text-center font-extrabold text-[var(--secondary-color)]">
-                  Bordado
-                </h4>
-              </div>
-            </div>
+            <CapModelSticker
+              {...aosParams}
+              title="Bordado"
+              src="/front-logos/bordado.png"
+            />
 
             {/* Silk 3D */}
-            <div {...aosParams} data-aos-delay="400">
-              <Image
-                src={"/front-logos/silk-3d.png"}
-                alt="Bonetto"
-                width={150}
-                height={150}
-                className="mx-auto rounded-lg object-cover shadow-md shadow-black/30"
-              />
-              <div className="relative mx-auto mt-4 w-32">
-                <div className="absolute z-0 h-full w-full bg-[var(--primary-color)] blur-md" />
-                <h4 className="relative mt-2 py-1 text-center font-extrabold text-[var(--secondary-color)]">
-                  Silk 3D
-                </h4>
-              </div>
-            </div>
+            <CapModelSticker
+              {...aosParams}
+              title="Silk 3D"
+              src="/front-logos/silk-3d.png"
+            />
 
             {/* Aplique à laser */}
-            <div {...aosParams} data-aos-delay="500">
-              <Image
-                src={"/front-logos/aplique-a-laser.png"}
-                alt="Bonetto"
-                width={150}
-                height={150}
-                className="mx-auto rounded-lg object-cover shadow-md shadow-black/30"
-              />
-              <div className="relative mx-auto mt-4 w-40">
-                <div className="absolute z-0 h-full w-full bg-[var(--primary-color)] blur-md" />
-                <h4 className="relative mt-2 py-1 text-center font-extrabold text-[var(--secondary-color)]">
-                  Aplique à laser
-                </h4>
-              </div>
-            </div>
+            <CapModelSticker
+              {...aosParams}
+              title="Aplique à laser"
+              src="/front-logos/aplique-a-laser.png"
+              textWidth="w-40"
+            />
 
             {/* Aplique 3D */}
-            <div {...aosParams} data-aos-delay="600">
-              <Image
-                src={"/front-logos/aplique-3d.png"}
-                alt="Bonetto"
-                width={150}
-                height={150}
-                className="mx-auto rounded-lg object-cover shadow-md shadow-black/30"
-              />
-              <div className="relative mx-auto mt-4 w-32">
-                <div className="absolute z-0 h-full w-full bg-[var(--primary-color)] blur-md" />
-                <h4 className="relative mt-2 py-1 text-center font-extrabold text-[var(--secondary-color)]">
-                  Aplique 3D
-                </h4>
-              </div>
-            </div>
+            <CapModelSticker
+              {...aosParams}
+              title="Aplique 3D"
+              src="/front-logos/aplique-3d.png"
+            />
 
             {/* Sublimado */}
-            <div {...aosParams} data-aos-delay="700">
-              <Image
-                src={"/front-logos/sublimado.png"}
-                alt="Bonetto"
-                width={150}
-                height={150}
-                className="mx-auto rounded-lg object-cover shadow-md shadow-black/30"
-              />
-              <div className="relative mx-auto mt-4 w-32">
-                <div className="absolute z-0 h-full w-full bg-[var(--primary-color)] blur-md" />
-                <h4 className="relative mt-2 py-1 text-center font-extrabold text-[var(--secondary-color)]">
-                  Sublimado
-                </h4>
-              </div>
-            </div>
+            <CapModelSticker
+              {...aosParams}
+              title="Sublimado"
+              src="/front-logos/sublimado.png"
+            />
 
             {/* Sublimação */}
-            <div {...aosParams} data-aos-delay="800">
-              <Image
-                src={"/front-logos/sublimacao.png"}
-                alt="Bonetto"
-                width={150}
-                height={150}
-                className="mx-auto rounded-lg object-cover shadow-md shadow-black/30"
-              />
-              <div className="relative mx-auto mt-4 w-32">
-                <div className="absolute z-0 h-full w-full bg-[var(--primary-color)] blur-md" />
-                <h4 className="relative mt-2 py-1 text-center font-extrabold text-[var(--secondary-color)]">
-                  Sublimação
-                </h4>
-              </div>
-            </div>
+            <CapModelSticker
+              {...aosParams}
+              title="Sublimação"
+              src="/front-logos/sublimacao.png"
+            />
 
             {/* DTF */}
-            <div {...aosParams} data-aos-delay="800">
-              <Image
-                src={"/front-logos/dtf.png"}
-                alt="Bonetto"
-                width={150}
-                height={150}
-                className="mx-auto rounded-lg object-cover shadow-md shadow-black/30"
-              />
-              <div className="relative mx-auto mt-4 w-20">
-                <div className="absolute z-0 h-full w-full bg-[var(--primary-color)] blur-md" />
-                <h4 className="relative mt-2 py-1 text-center font-extrabold text-[var(--secondary-color)]">
-                  DTF
-                </h4>
-              </div>
-            </div>
+            <CapModelSticker
+              {...aosParams}
+              title="DTF"
+              src="/front-logos/dtf.png"
+              textWidth="w-20"
+            />
           </div>
         </article>
       </Section>
