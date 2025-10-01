@@ -8,19 +8,19 @@ import {
 } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-interface OpinionCartProps {
+interface OpinionCardProps {
   title: string;
   description: string;
   imageSrc: string;
   name: string;
 }
 
-const OpinionCart = ({
+const OpinionCardComponent = ({
   title,
   description,
   imageSrc,
   name,
-}: OpinionCartProps) => {
+}: OpinionCardProps) => {
   return (
     <Card className="m-0.5 grid h-[375px] items-center border-transparent shadow-sm shadow-black/30">
       <CardHeader className="text-center">
@@ -43,4 +43,4 @@ const OpinionCart = ({
   );
 };
 
-export default OpinionCart;
+export default OpinionCardComponent;

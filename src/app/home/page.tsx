@@ -5,11 +5,11 @@ import { ChevronDown } from "lucide-react";
 import TitleComponent from "./components/sectionTitle";
 import Animation from "./components/animation";
 import Carousel from "./components/carousel";
-import OpinionCart from "./components/opinion-cart";
+import OpinionCard from "./components/opinion-card";
 import Accordion from "./components/accordion";
 import Section from "../components/Section";
 import CarouselCapItem from "./components/carousel-cap-item";
-import CapModelSticker from "./components/cap-model-sticker";
+import CapDetailSticker from "./components/cap-detail-sticker";
 import { MyButton } from "../components/MyButton";
 
 const Home = () => {
@@ -158,7 +158,7 @@ const Home = () => {
         </article>
       </Section>
 
-      {/* Modelos Exclusivos */}
+      {/* Modelos exclusivos */}
       <Section variant="secondary" id="exclusive-models">
         <article className="m-6">
           <TitleComponent title="Modelos Exclusivos" {...aosParams} />
@@ -224,70 +224,182 @@ const Home = () => {
         </article>
       </Section>
 
-      {/* Aplicação Frontal */}
+      {/* Aplicação frontal */}
       <Section variant="secondary">
         <article className="m-6">
           <TitleComponent
-            title="Escolha Sua Aplicação Frontal"
             {...aosParams}
+            title="Escolha Sua Aplicação Frontal"
           />
 
           <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-16">
             {/* Bordado */}
-            <CapModelSticker
+            <CapDetailSticker
               {...aosParams}
               title="Bordado"
               src="/front-logos/bordado.png"
+              textWidth="w-22"
             />
 
             {/* Silk 3D */}
-            <CapModelSticker
+            <CapDetailSticker
               {...aosParams}
               title="Silk 3D"
               src="/front-logos/silk-3d.png"
+              textWidth="w-20"
             />
 
             {/* Aplique à laser */}
-            <CapModelSticker
+            <CapDetailSticker
               {...aosParams}
               title="Aplique à laser"
               src="/front-logos/aplique-a-laser.png"
-              textWidth="w-40"
+              textWidth="w-34"
             />
 
             {/* Aplique 3D */}
-            <CapModelSticker
+            <CapDetailSticker
               {...aosParams}
               title="Aplique 3D"
               src="/front-logos/aplique-3d.png"
+              textWidth="w-28"
             />
 
             {/* Sublimado */}
-            <CapModelSticker
+            <CapDetailSticker
               {...aosParams}
               title="Sublimado"
               src="/front-logos/sublimado.png"
+              textWidth="w-28"
             />
 
             {/* Sublimação */}
-            <CapModelSticker
+            <CapDetailSticker
               {...aosParams}
               title="Sublimação"
               src="/front-logos/sublimacao.png"
+              textWidth="w-28"
             />
 
             {/* DTF */}
-            <CapModelSticker
+            <CapDetailSticker
               {...aosParams}
               title="DTF"
               src="/front-logos/dtf.png"
-              textWidth="w-20"
+              textWidth="w-14"
             />
           </div>
         </article>
       </Section>
 
-      {/* Prazos e Tarifas */}
+      {/* Aplicação Lateral */}
+      <Section variant="secondary">
+        <article className="m-6">
+          <TitleComponent
+            {...aosParams}
+            title="Escolha Sua Aplicação Lateral"
+          />
+
+          <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-16">
+            {/* Aplique à laser */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Aplique à laser"
+              src="/side-logos/aplique-a-laser.png"
+              textWidth="w-36"
+            />
+
+            {/* Bordado ou silk */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Bordado ou silk"
+              src="/side-logos/bordado-ou-silk.png"
+              textWidth="w-36"
+            />
+
+            {/* Aba sanduíche */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Aba Sanduíche"
+              src="/side-logos/aba-sanduiche.png"
+              textWidth="w-36"
+            />
+
+            {/* Aplique 3D */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Aplique 3D"
+              src="/side-logos/aplique-3d.png"
+              textWidth="w-30"
+            />
+          </div>
+        </article>
+      </Section>
+
+      {/* Customize e surpreenda */}
+      <Section variant="secondary">
+        <article className="m-6">
+          <TitleComponent {...aosParams} title="Customize e Surpreenda" />
+
+          <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-16">
+            {/* Ilhós */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Ilhós"
+              src="/front-logos/ilhos.png"
+              textWidth="w-16"
+            />
+
+            {/* Viés personalizado */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Viés Personalizado"
+              src="/customization/vies-personalizado.png"
+              textWidth="w-40"
+            />
+
+            {/* Forro estampado */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Forro Estampado"
+              src="/customization/forro-estampado.png"
+              textWidth="w-40"
+            />
+
+            {/* Fivela metálica */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Fivela Metálica"
+              src="/customization/fivela-metalica.png"
+            />
+
+            {/* Furos à laser */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Furos à Laser"
+              src="/customization/furos-a-laser.png"
+            />
+
+            {/* Costura na aba */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Costura na Aba"
+              src="/customization/costura-na-aba.png"
+              textWidth="w-34"
+            />
+
+            {/* Etiqueta */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Etiqueta"
+              src="/customization/etiqueta.png"
+              textWidth="w-22"
+            />
+          </div>
+        </article>
+      </Section>
+
+      {/* Prazos e tarifas */}
       <Section variant="secondary">
         <article className="m-6">
           <TitleComponent title="Prazos Diferenciados" {...aosParams} />
@@ -526,21 +638,21 @@ const Home = () => {
           </div>
 
           <Carousel {...aosParams} delay={6000} className="mt-8">
-            <OpinionCart
+            <OpinionCard
               title="Satisfeita!"
               description="Superou minhas expectativas em qualidade e beleza. O atendimento ao cliente foi muito bom e a entrega foi bem rápida. Recomendo a todos!"
               imageSrc="/avatar-1.avif"
               name="Claryssa Cínthia"
             />
 
-            <OpinionCart
+            <OpinionCard
               title="Top demais!"
               description="Personalização de qualidade, o bordado ficou exatamente como eu pedi e o mais importante: meus clientes elogiaram a qualidade do boné. A Bonetto entrega mais que um produto, entrega presença."
               imageSrc="/avatar-2.avif"
               name="Ricardo Soares Azevedo"
             />
 
-            <OpinionCart
+            <OpinionCard
               title="Recomendo!"
               description="Os bonés ficaram incríveis! Ótima qualidade e design, estou satisfeito com o resultado."
               imageSrc="/avatar-3.avif"
