@@ -29,7 +29,7 @@ const Home = () => {
         className="relative flex h-[calc(100vh-75px)] flex-col"
       >
         {/* Background */}
-        <div className="absolute right-0 h-full w-[20.5rem] bg-[url(/background/home-background.png)] bg-contain bg-fixed bg-right bg-no-repeat opacity-50" />
+        <div className="absolute right-0 h-full w-[20.5rem] bg-[url(/background/home-background.png)] bg-cover bg-right bg-no-repeat opacity-50 lg:bg-contain lg:bg-fixed" />
 
         {/* Carimbo */}
         <Image
@@ -115,7 +115,7 @@ const Home = () => {
           <div
             data-aos="fade-down"
             data-aos-delay="2000"
-            data-aos-duration="800"
+            data-aos-duration="500"
             data-aos-easing="ease-out"
             data-aos-anchor-placement="center-bottom"
             className="mx-auto animate-bounce delay-3000"
