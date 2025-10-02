@@ -67,6 +67,7 @@ export const Header = () => {
                   style="primary"
                   asChild
                   sectionToScroll="exclusive-models"
+                  callback={handleMobileMenu}
                 >
                   <Link
                     href={"#exclusive-models"}
