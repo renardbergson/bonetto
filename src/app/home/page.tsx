@@ -3,7 +3,6 @@ import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 
 import TitleComponent from "./components/sectionTitle";
-import Animation from "./components/animation";
 import Carousel from "./components/carousel";
 import OpinionCard from "./components/opinion-card";
 import Accordion from "./components/accordion";
@@ -27,18 +26,29 @@ const Home = () => {
       <Section
         id="welcome-section"
         variant="primary"
-        className="flex h-[calc(100vh-75px)] flex-col"
+        className="relative flex h-[calc(100vh-75px)] flex-col"
       >
-        <Animation />
+        {/* Background */}
+        <div className="absolute right-0 h-full w-[20.5rem] bg-[url(/background/home-background.png)] bg-contain bg-fixed bg-right bg-no-repeat opacity-50" />
 
-        <div className="mx-auto flex w-full flex-1 flex-col justify-between px-6 py-8 text-center font-light text-[var(--secondary-color)] xl:py-16">
+        {/* Carimbo */}
+        <Image
+          src="/background/carimbo.png"
+          alt="Carimbo de Qualidade"
+          width={100}
+          height={100}
+          className="absolute top-48 left-6 opacity-50"
+        />
+
+        {/* Texto e botões */}
+        <div className="z-10 mx-auto mt-[21rem] flex w-full flex-1 flex-col justify-between px-6 py-8 text-center font-light text-[var(--secondary-color)] xl:py-16">
           <p
             data-aos="fade-down"
             data-aos-delay="300"
             data-aos-duration="1000"
             data-aos-easing="ease-out"
             data-aos-anchor-placement="center-bottom"
-            className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl"
+            className="text-lg text-shadow-[1px_1px_var(--primary-color)] sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl"
           >
             Sua marca merece mais que um <br /> boné, ela merece um{" "}
             <span className="font-extrabold">
