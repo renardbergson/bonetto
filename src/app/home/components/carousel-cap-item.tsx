@@ -52,6 +52,7 @@ const CarouselCapItemComponent = ({
           alt={alt}
           width={0}
           height={0}
+          loading="lazy"
           sizes="100vw"
           className={`${imageIsLoading ? "!hidden" : ""} h-auto w-full rounded-lg`}
         />

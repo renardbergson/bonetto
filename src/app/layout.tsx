@@ -31,10 +31,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="h-screen scroll-smooth">
-      <head>
-        <link rel="preload" as="image" href="/background/home-background.png" />
-        <link rel="preload" as="image" href="/background/carimbo.png" />
-      </head>
       <body
         className={`${poppins.variable} flex min-h-screen flex-col antialiased`}
       >

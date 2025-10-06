@@ -29,26 +29,26 @@ const Home = () => {
         className="relative flex h-[calc(100vh-75px)] flex-col"
       >
         {/* Background */}
-        <div className="absolute right-0 h-full w-[20.5rem] bg-[url(/background/home-background.png)] bg-cover bg-right bg-no-repeat opacity-50 lg:bg-contain lg:bg-fixed" />
+        <div className="absolute right-0 h-full w-full bg-[url(/background/home-background.webp)] bg-contain bg-right-bottom bg-no-repeat opacity-45 lg:bg-contain lg:bg-fixed" />
 
         {/* Carimbo */}
         <Image
-          src="/background/carimbo.png"
+          src="/background/carimbo.webp"
           alt="Carimbo de Qualidade"
-          width={100}
-          height={100}
-          className="absolute top-48 left-6 opacity-50"
+          width={80}
+          height={80}
+          className="absolute top-56 left-8 opacity-45"
         />
 
         {/* Texto e botões */}
-        <div className="z-10 mx-auto mt-[21rem] flex w-full flex-1 flex-col justify-between px-6 py-8 text-center font-light text-[var(--secondary-color)] xl:py-16">
+        <div className="z-10 mx-auto mt-[20rem] flex w-full flex-1 flex-col justify-between px-6 py-8 text-center font-light text-[var(--secondary-color)] xl:py-16">
           <p
             data-aos="fade-down"
             data-aos-delay="300"
             data-aos-duration="1000"
             data-aos-easing="ease-out"
             data-aos-anchor-placement="center-bottom"
-            className="text-lg text-shadow-[1px_1px_var(--primary-color)] sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl"
+            className="text-lg text-shadow-[2px_2px_var(--primary-color)] sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl"
           >
             Sua marca merece mais que um <br /> boné, ela merece um{" "}
             <span className="font-extrabold">
@@ -159,11 +159,12 @@ const Home = () => {
           <Image
             {...aosParams}
             data-aos-delay="500"
-            src={"/whi-bonetto.avif"}
+            src={"/bonetto-1.png"}
+            loading="lazy"
             alt="Bonetto"
             width={0}
             height={0}
-            className="mt-8 h-80 w-full rounded-lg object-cover shadow-md shadow-black/30"
+            className="mt-8 h-[26rem] w-full rounded-lg object-cover shadow-md shadow-black/30"
           />
         </article>
       </Section>
@@ -199,383 +200,38 @@ const Home = () => {
             <CarouselCapItem
               href={"#"}
               title="Americano"
-              src={"/caps/american/01.avif"}
+              src={"/caps/american/01.webp"}
               alt="Boné modelo americano"
             />
 
             <CarouselCapItem
               href={"#"}
               title="6 gomos"
-              src={"/caps/six-buds/01.avif"}
+              src={"/caps/six-buds/01.webp"}
               alt="Boné modelo 6 gomos"
             />
 
             <CarouselCapItem
               href={"#"}
               title="Dad Hat"
-              src={"/caps/dad-hat/01.avif"}
+              src={"/caps/dad-hat/01.webp"}
               alt="Boné modelo dad hat"
             />
 
             <CarouselCapItem
               href={"#"}
               title="Bucket"
-              src={"/caps/bucket/01.avif"}
+              src={"/caps/bucket/01.webp"}
               alt="Boné modelo bucket"
             />
 
             <CarouselCapItem
               href={"#"}
               title="Viseira Esportiva"
-              src={"/caps/headband/01.png"}
+              src={"/caps/headband/01.webp"}
               alt="Boné modelo viseira esportiva"
             />
           </Carousel>
-        </article>
-      </Section>
-
-      {/* Aplicação frontal */}
-      <Section variant="secondary">
-        <article className="m-6">
-          <TitleComponent
-            {...aosParams}
-            title="Escolha Sua Aplicação Frontal"
-          />
-
-          <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-16">
-            {/* Bordado */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Bordado"
-              src="/front-logos/bordado.png"
-              textWidth="w-22"
-            />
-
-            {/* Silk 3D */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Silk 3D"
-              src="/front-logos/silk-3d.png"
-              textWidth="w-20"
-            />
-
-            {/* Aplique à laser */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Aplique à laser"
-              src="/front-logos/aplique-a-laser.png"
-              textWidth="w-34"
-            />
-
-            {/* Aplique 3D */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Aplique 3D"
-              src="/front-logos/aplique-3d.png"
-              textWidth="w-28"
-            />
-
-            {/* Sublimado */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Sublimado"
-              src="/front-logos/sublimado.png"
-              textWidth="w-28"
-            />
-
-            {/* Sublimação */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Sublimação"
-              src="/front-logos/sublimacao.png"
-              textWidth="w-28"
-            />
-
-            {/* DTF */}
-            <CapDetailSticker
-              {...aosParams}
-              title="DTF"
-              src="/front-logos/dtf.png"
-              textWidth="w-14"
-            />
-          </div>
-        </article>
-      </Section>
-
-      {/* Aplicação Lateral */}
-      <Section variant="secondary">
-        <article className="m-6">
-          <TitleComponent
-            {...aosParams}
-            title="Escolha Sua Aplicação Lateral"
-          />
-
-          <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-16">
-            {/* Aplique à laser */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Aplique à laser"
-              src="/side-logos/aplique-a-laser.png"
-              textWidth="w-36"
-            />
-
-            {/* Bordado ou silk */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Bordado ou silk"
-              src="/side-logos/bordado-ou-silk.png"
-              textWidth="w-36"
-            />
-
-            {/* Aba sanduíche */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Aba Sanduíche"
-              src="/side-logos/aba-sanduiche.png"
-              textWidth="w-36"
-            />
-
-            {/* Aplique 3D */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Aplique 3D"
-              src="/side-logos/aplique-3d.png"
-              textWidth="w-30"
-            />
-          </div>
-        </article>
-      </Section>
-
-      {/* Customize e surpreenda */}
-      <Section variant="secondary">
-        <article className="m-6">
-          <TitleComponent {...aosParams} title="Customize e Surpreenda" />
-
-          <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-16">
-            {/* Ilhós */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Ilhós"
-              src="/front-logos/ilhos.png"
-              textWidth="w-16"
-            />
-
-            {/* Viés personalizado */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Viés Personalizado"
-              src="/customization/vies-personalizado.png"
-              textWidth="w-40"
-            />
-
-            {/* Forro estampado */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Forro Estampado"
-              src="/customization/forro-estampado.png"
-              textWidth="w-40"
-            />
-
-            {/* Fivela metálica */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Fivela Metálica"
-              src="/customization/fivela-metalica.png"
-            />
-
-            {/* Furos à laser */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Furos à Laser"
-              src="/customization/furos-a-laser.png"
-            />
-
-            {/* Costura na aba */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Costura na Aba"
-              src="/customization/costura-na-aba.png"
-              textWidth="w-34"
-            />
-
-            {/* Etiqueta */}
-            <CapDetailSticker
-              {...aosParams}
-              title="Etiqueta"
-              src="/customization/etiqueta.png"
-              textWidth="w-22"
-            />
-          </div>
-        </article>
-      </Section>
-
-      {/* Prazos e tarifas */}
-      <Section variant="secondary">
-        <article className="m-6">
-          <TitleComponent title="Prazos Diferenciados" {...aosParams} />
-
-          <div className="space-y-14">
-            {/* Prazo Turbo */}
-            <div className="mt-8 flex items-center gap-10">
-              <Image
-                {...aosParams}
-                data-aos-delay="500"
-                src={"/sticks/watch.png"}
-                alt="Bonetto"
-                width={100}
-                height={100}
-              />
-
-              <div {...aosParams}>
-                <h3 className="mb-2 text-sm font-extrabold uppercase">
-                  Prazo Turbo
-                </h3>
-                <p className="font-extralight">Até 14 dias úteis</p>
-                <p className="font-extralight">
-                  Acréscimo de 15% do valor total
-                </p>
-              </div>
-            </div>
-
-            {/* Prazo Padrão */}
-            <div className="mt-8 flex items-center gap-10">
-              <Image
-                {...aosParams}
-                data-aos-delay="500"
-                src={"/sticks/calendar.png"}
-                alt="Bonetto"
-                width={100}
-                height={100}
-              />
-
-              <div {...aosParams}>
-                <h3 className="mb-2 font-extrabold uppercase">Prazo Padrão</h3>
-                <p className="mb-1 font-extralight">Até 22 dias úteis</p>
-                <p className="font-extralight">
-                  O prazo inicia após a confirmação de pagamento
-                </p>
-              </div>
-            </div>
-
-            {/* Frete */}
-            <div className="mt-8 flex items-center gap-10">
-              <Image
-                {...aosParams}
-                data-aos-delay="500"
-                src={"/sticks/shipping.png"}
-                alt="Bonetto"
-                width={100}
-                height={100}
-              />
-
-              <div {...aosParams}>
-                <h3 className="mb-2 text-sm font-extrabold uppercase">Frete</h3>
-                <p className="mb-4 font-extralight">
-                  Tempo médio de envio: até 14 dias úteis, a depender da
-                  localidade.
-                </p>
-              </div>
-            </div>
-
-            {/* Prazo de Produção */}
-            <div className="mt-8 flex items-center gap-10">
-              <Image
-                {...aosParams}
-                data-aos-delay="500"
-                src={"/sticks/production.png"}
-                alt="Bonetto"
-                width={100}
-                height={100}
-              />
-
-              <div {...aosParams}>
-                <h3 className="mb-2 text-sm font-extrabold uppercase">
-                  Prazo de produção
-                </h3>
-                <p className="mb-4 font-extralight">
-                  O prazo de produção inicia em até 01 dia útil após a
-                  confirmação do pagamento.
-                </p>
-                <p className="font-extralight">
-                  Quando finalizado, entraremos em contato, informando que o
-                  pedido será despachado.
-                </p>
-              </div>
-            </div>
-
-            {/* Envio Padrão */}
-            <div className="mt-8 flex items-center gap-10">
-              <Image
-                {...aosParams}
-                data-aos-delay="500"
-                src={"/sticks/truck.png"}
-                alt="Bonetto"
-                width={100}
-                height={100}
-              />
-
-              <div {...aosParams}>
-                <h3 className="mb-2 text-sm font-extrabold uppercase">
-                  Envio Padrão
-                </h3>
-                <p className="font-extralight">
-                  O pedido será enviado via Empresa Brasileira de Correios e
-                  Telégrafos
-                </p>
-              </div>
-            </div>
-
-            {/* Envio Aéreo */}
-            <div className="mt-8 flex items-center gap-10">
-              <Image
-                {...aosParams}
-                data-aos-delay="500"
-                src={"/sticks/plane.png"}
-                alt="Bonetto"
-                width={100}
-                height={100}
-              />
-
-              <div {...aosParams}>
-                <h3 className="mb-2 text-sm font-extrabold uppercase">
-                  Envio aéreo
-                </h3>
-                <p className="mb-4 font-extralight">
-                  O pedido será enviado via Azul Cargo
-                </p>
-                <p className="font-extralight">
-                  <span className="font-semibold">Atenção: </span>o valor
-                  tarifado no frete é de responsabilidade do cliente, consultar
-                  o vendedor.
-                </p>
-              </div>
-            </div>
-
-            {/* Pagamento */}
-            <div className="mt-8 flex items-center gap-10">
-              <Image
-                {...aosParams}
-                data-aos-delay="500"
-                src={"/sticks/payment.png"}
-                alt="Bonetto"
-                width={100}
-                height={100}
-              />
-
-              <div {...aosParams}>
-                <h3 className="mb-2 text-sm font-extrabold uppercase">
-                  Pagamento
-                </h3>
-                <p className="mb-4 font-extralight">
-                  Pix, cartão de crédito ou transferência bancária
-                </p>
-                <p className="mb-4 font-extralight">50% ao realizar o pedido</p>
-                <p className="font-extralight">
-                  50% + frete após finalizada a produção
-                </p>
-              </div>
-            </div>
-          </div>
         </article>
       </Section>
 
@@ -622,13 +278,197 @@ const Home = () => {
 
           <Image
             {...aosParams}
-            src={"/bonetto-2.avif"}
+            src={"/bonneto-2.webp"}
             alt="Soluções estratégicas"
+            loading="lazy"
             width={0}
             height={0}
             sizes="100vw"
-            className="mt-8 h-full w-full rounded-lg object-cover shadow-xl shadow-black/30 sm:mt-0"
+            className="mt-8 h-[36rem] w-full rounded-lg object-cover shadow-xl shadow-black/30 sm:mt-0"
           />
+        </article>
+      </Section>
+
+      {/* Aplicação frontal */}
+      <Section variant="secondary">
+        <article className="m-6">
+          <TitleComponent
+            {...aosParams}
+            title="Escolha Sua Aplicação Frontal"
+          />
+
+          <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-16">
+            {/* Bordado */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Bordado"
+              src="/front-logos/bordado.webp"
+              textWidth="w-22"
+            />
+
+            {/* Silk 3D */}
+            <CapDetailSticker
+              {...aosParams}
+              data-aos-delay="500"
+              title="Silk 3D"
+              src="/front-logos/silk-3d.webp"
+              textWidth="w-20"
+            />
+
+            {/* Aplique à laser */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Aplique à laser"
+              src="/front-logos/aplique-a-laser.webp"
+              textWidth="w-34"
+            />
+
+            {/* Aplique 3D */}
+            <CapDetailSticker
+              {...aosParams}
+              data-aos-delay="500"
+              title="Aplique 3D"
+              src="/front-logos/aplique-3d.webp"
+              textWidth="w-28"
+            />
+
+            {/* Sublimado */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Sublimado"
+              src="/front-logos/sublimado.webp"
+              textWidth="w-28"
+            />
+
+            {/* Sublimação */}
+            <CapDetailSticker
+              {...aosParams}
+              data-aos-delay="500"
+              title="Sublimação"
+              src="/front-logos/sublimacao.webp"
+              textWidth="w-28"
+            />
+
+            {/* DTF */}
+            <CapDetailSticker
+              {...aosParams}
+              title="DTF"
+              src="/front-logos/dtf.webp"
+              textWidth="w-14"
+            />
+          </div>
+        </article>
+      </Section>
+
+      {/* Aplicação Lateral */}
+      <Section variant="secondary">
+        <article className="m-6">
+          <TitleComponent
+            {...aosParams}
+            title="Escolha Sua Aplicação Lateral"
+          />
+
+          <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-16">
+            {/* Aplique à laser */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Aplique à laser"
+              src="/side-logos/aplique-a-laser.webp"
+              textWidth="w-36"
+            />
+
+            {/* Bordado ou silk */}
+            <CapDetailSticker
+              {...aosParams}
+              data-aos-delay="500"
+              title="Bordado ou silk"
+              src="/side-logos/bordado-ou-silk.webp"
+              textWidth="w-36"
+            />
+
+            {/* Aba sanduíche */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Aba Sanduíche"
+              src="/side-logos/aba-sanduiche.webp"
+              textWidth="w-36"
+            />
+
+            {/* Aplique 3D */}
+            <CapDetailSticker
+              {...aosParams}
+              data-aos-delay="500"
+              title="Aplique 3D"
+              src="/side-logos/aplique-3d.webp"
+              textWidth="w-30"
+            />
+          </div>
+        </article>
+      </Section>
+
+      {/* Customize e surpreenda */}
+      <Section variant="secondary">
+        <article className="m-6">
+          <TitleComponent {...aosParams} title="Customize e Surpreenda" />
+
+          <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-16">
+            {/* Ilhós */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Ilhós"
+              src="/customization/ilhos.webp"
+              textWidth="w-16"
+            />
+
+            {/* Viés personalizado */}
+            <CapDetailSticker
+              {...aosParams}
+              data-aos-delay="500"
+              title="Viés Personalizado"
+              src="/customization/vies-personalizado.webp"
+              textWidth="w-40"
+            />
+
+            {/* Forro estampado */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Forro Estampado"
+              src="/customization/forro-estampado.webp"
+              textWidth="w-40"
+            />
+
+            {/* Fivela metálica */}
+            <CapDetailSticker
+              {...aosParams}
+              data-aos-delay="500"
+              title="Fivela Metálica"
+              src="/customization/fivela-metalica.webp"
+            />
+
+            {/* Furos à laser */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Furos à Laser"
+              src="/customization/furos-a-laser.webp"
+            />
+
+            {/* Costura na aba */}
+            <CapDetailSticker
+              {...aosParams}
+              data-aos-delay="500"
+              title="Costura na Aba"
+              src="/customization/costura-na-aba.webp"
+              textWidth="w-34"
+            />
+
+            {/* Etiqueta */}
+            <CapDetailSticker
+              {...aosParams}
+              title="Etiqueta"
+              src="/customization/etiqueta.webp"
+              textWidth="w-22"
+            />
+          </div>
         </article>
       </Section>
 
@@ -647,7 +487,12 @@ const Home = () => {
             </p>
           </div>
 
-          <Carousel {...aosParams} delay={6000} className="mt-8">
+          <Carousel
+            {...aosParams}
+            data-aos-delay="500"
+            delay={6000}
+            className="mt-8"
+          >
             <OpinionCard
               title="Satisfeita!"
               description="Superou minhas expectativas em qualidade e beleza. O atendimento ao cliente foi muito bom e a entrega foi bem rápida. Recomendo a todos!"
@@ -669,6 +514,183 @@ const Home = () => {
               name="Bruno Cortez"
             />
           </Carousel>
+        </article>
+      </Section>
+
+      {/* Prazos e tarifas */}
+      <Section variant="secondary">
+        <article className="m-6">
+          <TitleComponent title="Prazos Diferenciados" {...aosParams} />
+
+          <div className="space-y-14">
+            {/* Prazo Turbo */}
+            <div className="mt-8 flex items-center gap-10">
+              <Image
+                {...aosParams}
+                data-aos-delay="500"
+                src={"/sticks/watch.png"}
+                alt="Bonetto"
+                loading="lazy"
+                width={100}
+                height={100}
+              />
+
+              <div {...aosParams}>
+                <h3 className="mb-2 text-sm font-extrabold uppercase">
+                  Prazo Turbo
+                </h3>
+                <p className="font-extralight">Até 14 dias úteis</p>
+                <p className="font-extralight">
+                  Acréscimo de 15% do valor total
+                </p>
+              </div>
+            </div>
+
+            {/* Prazo Padrão */}
+            <div className="mt-8 flex items-center gap-10">
+              <Image
+                {...aosParams}
+                data-aos-delay="500"
+                src={"/sticks/calendar.png"}
+                loading="lazy"
+                alt="Bonetto"
+                width={100}
+                height={100}
+              />
+
+              <div {...aosParams}>
+                <h3 className="mb-2 font-extrabold uppercase">Prazo Padrão</h3>
+                <p className="mb-1 font-extralight">Até 22 dias úteis</p>
+                <p className="font-extralight">
+                  O prazo inicia após a confirmação de pagamento
+                </p>
+              </div>
+            </div>
+
+            {/* Frete */}
+            <div className="mt-8 flex items-center gap-10">
+              <Image
+                {...aosParams}
+                data-aos-delay="500"
+                src={"/sticks/shipping.png"}
+                loading="lazy"
+                alt="Bonetto"
+                width={100}
+                height={100}
+              />
+
+              <div {...aosParams}>
+                <h3 className="mb-2 text-sm font-extrabold uppercase">Frete</h3>
+                <p className="mb-4 font-extralight">
+                  Tempo médio de envio: até 14 dias úteis, a depender da
+                  localidade.
+                </p>
+              </div>
+            </div>
+
+            {/* Prazo de Produção */}
+            <div className="mt-8 flex items-center gap-10">
+              <Image
+                {...aosParams}
+                data-aos-delay="500"
+                src={"/sticks/production.png"}
+                alt="Bonetto"
+                loading="lazy"
+                width={100}
+                height={100}
+              />
+
+              <div {...aosParams}>
+                <h3 className="mb-2 text-sm font-extrabold uppercase">
+                  Prazo de produção
+                </h3>
+                <p className="mb-4 font-extralight">
+                  O prazo de produção inicia em até 01 dia útil após a
+                  confirmação do pagamento.
+                </p>
+                <p className="font-extralight">
+                  Quando finalizado, entraremos em contato, informando que o
+                  pedido será despachado.
+                </p>
+              </div>
+            </div>
+
+            {/* Envio Padrão */}
+            <div className="mt-8 flex items-center gap-10">
+              <Image
+                {...aosParams}
+                data-aos-delay="500"
+                src={"/sticks/truck.png"}
+                loading="lazy"
+                alt="Bonetto"
+                width={100}
+                height={100}
+              />
+
+              <div {...aosParams}>
+                <h3 className="mb-2 text-sm font-extrabold uppercase">
+                  Envio Padrão
+                </h3>
+                <p className="font-extralight">
+                  O pedido será enviado via Empresa Brasileira de Correios e
+                  Telégrafos
+                </p>
+              </div>
+            </div>
+
+            {/* Envio Aéreo */}
+            <div className="mt-8 flex items-center gap-10">
+              <Image
+                {...aosParams}
+                data-aos-delay="500"
+                src={"/sticks/plane.png"}
+                loading="lazy"
+                alt="Bonetto"
+                width={100}
+                height={100}
+              />
+
+              <div {...aosParams}>
+                <h3 className="mb-2 text-sm font-extrabold uppercase">
+                  Envio aéreo
+                </h3>
+                <p className="mb-4 font-extralight">
+                  O pedido será enviado via Azul Cargo
+                </p>
+                <p className="font-extralight">
+                  <span className="font-semibold">Atenção: </span>o valor
+                  tarifado no frete é de responsabilidade do cliente, consultar
+                  o vendedor.
+                </p>
+              </div>
+            </div>
+
+            {/* Pagamento */}
+            <div className="mt-8 flex items-center gap-10">
+              <Image
+                {...aosParams}
+                data-aos-delay="500"
+                src={"/sticks/payment.png"}
+                loading="lazy"
+                alt="Bonetto"
+                width={100}
+                height={100}
+              />
+
+              <div {...aosParams}>
+                <h3 className="mb-2 text-sm font-extrabold uppercase">
+                  Pagamento
+                </h3>
+                <p className="mb-4 font-extralight">
+                  Pix, cartão de crédito ou transferência bancária
+                </p>
+                <p className="mb-4 font-extralight">50% ao realizar o pedido</p>
+                <p className="font-extralight">
+                  50% + frete após finalizada a produção
+                </p>
+              </div>
+            </div>
+          </div>
         </article>
       </Section>
 

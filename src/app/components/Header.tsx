@@ -38,7 +38,7 @@ export const Header = () => {
         </MenubarMenu>
 
         <Sheet open={sheetIsOpen} onOpenChange={setSheetIsOpen}>
-          <SheetContent className="w-72 border-0 bg-[var(--primary-color)] text-[var(--secondary-color)] opacity-90 sm:w-80">
+          <SheetContent className="w-72 border-0 bg-[var(--primary-color)] text-[var(--secondary-color)] opacity-85 sm:w-80">
             <SheetHeader className="flex flex-col">
               <VisuallyHidden>
                 <SheetTitle>Menu Mobile</SheetTitle>
