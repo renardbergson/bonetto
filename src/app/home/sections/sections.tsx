@@ -1,0 +1,10 @@
+export { default as WelcomeSection } from "./WelcomeSection";
+export { default as WhyChooseSection } from "./WhyChooseBonettoSection";
+export { default as ExclusiveModelsSection } from "./ExclusiveModelsSection";
+export { default as StrategicSolutionsSection } from "./StrategicSolutionsSection";
+export { default as FrontApplicationsSection } from "./FrontApplicationsSection";
+export { default as SideApplicationsSection } from "./SideApplicationsSection";
+export { default as CustomizeSection } from "./CustomizeSection";
+export { default as ReviewsSection } from "./ReviewsSection";
+export { default as DeadlinesSection } from "./DeadlinesSection";
+export { default as FAQSection } from "./FAQSection";
