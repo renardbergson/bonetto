@@ -8,7 +8,7 @@ type Props = {
 
 const FAQSection = ({ aosParams }: Props) => {
   return (
-    <Section variant="secondary">
+    <Section variant="secondary" id="faq">
       <article className="m-6">
         <TitleComponent title="Perguntas Frequentes" {...aosParams} />
 

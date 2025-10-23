@@ -1,23 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { Menubar, MenubarMenu } from "@/components/ui/menubar";
 import { Menu } from "lucide-react";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-} from "@/components/ui/sheet";
-import { Separator } from "@/components/ui/separator";
 
 import Logo from "./Logo";
-import HeaderButton from "./HeaderButton";
-import NavigationMenu from "./NavigationMenu";
+import DesktopMenu from "./DesktopMenu";
+import MobileMenu from "./MobileMenu";
 
 export const Header = () => {
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
+    e.preventDefault();
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const [sheetIsOpen, setSheetIsOpen] = useState(false);
 
   function handleMobileMenu() {
@@ -32,74 +34,21 @@ export const Header = () => {
 
           <div className="flex-1"></div>
 
+          {/* Mobile Menu Button */}
           <button className="lg:hidden" onClick={handleMobileMenu}>
             {<Menu />}
           </button>
         </MenubarMenu>
 
-        {/* Mobile Menu */}
-        <Sheet open={sheetIsOpen} onOpenChange={setSheetIsOpen}>
-          <SheetContent className="w-72 border-0 bg-[var(--primary-color)] text-[var(--secondary-color)] opacity-85 sm:w-80">
-            <SheetHeader className="flex flex-col">
-              <VisuallyHidden>
-                <SheetTitle>Menu Mobile</SheetTitle>
-              </VisuallyHidden>
-
-              <nav className="mt-12 p-4">
-                <HeaderButton
-                  onClick={handleMobileMenu}
-                  variant="ghost"
-                  asChild
-                >
-                  <Link
-                    href={"/home"}
-                    rel="Página Inicial"
-                    className="w-full pl-0"
-                  >
-                    <h1 className="w-full text-lg font-bold">Início</h1>
-                  </Link>
-                </HeaderButton>
-
-                <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
-
-                <HeaderButton
-                  variant="ghost"
-                  asChild
-                  sectionToScroll="exclusive-models"
-                  callback={handleMobileMenu}
-                >
-                  <Link
-                    href={"#exclusive-models"}
-                    rel="Categorias"
-                    className="w-full pl-0"
-                  >
-                    <h1 className="w-full text-lg font-bold">Modelos</h1>
-                  </Link>
-                </HeaderButton>
-
-                <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
-
-                <HeaderButton
-                  onClick={handleMobileMenu}
-                  variant="ghost"
-                  asChild
-                >
-                  <Link
-                    href={`https://wa.me/${process.env.NEXT_PUBLIC_COMPANY_WHATSAPP_NUMBER}`}
-                    target="_blank"
-                    rel="Fale Conosco"
-                    className="w-full pl-0"
-                  >
-                    <h1 className="w-full text-lg font-bold">Fale Conosco</h1>
-                  </Link>
-                </HeaderButton>
-              </nav>
-            </SheetHeader>
-          </SheetContent>
-        </Sheet>
-
         {/* Desktop Menu */}
-        <NavigationMenu />
+        <DesktopMenu scrollToSection={scrollToSection} />
+
+        {/* Mobile Menu */}
+        <MobileMenu
+          isOpen={sheetIsOpen}
+          handler={handleMobileMenu}
+          scrollToSection={scrollToSection}
+        />
       </Menubar>
     </header>
   );

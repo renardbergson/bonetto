@@ -13,7 +13,10 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="space-y-20 bg-[var(--primary-color)] px-6 py-12 text-[var(--secondary-color)]">
+    <footer
+      className="space-y-20 bg-[var(--primary-color)] px-6 py-12 text-[var(--secondary-color)]"
+      id="footer"
+    >
       <div className="text-center">
         <Logo className="mx-auto" />
 

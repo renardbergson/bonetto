@@ -8,36 +8,15 @@ interface Props {
   children: React.ReactNode;
   className?: string;
   onClick?: (e: React.MouseEvent) => void;
-  sectionToScroll?: string;
-  callback?: () => void;
 }
 
-const HeaderButton = ({
-  asChild,
-  children,
-  className,
-  onClick,
-  sectionToScroll,
-  callback,
-}: Props) => {
-  function handleScrollToSection(e: React.MouseEvent) {
-    if (sectionToScroll) {
-      e.preventDefault();
-      const modelsSection = document.getElementById(sectionToScroll || "");
-      modelsSection?.scrollIntoView({ behavior: "smooth" });
-    }
-
-    if (callback) {
-      callback();
-    }
-  }
-
+const HeaderButton = ({ asChild, children, className, onClick }: Props) => {
   return (
     <Button
-      className={`text-1xl w-[70%] rounded-none py-4 hover:cursor-pointer hover:border-b-2 ${className}`}
+      className={`text-1xl w-[70%] rounded-none py-4 ${className}`}
       asChild={asChild ?? false}
       type="button"
-      onClick={onClick ?? handleScrollToSection}
+      onClick={onClick}
     >
       {children}
     </Button>

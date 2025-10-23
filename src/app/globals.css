@@ -2,18 +2,6 @@
 @import "tw-animate-css";
 @import "aos/dist/aos.css";
 
-@keyframes clickMe {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.03);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 :root {
   --primary-color: #030505;
   --secondary-color: #f4e8d8;
@@ -24,16 +12,6 @@
 body {
   font-family: sans-serif;
   background: var(--primary-color);
-}
-
-#homepage-animation {
-  background: #000000;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(12, 17, 17, 1) 51%,
-    rgba(0, 0, 0, 1) 100%
-  ) !important;
 }
 
 /* toaster */

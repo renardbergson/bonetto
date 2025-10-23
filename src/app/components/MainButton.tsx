@@ -41,7 +41,7 @@ const MainButton = ({
 
   return (
     <Button
-      className={`text-1xl w-auto rounded-full py-4 hover:cursor-pointer ${
+      className={`text-1xl w-auto rounded-lg py-4 hover:cursor-pointer ${
         style === "primary"
           ? "bg-[var(--primary-color)] text-[var(--secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)]"
           : "bg-[var(--secondary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-[var(--secondary-color)]"
