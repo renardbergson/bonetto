@@ -9,7 +9,7 @@ import {
   ReviewsSection,
   DeadlinesSection,
   FAQSection,
-} from "./sections/sections";
+} from "./sections";
 
 const Home = () => {
   const aosParams = {

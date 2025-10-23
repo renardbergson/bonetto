@@ -14,7 +14,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 
 import Logo from "./Logo";
-import { MyButton } from "./MyButton";
+import HeaderButton from "./HeaderButton";
 import NavigationMenu from "./NavigationMenu";
 
 export const Header = () => {
@@ -25,8 +25,8 @@ export const Header = () => {
   }
 
   return (
-    <header className="z-10">
-      <Menubar className="flex h-[75px] items-center border-0 bg-[var(--primary-color)] p-3 text-[var(--secondary-color)] lg:px-6">
+    <header className="z-10 border-none">
+      <Menubar className="flex h-[75px] items-center border-0 bg-transparent p-3 text-[var(--secondary-color)] lg:px-6">
         <MenubarMenu>
           <Logo />
 
@@ -37,6 +37,7 @@ export const Header = () => {
           </button>
         </MenubarMenu>
 
+        {/* Mobile Menu */}
         <Sheet open={sheetIsOpen} onOpenChange={setSheetIsOpen}>
           <SheetContent className="w-72 border-0 bg-[var(--primary-color)] text-[var(--secondary-color)] opacity-85 sm:w-80">
             <SheetHeader className="flex flex-col">
@@ -45,10 +46,9 @@ export const Header = () => {
               </VisuallyHidden>
 
               <nav className="mt-12 p-4">
-                <MyButton
+                <HeaderButton
                   onClick={handleMobileMenu}
                   variant="ghost"
-                  style="primary"
                   asChild
                 >
                   <Link
@@ -58,13 +58,12 @@ export const Header = () => {
                   >
                     <h1 className="w-full text-lg font-bold">Início</h1>
                   </Link>
-                </MyButton>
+                </HeaderButton>
 
                 <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
 
-                <MyButton
+                <HeaderButton
                   variant="ghost"
-                  style="primary"
                   asChild
                   sectionToScroll="exclusive-models"
                   callback={handleMobileMenu}
@@ -76,14 +75,13 @@ export const Header = () => {
                   >
                     <h1 className="w-full text-lg font-bold">Modelos</h1>
                   </Link>
-                </MyButton>
+                </HeaderButton>
 
                 <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
 
-                <MyButton
+                <HeaderButton
                   onClick={handleMobileMenu}
                   variant="ghost"
-                  style="primary"
                   asChild
                 >
                   <Link
@@ -94,12 +92,13 @@ export const Header = () => {
                   >
                     <h1 className="w-full text-lg font-bold">Fale Conosco</h1>
                   </Link>
-                </MyButton>
+                </HeaderButton>
               </nav>
             </SheetHeader>
           </SheetContent>
         </Sheet>
 
+        {/* Desktop Menu */}
         <NavigationMenu />
       </Menubar>
     </header>

@@ -18,7 +18,7 @@ import validator from "validator";
 import { UserOutlined, MailOutlined, MobileOutlined } from "@ant-design/icons";
 import { Loader2Icon } from "lucide-react";
 
-import { MyButton } from "@/app/components/MyButton";
+import MainButton from "@/app/components/MainButton";
 
 const ContactForm = () => {
   const nameRef = useRef<HTMLInputElement>(null);
@@ -158,7 +158,7 @@ const ContactForm = () => {
           />
         </div>
 
-        <MyButton
+        <MainButton
           style="primary"
           variant="outline"
           asChild={false}
@@ -166,7 +166,7 @@ const ContactForm = () => {
           type="submit"
         >
           <span>Enviar contato</span>
-        </MyButton>
+        </MainButton>
       </form>
 
       {/* DIALOG FORM */}
@@ -236,7 +236,7 @@ const ContactForm = () => {
             </div>
 
             <DialogFooter className="mt-6 block text-center">
-              <MyButton
+              <MainButton
                 asChild={false}
                 style="primary"
                 variant="outline"
@@ -245,7 +245,7 @@ const ContactForm = () => {
               >
                 {isPending && <Loader2Icon className="size-4 animate-spin" />}
                 {isPending ? "Enviando..." : "Enviar"}
-              </MyButton>
+              </MainButton>
             </DialogFooter>
           </form>
         </DialogContent>

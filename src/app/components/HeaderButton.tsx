@@ -2,31 +2,24 @@
 
 import { Button } from "@/components/ui/button";
 
-interface MyButtonProps {
-  style: "primary" | "secondary";
+interface Props {
   variant: "outline" | "ghost";
   asChild: boolean;
   children: React.ReactNode;
   className?: string;
-  type?: "button" | "submit";
   onClick?: (e: React.MouseEvent) => void;
   sectionToScroll?: string;
   callback?: () => void;
-  disabled?: boolean;
 }
 
-const MyButton = ({
-  style,
-  variant,
+const HeaderButton = ({
   asChild,
   children,
   className,
-  type,
   onClick,
   sectionToScroll,
   callback,
-  disabled,
-}: MyButtonProps) => {
+}: Props) => {
   function handleScrollToSection(e: React.MouseEvent) {
     if (sectionToScroll) {
       e.preventDefault();
@@ -41,20 +34,14 @@ const MyButton = ({
 
   return (
     <Button
-      className={`text-1xl w-[70%] rounded-full py-4 hover:cursor-pointer ${
-        style === "primary"
-          ? "bg-[var(--primary-color)] text-[var(--secondary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)]"
-          : "bg-[var(--secondary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-[var(--secondary-color)]"
-      } ${className}`}
-      variant={variant}
+      className={`text-1xl w-[70%] rounded-none py-4 hover:cursor-pointer hover:border-b-2 ${className}`}
       asChild={asChild ?? false}
-      type={type}
+      type="button"
       onClick={onClick ?? handleScrollToSection}
-      disabled={disabled ?? false}
     >
       {children}
     </Button>
   );
 };
 
-export { MyButton };
+export default HeaderButton;

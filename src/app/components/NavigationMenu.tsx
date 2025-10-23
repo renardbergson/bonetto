@@ -8,43 +8,37 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 
-import { MyButton } from "./MyButton";
+import HeaderButton from "./HeaderButton";
 
 const NavigationMenuComponent = () => {
   return (
     <NavigationMenu viewport={false} className="hidden lg:flex">
       <NavigationMenuList>
-        <MyButton asChild style="primary" variant="ghost" className="w-fit">
+        <HeaderButton asChild variant="ghost" className="w-fit 2xl:text-lg">
           <Link href="/home">
             <NavigationMenuItem>Início</NavigationMenuItem>
           </Link>
-        </MyButton>
+        </HeaderButton>
 
-        <MyButton
+        <HeaderButton
           asChild
-          style="primary"
           variant="ghost"
-          className="w-fit"
+          className="w-fit 2xl:text-lg"
           sectionToScroll="exclusive-models"
         >
           <Link href={"#exclusive-models"}>
             <NavigationMenuItem>Modelos</NavigationMenuItem>
           </Link>
-        </MyButton>
+        </HeaderButton>
 
-        <MyButton
-          asChild
-          style="primary"
-          variant="ghost"
-          className="w-fit pr-0"
-        >
+        <HeaderButton asChild variant="ghost" className="w-fit 2xl:text-lg">
           <Link
             href={`https://wa.me/${process.env.NEXT_PUBLIC_COMPANY_WHATSAPP_NUMBER}`}
             target="_blank"
           >
             <NavigationMenuItem>Fale Conosco</NavigationMenuItem>
           </Link>
-        </MyButton>
+        </HeaderButton>
       </NavigationMenuList>
     </NavigationMenu>
   );
