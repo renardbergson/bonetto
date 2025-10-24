@@ -55,7 +55,7 @@ const WelcomeSection = () => {
               style="secondary"
               variant="outline"
               asChild
-              className="hover:scale-105 lg:p-5 2xl:p-8 2xl:text-xl"
+              className="hover:scale-105 lg:p-7 2xl:p-9 2xl:text-xl"
             >
               <Link
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_COMPANY_WHATSAPP_NUMBER}`}
@@ -78,7 +78,7 @@ const WelcomeSection = () => {
               style="primary"
               variant="outline"
               asChild
-              className="mt-10 sm:mt-12 md:mt-10 lg:mt-0 lg:p-5 2xl:p-8 2xl:text-xl"
+              className="mt-10 sm:mt-12 md:mt-10 lg:mt-0 lg:p-7 2xl:p-9 2xl:text-xl"
               sectionToScroll="exclusive-models"
             >
               <Link href={"#exclusive-models"}>Conferir catálogo</Link>
