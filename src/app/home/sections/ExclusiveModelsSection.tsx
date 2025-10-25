@@ -10,18 +10,18 @@ type Props = {
 const ExclusiveModelsSection = ({ aosParams }: Props) => {
   return (
     <Section variant="secondary" id="exclusive-models">
-      <article className="m-6">
+      <article className="m-6 sm:mx-10 md:mx-12 lg:mx-16 2xl:mx-24">
         <TitleComponent title="Modelos Exclusivos" {...aosParams} />
 
-        <div className="mt-8 h-fit space-y-10 text-justify text-base leading-7 font-extralight sm:text-lg">
+        <div className="mt-8 h-fit space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
           <p {...aosParams}>
             Aqui você encontra os melhores modelos de bonés para dar um toque
-            único e exclusivo à sua marca. Não é só um boné, é um veículo de
-            conexão, lembrança e crescimento.
+            único e exclusivo à sua marca. <br className="hidden lg:block" />{" "}
+            Não é só um boné, é um veículo de conexão, lembrança e crescimento.
           </p>
         </div>
 
-        <Carousel className="mt-8" {...aosParams}>
+        <Carousel className="mt-8 lg:mx-auto" {...aosParams}>
           <CarouselCapItem
             href={"#"}
             title="Promocional"

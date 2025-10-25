@@ -5,6 +5,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 import { CarouselApi } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
@@ -54,11 +56,17 @@ const CarouselComponent = ({
     >
       <CarouselContent className="-ml-6">
         {children?.map((item, index) => (
-          <CarouselItem className="pl-6 sm:basis-2/3" key={index}>
+          <CarouselItem
+            className="pl-8 sm:basis-2/3 lg:basis-2/4 xl:basis-2/5"
+            key={index}
+          >
             {item}
           </CarouselItem>
         ))}
       </CarouselContent>
+
+      <CarouselPrevious className="hidden cursor-pointer lg:block" />
+      <CarouselNext className="hidden cursor-pointer lg:block" />
 
       <div className="mt-5 flex justify-center gap-2">
         {children?.map((_, index) => (

@@ -14,7 +14,9 @@ const TitleComponent = ({
       className={`bg-[var(--primary-color)] p-4 text-[var(--secondary-color)] shadow-md shadow-black/30 ${className}`}
       {...props}
     >
-      <h3 className="text-center text-2xl">{title}</h3>
+      <h3 className="cursor-default text-center text-2xl 2xl:text-3xl">
+        {title}
+      </h3>
     </div>
   );
 };

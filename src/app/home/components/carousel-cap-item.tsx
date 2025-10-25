@@ -41,21 +41,23 @@ const CarouselCapItemComponent = ({
       <div className="relative flex flex-col items-center justify-center">
         {/* <Link href={href} className="absolute top-[12%] block h-[80%] w-[78%]" /> */}
 
-        <h4 className="mb-2 text-center font-bold text-[var(--primary-color)]">
+        <h4 className="mb-2 text-center font-bold text-[var(--primary-color)] 2xl:text-lg">
           {title}
         </h4>
 
         <ImageSkeleton className={`${imageIsLoading ? "!flex" : "!hidden"}`} />
 
-        <Image
-          src={src}
-          alt={alt}
-          width={0}
-          height={0}
-          loading="lazy"
-          sizes="100vw"
-          className={`${imageIsLoading ? "!hidden" : ""} h-auto w-full rounded-lg`}
-        />
+        <div className="group w-full overflow-hidden rounded-lg">
+          <Image
+            src={src}
+            alt={alt}
+            width={0}
+            height={0}
+            loading="lazy"
+            sizes="100vw"
+            className={`${imageIsLoading ? "!hidden" : ""} h-auto w-full rounded-lg transition-transform duration-300 group-hover:scale-110`}
+          />
+        </div>
       </div>
     </>
   );
