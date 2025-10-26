@@ -2,8 +2,6 @@ import Section from "@/app/components/Section";
 import TitleComponent from "../components/sectionTitle";
 import { TrendingUp, Users, Gift, Store } from "lucide-react";
 
-import Image from "next/image";
-
 const solutions = [
   {
     icon: TrendingUp,
