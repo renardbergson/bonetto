@@ -1,4 +1,5 @@
 import Section from "@/app/components/Section";
+import Article from "@/app/components/Article";
 import TitleComponent from "../components/sectionTitle";
 import Carousel from "../components/carousel";
 import OpinionCard from "../components/opinion-card";
@@ -10,7 +11,7 @@ type Props = {
 const ReviewsSection = ({ aosParams }: Props) => {
   return (
     <Section variant="secondary">
-      <article className="m-6">
+      <Article>
         <TitleComponent title="Avaliação dos Nossos Clientes" {...aosParams} />
 
         <div className="mt-8 h-fit space-y-10 text-justify text-base leading-7 font-extralight sm:text-lg">
@@ -47,7 +48,7 @@ const ReviewsSection = ({ aosParams }: Props) => {
             name="Bruno Cortez"
           />
         </Carousel>
-      </article>
+      </Article>
     </Section>
   );
 };

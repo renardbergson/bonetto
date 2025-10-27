@@ -57,7 +57,7 @@ const CarouselComponent = ({
       <CarouselContent className="-ml-6">
         {children?.map((item, index) => (
           <CarouselItem
-            className="pl-8 sm:basis-2/3 lg:basis-2/4 xl:basis-2/5"
+            className="pl-8 md:basis-2/3 lg:basis-2/4 xl:basis-2/5"
             key={index}
           >
             {item}

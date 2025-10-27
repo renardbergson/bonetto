@@ -1,4 +1,5 @@
 import Section from "@/app/components/Section";
+import Article from "@/app/components/Article";
 import TitleComponent from "../components/sectionTitle";
 import ModelCard from "../components/model-card";
 
@@ -54,17 +55,21 @@ type Props = {
 const FrontApplicationsSection = ({ aosParams }: Props) => {
   return (
     <Section variant="secondary">
-      <article className="m-6 sm:mx-10 md:mx-12 lg:mx-16 2xl:mx-24">
-        <TitleComponent {...aosParams} title="Escolha Sua Aplicação Frontal" />
+      <Article>
+        <TitleComponent
+          {...aosParams}
+          data-aos-anchor-placement="center-bottom"
+          title="Escolha Sua Aplicação Frontal"
+        />
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {applications.map((model, index) => (
             <div key={index} {...aosParams}>
               <ModelCard model={model} />
             </div>
           ))}
         </div>
-      </article>
+      </Article>
     </Section>
   );
 };

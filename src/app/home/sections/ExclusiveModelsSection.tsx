@@ -1,4 +1,5 @@
 import Section from "@/app/components/Section";
+import Article from "@/app/components/Article";
 import TitleComponent from "../components/sectionTitle";
 import Carousel from "../components/carousel";
 import CarouselCapItem from "../components/carousel-cap-item";
@@ -10,10 +11,10 @@ type Props = {
 const ExclusiveModelsSection = ({ aosParams }: Props) => {
   return (
     <Section variant="secondary" id="exclusive-models">
-      <article className="m-6 sm:mx-10 md:mx-12 lg:mx-16 2xl:mx-24">
+      <Article>
         <TitleComponent title="Modelos Exclusivos" {...aosParams} />
 
-        <div className="mt-8 h-fit space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
+        <div className="mt-10 h-fit space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
           <p {...aosParams}>
             Aqui você encontra os melhores modelos de bonés para dar um toque
             único e exclusivo à sua marca. <br className="hidden lg:block" />{" "}
@@ -21,7 +22,7 @@ const ExclusiveModelsSection = ({ aosParams }: Props) => {
           </p>
         </div>
 
-        <Carousel className="mt-8 lg:mx-auto" {...aosParams}>
+        <Carousel className="mt-10 lg:mx-auto" {...aosParams}>
           <CarouselCapItem
             href={"#"}
             title="Promocional"
@@ -71,7 +72,7 @@ const ExclusiveModelsSection = ({ aosParams }: Props) => {
             alt="Boné modelo viseira esportiva"
           />
         </Carousel>
-      </article>
+      </Article>
     </Section>
   );
 };

@@ -1,5 +1,7 @@
 import Section from "@/app/components/Section";
+import Article from "@/app/components/Article";
 import TitleComponent from "../components/sectionTitle";
+
 import { TrendingUp, Users, Gift, Store } from "lucide-react";
 
 const solutions = [
@@ -48,10 +50,10 @@ type Props = {
 const StrategicSolutionsSection = ({ aosParams }: Props) => {
   return (
     <Section variant="secondary">
-      <article className="m-6 sm:mx-10 md:mx-12 lg:mx-16 2xl:mx-24">
+      <Article>
         <TitleComponent title="Soluções Estratégicas" {...aosParams} />
 
-        <div className="mt-8 h-fit cursor-default space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
+        <div className="mt-10 h-fit cursor-default space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
           <p {...aosParams}>
             Cada boné é mais que um produto: é uma ferramenta estratégica{" "}
             <br className="hidden sm:block" /> para fortalecer sua marca,
@@ -59,7 +61,7 @@ const StrategicSolutionsSection = ({ aosParams }: Props) => {
           </p>
         </div>
 
-        <div className="mt-8 mb-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="mt-10 mb-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
           {solutions.map((solution, index) => {
             const Icon = solution.icon;
 
@@ -97,7 +99,7 @@ const StrategicSolutionsSection = ({ aosParams }: Props) => {
             );
           })}
         </div>
-      </article>
+      </Article>
     </Section>
   );
 };

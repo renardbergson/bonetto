@@ -1,6 +1,34 @@
 import Section from "@/app/components/Section";
+import Article from "@/app/components/Article";
 import TitleComponent from "../components/sectionTitle";
-import CapDetailSticker from "../components/cap-detail-sticker";
+import ModelCard from "../components/model-card";
+
+const models = [
+  {
+    name: "Aplique à laser",
+    image: "/side-logos/aplique-a-laser.webp",
+    description:
+      "Peças cortadas a laser em materiais como couro sintético ou tecido técnico, com contornos precisos e acabamento limpo — ideal para logos detalhados sem costuras aparentes.",
+  },
+  {
+    name: "Bordado ou silk",
+    image: "/side-logos/bordado-ou-silk.webp",
+    description:
+      "Bordado oferece relevo, textura e alta durabilidade; silk (serigrafia) é indicado para áreas planas e cores sólidas, sendo mais econômico em tiragens maiores.",
+  },
+  {
+    name: "Aba Sanduíche",
+    image: "/side-logos/aba-sanduiche.webp",
+    description:
+      "Detalhe na borda da aba com camada contrastante costurada entre camadas, proporcionando destaque sutil, reforço estrutural e acabamento profissional.",
+  },
+  {
+    name: "Aplique 3D",
+    image: "/side-logos/aplique-3d.webp",
+    description:
+      "Apliques em PVC, borracha ou tecido com relevo pronunciado, aplicados por colagem ou costura para efeito tátil e visual marcante, duráveis e resistentes ao desgaste.",
+  },
+];
 
 type Props = {
   aosParams?: Record<string, string>;
@@ -9,45 +37,21 @@ type Props = {
 const SideApplicationsSection = ({ aosParams }: Props) => {
   return (
     <Section variant="secondary">
-      <article className="m-6">
-        <TitleComponent {...aosParams} title="Escolha Sua Aplicação Lateral" />
+      <Article>
+        <TitleComponent
+          {...aosParams}
+          data-aos-anchor-placement="center-bottom"
+          title="Escolha Sua Aplicação Lateral"
+        />
 
-        <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-16">
-          {/* Aplique à laser */}
-          <CapDetailSticker
-            {...aosParams}
-            title="Aplique à laser"
-            src="/side-logos/aplique-a-laser.webp"
-            textWidth="w-36"
-          />
-
-          {/* Bordado ou silk */}
-          <CapDetailSticker
-            {...aosParams}
-            data-aos-delay="500"
-            title="Bordado ou silk"
-            src="/side-logos/bordado-ou-silk.webp"
-            textWidth="w-36"
-          />
-
-          {/* Aba sanduíche */}
-          <CapDetailSticker
-            {...aosParams}
-            title="Aba Sanduíche"
-            src="/side-logos/aba-sanduiche.webp"
-            textWidth="w-36"
-          />
-
-          {/* Aplique 3D */}
-          <CapDetailSticker
-            {...aosParams}
-            data-aos-delay="500"
-            title="Aplique 3D"
-            src="/side-logos/aplique-3d.webp"
-            textWidth="w-30"
-          />
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          {models.map((model, index) => (
+            <div key={index} {...aosParams}>
+              <ModelCard model={model} />
+            </div>
+          ))}
         </div>
-      </article>
+      </Article>
     </Section>
   );
 };

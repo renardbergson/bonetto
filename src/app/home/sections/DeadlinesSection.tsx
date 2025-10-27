@@ -1,4 +1,5 @@
 import Section from "@/app/components/Section";
+import Article from "@/app/components/Article";
 import TitleComponent from "../components/sectionTitle";
 
 import Image from "next/image";
@@ -10,7 +11,7 @@ type Props = {
 const DeadlinesSection = ({ aosParams }: Props) => {
   return (
     <Section variant="secondary">
-      <article className="m-6">
+      <Article>
         <TitleComponent title="Prazos Diferenciados" {...aosParams} />
 
         <div className="space-y-14">
@@ -179,7 +180,7 @@ const DeadlinesSection = ({ aosParams }: Props) => {
             </div>
           </div>
         </div>
-      </article>
+      </Article>
     </Section>
   );
 };

@@ -1,6 +1,52 @@
 import Section from "@/app/components/Section";
+import Article from "@/app/components/Article";
 import TitleComponent from "../components/sectionTitle";
-import CapDetailSticker from "../components/cap-detail-sticker";
+import ModelCard from "../components/model-card";
+
+const models = [
+  {
+    name: "Ilhós",
+    image: "/customization/ilhos.webp",
+    description:
+      "Ilhós de tecido ou metálicos, reforçados para ventilação e acabamento profissional; disponíveis em vários acabamentos (níquel, ouro, preto) para combinar com o design.",
+  },
+  {
+    name: "Viés Personalizado",
+    image: "/customization/vies-personalizado.webp",
+    description:
+      "Viés interno impresso ou em cor sólida que reforça a aba e adiciona um detalhe discreto de marca — ideal para identidade refinada em pequenas áreas.",
+  },
+  {
+    name: "Forro Estampado",
+    image: "/customization/forro-estampado.webp",
+    description:
+      "Forro interno com estampas ou padrões aplicados por impressão resistente, entregando um acabamento premium e um elemento surpresa ao abrir o boné.",
+  },
+  {
+    name: "Fivela Metálica",
+    image: "/customization/fivela-metalica.webp",
+    description:
+      "Fivela de metal personalizada com opções de gravação e diversos acabamentos; combina durabilidade e estética para ajuste preciso.",
+  },
+  {
+    name: "Furos à Laser",
+    image: "/customization/furos-a-laser.webp",
+    description:
+      "Perfurações de precisão a laser para ventilação ou acabamento decorativo, sem comprometer a integridade do tecido — recomendadas para materiais técnicos.",
+  },
+  {
+    name: "Costura na Aba",
+    image: "/customization/costura-na-aba.webp",
+    description:
+      "Costuras decorativas ou funcionais na aba, com linhas contrastantes ou ton‑sur‑ton, que aumentam resistência e adicionam caráter ao design.",
+  },
+  {
+    name: "Etiqueta",
+    image: "/customization/etiqueta.webp",
+    description:
+      "Etiquetas internas ou externas em tecido, couro sintético ou silicone, personalizáveis com logo, instruções de cuidado ou numeração para edições limitadas.",
+  },
+];
 
 type Props = {
   aosParams?: Record<string, string>;
@@ -9,68 +55,21 @@ type Props = {
 const CustomizeSection = ({ aosParams }: Props) => {
   return (
     <Section variant="secondary">
-      <article className="m-6">
-        <TitleComponent {...aosParams} title="Customize e Surpreenda" />
+      <Article>
+        <TitleComponent
+          {...aosParams}
+          data-aos-anchor-placement="center-bottom"
+          title="Customize e Surpreenda"
+        />
 
-        <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-16">
-          {/* Ilhós */}
-          <CapDetailSticker
-            {...aosParams}
-            title="Ilhós"
-            src="/customization/ilhos.webp"
-            textWidth="w-16"
-          />
-
-          {/* Viés personalizado */}
-          <CapDetailSticker
-            {...aosParams}
-            data-aos-delay="500"
-            title="Viés Personalizado"
-            src="/customization/vies-personalizado.webp"
-            textWidth="w-40"
-          />
-
-          {/* Forro estampado */}
-          <CapDetailSticker
-            {...aosParams}
-            title="Forro Estampado"
-            src="/customization/forro-estampado.webp"
-            textWidth="w-40"
-          />
-
-          {/* Fivela metálica */}
-          <CapDetailSticker
-            {...aosParams}
-            data-aos-delay="500"
-            title="Fivela Metálica"
-            src="/customization/fivela-metalica.webp"
-          />
-
-          {/* Furos à laser */}
-          <CapDetailSticker
-            {...aosParams}
-            title="Furos à Laser"
-            src="/customization/furos-a-laser.webp"
-          />
-
-          {/* Costura na aba */}
-          <CapDetailSticker
-            {...aosParams}
-            data-aos-delay="500"
-            title="Costura na Aba"
-            src="/customization/costura-na-aba.webp"
-            textWidth="w-34"
-          />
-
-          {/* Etiqueta */}
-          <CapDetailSticker
-            {...aosParams}
-            title="Etiqueta"
-            src="/customization/etiqueta.webp"
-            textWidth="w-22"
-          />
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          {models.map((model, index) => (
+            <div key={index} {...aosParams}>
+              <ModelCard model={model} />
+            </div>
+          ))}
         </div>
-      </article>
+      </Article>
     </Section>
   );
 };

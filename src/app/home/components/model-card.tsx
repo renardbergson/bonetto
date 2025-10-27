@@ -29,7 +29,7 @@ const ModelCard = ({ model }: Props) => {
         <div className="mb-3 flex items-start justify-between">
           <h3 className="text-xl font-bold">{model.name}</h3>
         </div>
-        <p className="text-muted-foreground text-base leading-relaxed font-extralight">
+        <p className="text-muted-foreground text-base leading-relaxed font-extralight 2xl:text-lg">
           {model.description}
         </p>
       </div>

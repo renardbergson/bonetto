@@ -1,4 +1,5 @@
 import Section from "@/app/components/Section";
+import Article from "@/app/components/Article";
 import TitleComponent from "../components/sectionTitle";
 import Accordion from "../components/accordion";
 
@@ -9,7 +10,7 @@ type Props = {
 const FAQSection = ({ aosParams }: Props) => {
   return (
     <Section variant="secondary" id="faq">
-      <article className="m-6">
+      <Article>
         <TitleComponent title="Perguntas Frequentes" {...aosParams} />
 
         <Accordion
@@ -53,7 +54,7 @@ const FAQSection = ({ aosParams }: Props) => {
             },
           ]}
         />
-      </article>
+      </Article>
     </Section>
   );
 };

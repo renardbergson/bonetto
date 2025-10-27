@@ -1,5 +1,6 @@
 import Section from "@/app/components/Section";
 import TitleComponent from "../components/sectionTitle";
+import Article from "@/app/components/Article";
 
 import {
   Target,
@@ -51,10 +52,10 @@ type Props = {
 const WhyChooseBonettoSection = ({ aosParams }: Props) => {
   return (
     <Section variant="secondary">
-      <article className="m-6 sm:mx-10 md:mx-12 lg:mx-16 2xl:mx-24">
+      <Article>
         <TitleComponent title="Por que escolher a Bonetto?" {...aosParams} />
 
-        <div className="mt-8 h-fit cursor-default space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
+        <div className="mt-10 h-fit cursor-default space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
           <p {...aosParams}>
             Nós transformamos sua identidade visual em bonés sofisticados e
             exclusivos. <br className="hidden md:block" /> Unimos design
@@ -63,7 +64,7 @@ const WhyChooseBonettoSection = ({ aosParams }: Props) => {
           </p>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {content.map((item, index) => {
             const Icon = item.icon;
 
@@ -84,7 +85,7 @@ const WhyChooseBonettoSection = ({ aosParams }: Props) => {
             );
           })}
         </div>
-      </article>
+      </Article>
     </Section>
   );
 };
