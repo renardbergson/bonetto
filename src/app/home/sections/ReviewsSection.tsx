@@ -17,7 +17,10 @@ const ReviewsSection = ({ aosParams }: Props) => {
         <div className="mt-8 h-fit space-y-10 text-justify text-base leading-7 font-extralight sm:text-lg">
           <p {...aosParams}>
             Outros clientes já avaliaram a Bonetto como a opção certa para
-            tornar suas marcas mais fortes.
+            promover suas marcas. Junte-se a eles! Estamos prontos para guiar
+            você na escolha do modelo ideal para destacar sua marca com estilo,
+            qualidade e durabilidade. Se tiver dúvidas, não hesite em falar
+            conosco, estamos em todas as redes sociais!
           </p>
         </div>
 

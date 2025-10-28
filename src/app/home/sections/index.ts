@@ -5,6 +5,7 @@ export { default as StrategicSolutionsSection } from "./StrategicSolutionsSectio
 export { default as FrontApplicationsSection } from "./FrontApplicationsSection";
 export { default as SideApplicationsSection } from "./SideApplicationsSection";
 export { default as CustomizeSection } from "./CustomizeSection";
+export { default as TransformYourBrandSection } from "./TransformYourBrand";
 export { default as ReviewsSection } from "./ReviewsSection";
 export { default as DeadlinesSection } from "./DeadlinesSection";
 export { default as FAQSection } from "./FAQSection";

@@ -62,6 +62,18 @@ const CustomizeSection = ({ aosParams }: Props) => {
           title="Customize e Surpreenda"
         />
 
+        <div className="mt-10 h-fit cursor-default space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
+          <p {...aosParams}>
+            Detalhes fazem a diferença. Personalize cada peça — ilhós, viés,
+            forro, fivela e etiquetas — para criar bonés que surpreendem ao
+            primeiro contato e que se destacam dentre os demais. Use a
+            criatividade e deixe a sua marca mais atraente e memorável. Está em
+            dúvida? Fale conosco! Oferecemos consultoria técnica, provas e
+            amostras para ajustar materiais e acabamentos conforme a sua
+            necessidade.
+          </p>
+        </div>
+
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {models.map((model, index) => (
             <div key={index} {...aosParams}>

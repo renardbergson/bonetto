@@ -6,6 +6,7 @@ import {
   FrontApplicationsSection,
   SideApplicationsSection,
   CustomizeSection,
+  TransformYourBrandSection,
   ReviewsSection,
   DeadlinesSection,
   FAQSection,
@@ -42,6 +43,9 @@ const Home = () => {
 
       {/* Customize e surpreenda */}
       <CustomizeSection aosParams={aosParams} />
+
+      {/* Transforme a sua marca */}
+      <TransformYourBrandSection aosParams={aosParams} />
 
       {/* Avaliações */}
       <ReviewsSection aosParams={aosParams} />

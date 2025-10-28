@@ -44,6 +44,18 @@ const SideApplicationsSection = ({ aosParams }: Props) => {
           title="Escolha Sua Aplicação Lateral"
         />
 
+        <div className="mt-10 h-fit cursor-default space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
+          <p {...aosParams}>
+            Aplicações laterais acrescentam detalhes discretos que valorizam o
+            design do boné. Seja um bordado sutil, um aplique texturizado ou um
+            viés na aba, esses toques agregam personalidade, reforçam sua
+            identidade em pontos de contato e abrem possibilidades para coleções
+            temáticas, brindes e ações especiais. Escolha acabamento e
+            posicionamento conforme o impacto desejado — contraste, textura ou
+            economia — e nós cuidamos do resto para garantir um visual refinado.
+          </p>
+        </div>
+
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {models.map((model, index) => (
             <div key={index} {...aosParams}>

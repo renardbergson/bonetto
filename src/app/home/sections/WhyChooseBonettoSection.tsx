@@ -57,10 +57,11 @@ const WhyChooseBonettoSection = ({ aosParams }: Props) => {
 
         <div className="mt-10 h-fit cursor-default space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
           <p {...aosParams}>
-            Nós transformamos sua identidade visual em bonés sofisticados e
-            exclusivos. <br className="hidden md:block" /> Unimos design
-            inteligente a materiais premium para fortalecer o branding da sua
-            marca.
+            Transformamos a sua identidade visual em bonés sofisticados e
+            exclusivos. Unimos design inteligente, materiais{" "}
+            <br className="hidden lg:block" /> premium e acabamento impecável
+            para potencializar seu branding e gerar o impacto visual que a sua
+            marca merece.
           </p>
         </div>
 

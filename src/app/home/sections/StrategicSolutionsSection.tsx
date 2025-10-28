@@ -55,9 +55,12 @@ const StrategicSolutionsSection = ({ aosParams }: Props) => {
 
         <div className="mt-10 h-fit cursor-default space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
           <p {...aosParams}>
-            Cada boné é mais que um produto: é uma ferramenta estratégica{" "}
-            <br className="hidden sm:block" /> para fortalecer sua marca,
-            engajar sua equipe e conquistar clientes.
+            Um boné personalizado é uma ferramenta estratégica, seja em eventos,
+            uniformes ou brindes. Ele expõe sua identidade de forma recorrente,
+            transformando clientes e colaboradores em embaixadores do seu
+            negócio. O uso desse item gera reconhecimento, reforça
+            profissionalismo e cria lembranças positivas que potencializam ações
+            de marketing e vendas.
           </p>
         </div>
 
