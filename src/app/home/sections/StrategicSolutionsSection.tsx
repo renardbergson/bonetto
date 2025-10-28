@@ -72,9 +72,9 @@ const StrategicSolutionsSection = ({ aosParams }: Props) => {
 
             return (
               <div key={index} {...aosParams}>
-                <div className="group bg-card h-full rounded-lg border border-[var(--borders-color)] p-5 transition-all duration-300 hover:scale-[1.02]">
+                <div className="group bg-card h-full rounded-lg border border-[var(--borders-color)] p-5 transition-all duration-300 hover:scale-105 hover:shadow-lg">
                   <div className="flex items-start gap-6">
-                    <div className="bg-primary/10 group-hover:bg-primary/20 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-lg bg-[var(--quaternary-color)] transition-colors">
+                    <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-lg bg-[var(--quaternary-color)] transition-colors">
                       <Icon className="text-primary" size={28} />
                     </div>
 

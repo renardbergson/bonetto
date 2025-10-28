@@ -8,7 +8,7 @@ import {
   CustomizeSection,
   TransformYourBrandSection,
   ReviewsSection,
-  DeadlinesSection,
+  DeliveryTimeSection,
   FAQSection,
 } from "./sections";
 
@@ -51,7 +51,7 @@ const Home = () => {
       <ReviewsSection aosParams={aosParams} />
 
       {/* Prazos e tarifas */}
-      <DeadlinesSection aosParams={aosParams} />
+      <DeliveryTimeSection aosParams={aosParams} />
 
       {/* FAQ */}
       <FAQSection aosParams={aosParams} />
