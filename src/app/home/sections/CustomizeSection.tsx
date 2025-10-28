@@ -1,5 +1,6 @@
 import Section from "@/app/components/Section";
 import Article from "@/app/components/Article";
+import Paragraph from "../components/paragraph";
 import TitleComponent from "../components/sectionTitle";
 import ModelCard from "../components/model-card";
 
@@ -53,6 +54,17 @@ type Props = {
 };
 
 const CustomizeSection = ({ aosParams }: Props) => {
+  const paragraphContent = (
+    <p {...aosParams}>
+      Detalhes fazem a diferença. Personalize cada peça — ilhós, viés, forro,
+      fivela e etiquetas — para criar bonés que surpreendem ao primeiro contato
+      e que se destacam dentre os demais. Use a criatividade e deixe a sua marca
+      mais atraente e memorável. Está em dúvida? Fale conosco! Oferecemos
+      consultoria técnica, provas e amostras para ajustar materiais e
+      acabamentos conforme a sua necessidade.
+    </p>
+  );
+
   return (
     <Section variant="secondary">
       <Article>
@@ -62,19 +74,9 @@ const CustomizeSection = ({ aosParams }: Props) => {
           title="Customize e Surpreenda"
         />
 
-        <div className="mt-10 h-fit cursor-default space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
-          <p {...aosParams}>
-            Detalhes fazem a diferença. Personalize cada peça — ilhós, viés,
-            forro, fivela e etiquetas — para criar bonés que surpreendem ao
-            primeiro contato e que se destacam dentre os demais. Use a
-            criatividade e deixe a sua marca mais atraente e memorável. Está em
-            dúvida? Fale conosco! Oferecemos consultoria técnica, provas e
-            amostras para ajustar materiais e acabamentos conforme a sua
-            necessidade.
-          </p>
-        </div>
+        <Paragraph>{paragraphContent}</Paragraph>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {models.map((model, index) => (
             <div key={index} {...aosParams}>
               <ModelCard model={model} />

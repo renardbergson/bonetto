@@ -14,9 +14,9 @@ const DeadlinesSection = ({ aosParams }: Props) => {
       <Article>
         <TitleComponent title="Prazos Diferenciados" {...aosParams} />
 
-        <div className="space-y-14">
+        <div className="mt-10 space-y-14">
           {/* Prazo Turbo */}
-          <div className="mt-8 flex items-center gap-10">
+          <div className="flex items-center gap-10">
             <Image
               {...aosParams}
               data-aos-delay="500"

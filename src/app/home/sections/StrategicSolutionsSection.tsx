@@ -1,5 +1,6 @@
 import Section from "@/app/components/Section";
 import Article from "@/app/components/Article";
+import Paragraph from "../components/paragraph";
 import TitleComponent from "../components/sectionTitle";
 
 import { TrendingUp, Users, Gift, Store } from "lucide-react";
@@ -48,23 +49,24 @@ type Props = {
 };
 
 const StrategicSolutionsSection = ({ aosParams }: Props) => {
+  const paragraphContent = (
+    <p {...aosParams}>
+      Um boné personalizado é uma ferramenta estratégica, seja em eventos,
+      uniformes ou brindes. Ele expõe sua identidade de forma recorrente,
+      transformando clientes e colaboradores em embaixadores do seu negócio. O
+      uso desse item gera reconhecimento, reforça profissionalismo e cria
+      lembranças positivas que potencializam ações de marketing e vendas.
+    </p>
+  );
+
   return (
     <Section variant="secondary">
       <Article>
         <TitleComponent title="Soluções Estratégicas" {...aosParams} />
 
-        <div className="mt-10 h-fit cursor-default space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
-          <p {...aosParams}>
-            Um boné personalizado é uma ferramenta estratégica, seja em eventos,
-            uniformes ou brindes. Ele expõe sua identidade de forma recorrente,
-            transformando clientes e colaboradores em embaixadores do seu
-            negócio. O uso desse item gera reconhecimento, reforça
-            profissionalismo e cria lembranças positivas que potencializam ações
-            de marketing e vendas.
-          </p>
-        </div>
+        <Paragraph>{paragraphContent}</Paragraph>
 
-        <div className="mt-10 mb-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="mb-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
           {solutions.map((solution, index) => {
             const Icon = solution.icon;
 

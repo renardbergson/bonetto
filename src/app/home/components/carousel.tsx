@@ -54,7 +54,7 @@ const CarouselComponent = ({
       ]}
       setApi={setApi}
     >
-      <CarouselContent className="-ml-6">
+      <CarouselContent>
         {children?.map((item, index) => (
           <CarouselItem
             className="pl-8 md:basis-2/3 lg:basis-2/4 xl:basis-2/5"

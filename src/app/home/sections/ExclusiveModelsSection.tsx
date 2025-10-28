@@ -1,5 +1,6 @@
 import Section from "@/app/components/Section";
 import Article from "@/app/components/Article";
+import Paragraph from "../components/paragraph";
 import TitleComponent from "../components/sectionTitle";
 import Carousel from "../components/carousel";
 import CarouselCapItem from "../components/carousel-cap-item";
@@ -9,22 +10,24 @@ type Props = {
 };
 
 const ExclusiveModelsSection = ({ aosParams }: Props) => {
+  const paragraphContent = (
+    <p {...aosParams}>
+      Aqui você encontra modelos pensados para destacar sua identidade visual
+      com estilo e funcionalidade. Mais que um acessório, cada
+      <br className="hidden 2xl:block" /> peça é um canal de conexão — uma
+      lembrança duradoura que fortalece a presença do seu negócio e aproxima
+      você do seu público.
+    </p>
+  );
+
   return (
     <Section variant="secondary" id="exclusive-models">
       <Article>
         <TitleComponent title="Modelos Exclusivos" {...aosParams} />
 
-        <div className="mt-10 h-fit space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
-          <p {...aosParams}>
-            Aqui você encontra modelos pensados para destacar sua identidade
-            visual com estilo e funcionalidade. Mais que um acessório, cada
-            <br className="hidden 2xl:block" /> peça é um canal de conexão — uma
-            lembrança duradoura que fortalece a presença do seu negócio e
-            aproxima você do seu público.
-          </p>
-        </div>
+        <Paragraph>{paragraphContent}</Paragraph>
 
-        <Carousel className="mt-10 lg:mx-auto" {...aosParams}>
+        <Carousel className="mt-4 lg:mx-auto" {...aosParams}>
           <CarouselCapItem
             href={"#"}
             title="Promocional"

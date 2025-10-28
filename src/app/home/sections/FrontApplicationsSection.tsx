@@ -1,5 +1,6 @@
 import Section from "@/app/components/Section";
 import Article from "@/app/components/Article";
+import Paragraph from "../components/paragraph";
 import TitleComponent from "../components/sectionTitle";
 import ModelCard from "../components/model-card";
 
@@ -53,6 +54,18 @@ type Props = {
 };
 
 const FrontApplicationsSection = ({ aosParams }: Props) => {
+  const paragraphContent = (
+    <p {...aosParams}>
+      Cada uma entrega um resultado estético e funcional diferente. O Bordado
+      oferece relevo e durabilidade; Silk 3D e DTF destacam cores e detalhes;
+      apliques e corte a laser trazem textura e precisão; já a sublimação
+      reproduz imagens complexas sem adicionar espessura. Escolha a aplicação
+      conforme o objetivo — presença, resistência ou fidelidade visual — e nós
+      ajustamos materiais e acabamento para garantir um resultado profissional e
+      duradouro.
+    </p>
+  );
+
   return (
     <Section variant="secondary">
       <Article>
@@ -62,19 +75,9 @@ const FrontApplicationsSection = ({ aosParams }: Props) => {
           title="Escolha Sua Aplicação Frontal"
         />
 
-        <div className="mt-10 h-fit cursor-default space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
-          <p {...aosParams}>
-            Cada uma entrega um resultado estético e funcional diferente. O
-            Bordado oferece relevo e durabilidade; Silk 3D e DTF destacam cores
-            e detalhes; apliques e corte a laser trazem textura e precisão; já a
-            sublimação reproduz imagens complexas sem adicionar espessura.
-            Escolha a aplicação conforme o objetivo — presença, resistência ou
-            fidelidade visual — e nós ajustamos materiais e acabamento para
-            garantir um resultado profissional e duradouro.
-          </p>
-        </div>
+        <Paragraph>{paragraphContent}</Paragraph>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {applications.map((model, index) => (
             <div key={index} {...aosParams}>
               <ModelCard model={model} />

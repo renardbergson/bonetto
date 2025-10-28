@@ -1,6 +1,7 @@
 import Section from "@/app/components/Section";
 import TitleComponent from "../components/sectionTitle";
 import Article from "@/app/components/Article";
+import Paragraph from "../components/paragraph";
 
 import {
   Target,
@@ -50,22 +51,23 @@ type Props = {
 };
 
 const WhyChooseBonettoSection = ({ aosParams }: Props) => {
+  const paragraphContent = (
+    <p {...aosParams}>
+      Transformamos a sua identidade visual em bonés sofisticados e exclusivos.
+      Unimos design inteligente, materiais premium e acabamento impecável para
+      potencializar seu branding e gerar o impacto visual que a sua marca
+      merece.
+    </p>
+  );
+
   return (
     <Section variant="secondary">
       <Article>
         <TitleComponent title="Por que escolher a Bonetto?" {...aosParams} />
 
-        <div className="mt-10 h-fit cursor-default space-y-10 text-justify text-base leading-7 font-extralight sm:text-center sm:text-lg 2xl:text-xl">
-          <p {...aosParams}>
-            Transformamos a sua identidade visual em bonés sofisticados e
-            exclusivos. Unimos design inteligente, materiais{" "}
-            <br className="hidden lg:block" /> premium e acabamento impecável
-            para potencializar seu branding e gerar o impacto visual que a sua
-            marca merece.
-          </p>
-        </div>
+        <Paragraph>{paragraphContent}</Paragraph>
 
-        <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {content.map((item, index) => {
             const Icon = item.icon;
 

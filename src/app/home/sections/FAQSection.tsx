@@ -15,7 +15,7 @@ const FAQSection = ({ aosParams }: Props) => {
 
         <Accordion
           {...aosParams}
-          className="mt-8"
+          className="mt-10"
           items={[
             {
               title: "Qual a quantidade mínima para pedido?",
