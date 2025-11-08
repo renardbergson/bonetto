@@ -1,6 +1,23 @@
+import type { MouseEvent } from "react";
+
+export type AnchorLabel =
+  | "Início"
+  | "Catálogo"
+  | "Prazos"
+  | "FAQ"
+  | "Fale Conosco";
+
+export type AnchorHref =
+  | "header"
+  | "home"
+  | "exclusive-models"
+  | "delivery-time-section"
+  | "faq"
+  | "footer";
+
 export type scrollHandler = (
-  e: React.MouseEvent<HTMLAnchorElement>,
-  id: string,
+  e: MouseEvent<HTMLAnchorElement>,
+  id: AnchorHref,
 ) => void;
 
 const scrollToSection: scrollHandler = (e, id) => {

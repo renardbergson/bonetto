@@ -1,10 +1,17 @@
 import Title from "./Title";
 import scrollToSection from "@/lib/scrollToSection";
 
+import { AnchorLabel, AnchorHref } from "@/lib/scrollToSection";
+
 import Link from "next/link";
 
+interface LinkContent {
+  label: AnchorLabel;
+  href: AnchorHref;
+}
+
 const Links = () => {
-  const links = [
+  const links: LinkContent[] = [
     { label: "Início", href: "header" },
     { label: "Catálogo", href: "exclusive-models" },
     { label: "Prazos", href: "delivery-time-section" },
