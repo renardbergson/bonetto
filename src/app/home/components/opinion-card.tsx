@@ -22,7 +22,7 @@ const OpinionCardComponent = ({
   name,
 }: OpinionCardProps) => {
   return (
-    <Card className="m-0.5 grid h-[375px] items-center border-transparent shadow-sm shadow-black/30">
+    <Card className="m-0.5 grid h-[375px] cursor-default items-center border-transparent shadow-sm shadow-black/30">
       <CardHeader className="text-center">
         <CardDescription>★★★★★</CardDescription>
         <CardTitle className="font-extrabold">{title}</CardTitle>

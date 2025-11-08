@@ -86,7 +86,7 @@ const DeliveryTimeSection = ({ aosParams }: Props) => {
   );
 
   return (
-    <Section variant="secondary">
+    <Section variant="secondary" id="delivery-time-section">
       <Article>
         <TitleComponent title="Prazos Diferenciados" {...aosParams} />
 
@@ -98,7 +98,7 @@ const DeliveryTimeSection = ({ aosParams }: Props) => {
 
             return (
               <div key={index} {...aosParams}>
-                <div className="bg-card group relative flex h-full flex-col justify-between rounded-xl border-1 border-[var(--borders-color)] p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                <div className="bg-card group relative flex h-full cursor-default flex-col justify-between rounded-xl border-1 border-[var(--borders-color)] p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg">
                   {item.highlight && (
                     <div className="text-primary-foreground absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[var(--quaternary-color)] px-4 py-1 text-xs font-semibold">
                       Mais Rápido
@@ -117,13 +117,13 @@ const DeliveryTimeSection = ({ aosParams }: Props) => {
 
                     {/* Title and Subtitle */}
                     <h3 className="text-xl font-bold">{item.title}</h3>
-                    <p className="text-muted-foreground mb-2 font-sans text-sm font-stretch-condensed 2xl:text-base">
+                    <p className="text-muted-foreground mb-2 font-sans text-sm font-stretch-condensed sm:text-base">
                       {item.subtitle}
                     </p>
                   </div>
 
                   {/* Description */}
-                  <p className="text-muted-foreground mt-6 text-sm font-extralight 2xl:text-base">
+                  <p className="text-muted-foreground mt-6 text-sm font-extralight sm:text-base 2xl:text-lg">
                     {item.description}
                   </p>
                 </div>

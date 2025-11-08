@@ -57,7 +57,7 @@ type Props = {
 const Charts = ({ aosParams }: Props) => {
   return (
     <section>
-      <div className="container mx-auto lg:px-8">
+      <div className="container mx-auto cursor-default lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 2xl:grid-cols-3">
           {/* Line Chart - Crescimento */}
           <div

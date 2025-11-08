@@ -66,7 +66,7 @@ const StrategicSolutionsSection = ({ aosParams }: Props) => {
 
         <Paragraph>{paragraphContent}</Paragraph>
 
-        <div className="mb-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="mb-16 grid cursor-default grid-cols-1 gap-8 lg:grid-cols-2">
           {solutions.map((solution, index) => {
             const Icon = solution.icon;
 

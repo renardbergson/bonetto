@@ -12,7 +12,7 @@ interface Props {
 
 const ModelCard = ({ model }: Props) => {
   return (
-    <div className="group bg-card relative h-full overflow-hidden rounded-2xl p-10 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
+    <div className="group bg-card relative h-full cursor-default overflow-hidden rounded-2xl p-10 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
       <div className="bg-muted relative overflow-hidden rounded-2xl">
         <Image
           width={500}

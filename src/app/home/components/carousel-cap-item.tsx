@@ -41,7 +41,7 @@ const CarouselCapItemComponent = ({
       <div className="relative flex flex-col items-center justify-center">
         {/* <Link href={href} className="absolute top-[12%] block h-[80%] w-[78%]" /> */}
 
-        <h4 className="mb-2 text-center font-bold text-[var(--primary-color)] 2xl:text-lg">
+        <h4 className="mb-2 cursor-default text-center font-bold text-[var(--primary-color)] 2xl:text-lg">
           {title}
         </h4>
 

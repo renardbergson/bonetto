@@ -9,12 +9,10 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import HeaderButton from "./HeaderButton";
+import { scrollHandler } from "@/lib/scrollToSection";
 
 type Props = {
-  scrollToSection?: (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    id: string,
-  ) => void;
+  scrollToSection?: scrollHandler;
 };
 
 const DesktopMenu = ({ scrollToSection }: Props) => {

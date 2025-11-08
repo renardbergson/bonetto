@@ -3,23 +3,14 @@
 import { useState } from "react";
 import { Menubar, MenubarMenu } from "@/components/ui/menubar";
 import { Menu } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 import Logo from "./Logo";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
+import scrollToSection from "@/lib/scrollToSection";
 
 export const Header = () => {
-  const scrollToSection = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    id: string,
-  ) => {
-    e.preventDefault();
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const [sheetIsOpen, setSheetIsOpen] = useState(false);
 
   function handleMobileMenu() {
@@ -27,7 +18,7 @@ export const Header = () => {
   }
 
   return (
-    <header className="z-10 border-none">
+    <header className="z-10 border-none" id="header">
       <Menubar className="flex h-[75px] items-center border-0 bg-transparent p-3 text-[var(--secondary-color)] lg:px-6">
         <MenubarMenu>
           <Logo />
@@ -50,6 +41,8 @@ export const Header = () => {
           scrollToSection={scrollToSection}
         />
       </Menubar>
+
+      <Separator className="bg-[var(--tertiary-color)]" />
     </header>
   );
 };

@@ -15,8 +15,8 @@ import {
 const Home = () => {
   const aosParams = {
     "data-aos": "fade-up",
-    "data-aos-delay": "300",
-    "data-aos-duration": "300",
+    "data-aos-delay": "200",
+    "data-aos-duration": "250",
     "data-aos-easing": "ease-out-cubic",
     "data-aos-anchor-placement": "top-bottom",
   };

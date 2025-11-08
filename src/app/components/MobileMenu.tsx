@@ -9,14 +9,12 @@ import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 
 import HeaderButton from "./HeaderButton";
+import { scrollHandler } from "@/lib/scrollToSection";
 
 type Props = {
   isOpen?: boolean;
   handler: () => void;
-  scrollToSection?: (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    id: string,
-  ) => void;
+  scrollToSection?: scrollHandler;
 };
 
 const MobileMenu = ({ isOpen, handler, scrollToSection }: Props) => {
