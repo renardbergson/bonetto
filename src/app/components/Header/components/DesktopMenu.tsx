@@ -8,21 +8,22 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 
-import HeaderButton from "./HeaderButton";
+import { HeaderButton } from "./";
 import { scrollHandler } from "@/lib/scrollToSection";
 
 type Props = {
   scrollToSection?: scrollHandler;
+  className?: string;
 };
 
-const DesktopMenu = ({ scrollToSection }: Props) => {
+const DesktopMenu = ({ scrollToSection, className }: Props) => {
   return (
-    <NavigationMenu viewport={false} className="hidden lg:flex">
+    <NavigationMenu viewport={false} className={className}>
       <NavigationMenuList>
         <HeaderButton
           asChild
           variant="ghost"
-          className="w-fit hover:cursor-pointer hover:border-b-2 2xl:text-lg"
+          className={`w-fit hover:cursor-pointer hover:border-b-2 2xl:text-lg ${className}`}
         >
           <Link href="">
             <NavigationMenuItem>Início</NavigationMenuItem>
@@ -60,7 +61,7 @@ const DesktopMenu = ({ scrollToSection }: Props) => {
         <HeaderButton
           asChild
           variant="ghost"
-          className="w-fit rounded-lg bg-[var(--secondary-color)] text-[var(--primary-color)] hover:scale-105 2xl:text-lg"
+          className="w-fit rounded-lg bg-(--secondary-color) text-(--primary-color) hover:scale-105 2xl:text-lg"
         >
           <Link
             href="footer"

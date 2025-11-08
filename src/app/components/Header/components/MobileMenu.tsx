@@ -8,7 +8,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 
-import HeaderButton from "./HeaderButton";
+import { HeaderButton } from "./";
 import { scrollHandler } from "@/lib/scrollToSection";
 
 type Props = {
@@ -20,7 +20,7 @@ type Props = {
 const MobileMenu = ({ isOpen, handler, scrollToSection }: Props) => {
   return (
     <Sheet open={isOpen} onOpenChange={handler}>
-      <SheetContent className="w-72 border-0 bg-[var(--primary-color)] text-[var(--secondary-color)] opacity-85 sm:w-80">
+      <SheetContent className="w-72 border-0 bg-(--primary-color) text-(--secondary-color) opacity-85 sm:w-80">
         <SheetHeader className="flex flex-col">
           <VisuallyHidden>
             <SheetTitle>Menu Mobile</SheetTitle>
@@ -33,7 +33,7 @@ const MobileMenu = ({ isOpen, handler, scrollToSection }: Props) => {
               </Link>
             </HeaderButton>
 
-            <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
+            <Separator className="m-4! my-4 ml-0! bg-(--tertiary-color)" />
 
             <HeaderButton onClick={handler} variant="ghost" asChild>
               <Link
@@ -48,7 +48,7 @@ const MobileMenu = ({ isOpen, handler, scrollToSection }: Props) => {
               </Link>
             </HeaderButton>
 
-            <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
+            <Separator className="m-4! my-4 ml-0! bg-(--tertiary-color)" />
 
             <HeaderButton onClick={handler} variant="ghost" asChild>
               <Link
@@ -61,7 +61,7 @@ const MobileMenu = ({ isOpen, handler, scrollToSection }: Props) => {
               </Link>
             </HeaderButton>
 
-            <Separator className="!m-4 my-4 !ml-0 bg-[var(--tertiary-color)]" />
+            <Separator className="m-4! my-4 ml-0! bg-(--tertiary-color)" />
 
             <HeaderButton onClick={handler} variant="ghost" asChild>
               <Link
