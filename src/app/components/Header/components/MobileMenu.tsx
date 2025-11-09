@@ -44,7 +44,7 @@ const MobileMenu = ({ isOpen, handler, scrollToSection }: Props) => {
       link: {
         href: "exclusive-models",
         rel: "Modelos",
-        onClick: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>
+        onClick: (e) =>
           scrollToSection && scrollToSection(e, "exclusive-models"),
       },
     },
@@ -54,8 +54,7 @@ const MobileMenu = ({ isOpen, handler, scrollToSection }: Props) => {
       link: {
         href: "faq",
         rel: "FAQ",
-        onClick: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>
-          scrollToSection && scrollToSection(e, "faq"),
+        onClick: (e) => scrollToSection && scrollToSection(e, "faq"),
       },
     },
     {
@@ -64,8 +63,7 @@ const MobileMenu = ({ isOpen, handler, scrollToSection }: Props) => {
       link: {
         href: "footer",
         rel: "Fale Conosco",
-        onClick: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>
-          scrollToSection && scrollToSection(e, "footer"),
+        onClick: (e) => scrollToSection && scrollToSection(e, "footer"),
       },
     },
   ];
