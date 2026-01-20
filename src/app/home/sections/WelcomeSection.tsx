@@ -13,7 +13,7 @@ const WelcomeSection = () => {
       className="relative flex h-[calc(100vh-75px)] flex-col"
     >
       {/* Background */}
-      <div className="absolute right-0 h-full w-full bg-[url(/background/home-background.webp)] bg-contain bg-right-bottom bg-no-repeat opacity-45 sm:w-[70%] sm:bg-cover sm:bg-[position:100%_30%] md:w-[60%] lg:w-full lg:bg-size-[40%] lg:bg-fixed lg:bg-[position:100%_10%]" />
+      <div className="absolute right-0 h-full w-full bg-[url(/background/home-background.webp)] bg-contain bg-bottom-right bg-no-repeat opacity-45 sm:w-[70%] sm:bg-cover sm:bg-position-[100%_30%] md:w-[60%] lg:w-full lg:bg-size-[40%] lg:bg-fixed lg:bg-position-[100%_10%]" />
 
       {/* Carimbo */}
       <Image
@@ -25,7 +25,7 @@ const WelcomeSection = () => {
       />
 
       {/* Conteúdo */}
-      <div className="z-10 mx-auto mt-[20rem] flex w-full flex-1 flex-col justify-between px-6 py-8 text-center font-light text-[var(--secondary-color)] sm:mt-[18rem] lg:mt-[15rem] lg:text-start 2xl:mt-[20rem]">
+      <div className="z-10 mx-auto mt-80 flex w-full flex-1 flex-col justify-between px-6 py-8 text-center font-light text-(--secondary-color) sm:mt-72 lg:mt-60 lg:text-start 2xl:mt-80">
         <p
           data-aos="fade-down"
           data-aos-delay="300"
@@ -96,7 +96,7 @@ const WelcomeSection = () => {
           className="cursor-default lg:ml-20 lg:flex lg:items-center lg:gap-2 2xl:ml-36"
         >
           <span>★★★★★</span>
-          <p className="mt-3 text-xs text-[var(--secondary-color)] uppercase lg:mt-0 2xl:text-base">
+          <p className="mt-3 text-xs text-(--secondary-color) uppercase lg:mt-0 2xl:text-base">
             Qualidade excepcional <br className="lg:hidden" /> e design
             exclusivo
           </p>

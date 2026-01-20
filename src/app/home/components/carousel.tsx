@@ -72,7 +72,7 @@ const CarouselComponent = ({
         {children?.map((_, index) => (
           <div
             key={index}
-            className={`h-2 w-2 cursor-pointer rounded-full border-1 border-[var(--primary-color)] ${currentSlide === index && "bg-[var(--primary-color)]"}`}
+            className={`h-2 w-2 cursor-pointer rounded-full border border-(--primary-color) ${currentSlide === index && "bg-(--primary-color)"}`}
             onClick={() => handleGoToSlide(index)}
           ></div>
         ))}

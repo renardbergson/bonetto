@@ -16,8 +16,8 @@ const SectionComponent = ({
       id={id}
       className={`space-y-16 ${className} ${
         variant === "primary"
-          ? "bg-[var(--primary-color)] text-[var(--secondary-color)]"
-          : "bg-[var(--secondary-color)] text-[var(--primary-color)]"
+          ? "bg-(--primary-color) text-(--secondary-color)"
+          : "bg-(--secondary-color) text-(--primary-color)"
       }`}
     >
       {children}

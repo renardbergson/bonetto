@@ -98,16 +98,16 @@ const DeliveryTimeSection = ({ aosParams }: Props) => {
 
             return (
               <div key={index} {...aosParams}>
-                <div className="bg-card group relative flex h-full cursor-default flex-col justify-between rounded-xl border-1 border-[var(--borders-color)] p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                <div className="bg-card group relative flex h-full cursor-default flex-col justify-between rounded-xl border border-(--borders-color) p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg">
                   {item.highlight && (
-                    <div className="text-primary-foreground absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[var(--quaternary-color)] px-4 py-1 text-xs font-semibold">
+                    <div className="text-primary-foreground absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-(--quaternary-color) px-4 py-1 text-xs font-semibold">
                       Mais Rápido
                     </div>
                   )}
 
                   <div>
                     {/* Icon */}
-                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-[var(--quaternary-color)] transition-all duration-300">
+                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-(--quaternary-color) transition-all duration-300">
                       <Icon
                         className="text-primary"
                         size={32}

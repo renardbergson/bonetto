@@ -72,9 +72,9 @@ const StrategicSolutionsSection = ({ aosParams }: Props) => {
 
             return (
               <div key={index} {...aosParams}>
-                <div className="group bg-card h-full rounded-lg border border-[var(--borders-color)] p-5 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                <div className="group bg-card h-full rounded-lg border border-(--borders-color) p-5 transition-all duration-300 hover:scale-105 hover:shadow-lg">
                   <div className="flex items-start gap-6">
-                    <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-lg bg-[var(--quaternary-color)] transition-colors">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-(--quaternary-color) transition-colors">
                       <Icon className="text-primary" size={28} />
                     </div>
 
@@ -86,7 +86,7 @@ const StrategicSolutionsSection = ({ aosParams }: Props) => {
                         {solution.description}
                       </p>
 
-                      <div className="rounded-lg border border-[var(--borders-color)] p-4">
+                      <div className="rounded-lg border border-(--borders-color) p-4">
                         <div className="text-primary mb-1 text-3xl font-bold">
                           {solution.stat}
                         </div>

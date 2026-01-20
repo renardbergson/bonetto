@@ -23,7 +23,7 @@ const ReviewsSection = ({ aosParams }: Props) => {
   return (
     <Section variant="secondary">
       <Article>
-        <TitleComponent title="Avaliação dos Nossos Clientes" {...aosParams} />
+        <TitleComponent title="Confira Nossos Clientes" {...aosParams} />
 
         <Paragraph>{paragraphContent}</Paragraph>
 

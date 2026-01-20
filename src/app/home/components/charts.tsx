@@ -62,7 +62,7 @@ const Charts = ({ aosParams }: Props) => {
           {/* Line Chart - Crescimento */}
           <div
             {...aosParams}
-            className="bg-card flex h-[450px] flex-col justify-between rounded-2xl border border-[var(--borders-color)] p-6"
+            className="bg-card flex h-[450px] flex-col justify-between rounded-2xl border border-(--borders-color) p-6"
           >
             <div>
               <h4 className="text-lg font-semibold">Crescimento Mensal</h4>
@@ -105,7 +105,7 @@ const Charts = ({ aosParams }: Props) => {
           {/* Bar Chart - Antes/Depois */}
           <div
             {...aosParams}
-            className="bg-card flex h-[450px] flex-col justify-between rounded-2xl border border-[var(--borders-color)] p-6"
+            className="bg-card flex h-[450px] flex-col justify-between rounded-2xl border border-(--borders-color) p-6"
           >
             <div>
               <h4 className="text-lg font-semibold">Impacto</h4>
@@ -136,7 +136,7 @@ const Charts = ({ aosParams }: Props) => {
           {/* Pie Chart - Distribuição */}
           <div
             {...aosParams}
-            className="bg-card flex h-[450px] flex-col justify-between rounded-2xl border border-[var(--borders-color)] p-6"
+            className="bg-card flex h-[450px] flex-col justify-between rounded-2xl border border-(--borders-color) p-6"
           >
             <div>
               <h4 className="text-lg font-semibold">Aplicações</h4>

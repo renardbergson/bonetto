@@ -43,8 +43,8 @@ const MainButton = ({
     <Button
       className={`text-1xl w-auto rounded-lg py-4 hover:cursor-pointer ${
         style === "primary"
-          ? "bg-[var(--primary-color)] text-[var(--secondary-color)]"
-          : "bg-[var(--secondary-color)] text-[var(--primary-color)]"
+          ? "bg-(--primary-color) text-(--secondary-color)"
+          : "bg-(--secondary-color) text-(--primary-color)"
       } ${className}`}
       variant={variant}
       asChild={asChild ?? false}

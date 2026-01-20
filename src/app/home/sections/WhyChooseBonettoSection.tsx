@@ -73,8 +73,8 @@ const WhyChooseBonettoSection = ({ aosParams }: Props) => {
 
             return (
               <div key={index} {...aosParams}>
-                <div className="h-full rounded-lg border border-[var(--borders-color)] p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--quaternary-color)]">
+                <div className="h-full rounded-lg border border-(--borders-color) p-6 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-(--quaternary-color)">
                     <Icon className="text-primary" size={24} />
                   </div>
                   <h3 className="mb-2 cursor-default text-xl font-semibold">
