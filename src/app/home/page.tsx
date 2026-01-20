@@ -3,9 +3,6 @@ import {
   WhyChooseSection,
   ExclusiveModelsSection,
   StrategicSolutionsSection,
-  FrontApplicationsSection,
-  SideApplicationsSection,
-  CustomizeSection,
   TransformYourBrandSection,
   ReviewsSection,
   DeliveryTimeSection,
@@ -35,15 +32,6 @@ const Home = () => {
 
       {/* Soluções estratégicas */}
       <StrategicSolutionsSection aosParams={aosParams} />
-
-      {/* Aplicação frontal */}
-      <FrontApplicationsSection aosParams={aosParams} />
-
-      {/* Aplicação Lateral */}
-      <SideApplicationsSection aosParams={aosParams} />
-
-      {/* Customize e surpreenda */}
-      <CustomizeSection aosParams={aosParams} />
 
       {/* Transforme a sua marca */}
       <TransformYourBrandSection aosParams={aosParams} />
