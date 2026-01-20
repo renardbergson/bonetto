@@ -9,6 +9,7 @@ import {
   TransformYourBrandSection,
   ReviewsSection,
   DeliveryTimeSection,
+  BudgetSection,
   FAQSection,
 } from "./sections";
 
@@ -22,7 +23,7 @@ const Home = () => {
   };
 
   return (
-    <div className="space-y-16 bg-[var(--secondary-color)] pb-14 sm:space-y-18">
+    <div className="space-y-16 bg-(--secondary-color) pb-14 sm:space-y-18">
       {/* Welcome */}
       <WelcomeSection />
 
@@ -52,6 +53,9 @@ const Home = () => {
 
       {/* Prazos e tarifas */}
       <DeliveryTimeSection aosParams={aosParams} />
+
+      {/* Formulário de orçamento */}
+      <BudgetSection aosParams={aosParams} />
 
       {/* FAQ */}
       <FAQSection aosParams={aosParams} />

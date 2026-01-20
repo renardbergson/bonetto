@@ -11,7 +11,7 @@ const FAQSection = ({ aosParams }: Props) => {
   return (
     <Section variant="secondary" id="faq">
       <Article>
-        <TitleComponent title="Perguntas Frequentes" {...aosParams} />
+        <TitleComponent {...aosParams} title="Perguntas Frequentes" />
 
         <Accordion
           {...aosParams}

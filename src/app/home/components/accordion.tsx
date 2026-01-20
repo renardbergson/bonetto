@@ -22,9 +22,14 @@ const AccordionComponent = ({
   ...props
 }: AccordionComponentProps) => {
   return (
-    <Accordion className={`mx-1 ${className}`} type="single" collapsible>
+    <Accordion
+      className={`mx-1 ${className}`}
+      type="single"
+      collapsible
+      {...props}
+    >
       {items.map((item, index) => (
-        <AccordionItem key={index} value={`item-${index}`} {...props}>
+        <AccordionItem key={index} value={`item-${index}`}>
           <AccordionTrigger className="text-base font-bold hover:cursor-pointer 2xl:text-lg">
             {item.title}
           </AccordionTrigger>

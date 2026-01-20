@@ -8,4 +8,5 @@ export { default as CustomizeSection } from "./CustomizeSection";
 export { default as TransformYourBrandSection } from "./TransformYourBrand";
 export { default as ReviewsSection } from "./ReviewsSection";
 export { default as DeliveryTimeSection } from "./DeliveryTimeSection";
+export { default as BudgetSection } from "./BudgetSection/BudgetSection";
 export { default as FAQSection } from "./FAQSection";
