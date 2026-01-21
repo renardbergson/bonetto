@@ -32,7 +32,7 @@ const WelcomeSection = () => {
           data-aos-duration="1000"
           data-aos-easing="ease-out"
           data-aos-anchor-placement="center-bottom"
-          className="cursor-default text-lg text-shadow-[2px_2px_var(--primary-color)] sm:text-xl lg:ml-20 lg:text-4xl 2xl:mb-8 2xl:ml-36 2xl:text-5xl"
+          className="cursor-default text-lg text-shadow-[2px_2px_var(--primary-color)] sm:text-xl lg:ml-20 lg:text-4xl 2xl:mb-8 2xl:ml-36 2xl:text-5xl tracking-wide"
         >
           Sua marca merece mais que um <br /> boné, ela merece um{" "}
           <span className="font-extrabold">
@@ -55,7 +55,7 @@ const WelcomeSection = () => {
               style="secondary"
               variant="outline"
               asChild
-              className="hover:scale-105 lg:p-7 2xl:p-9 2xl:text-xl"
+              className="hover:scale-105 border-none w-64 shadow-sm shadow-white bg-green-500 p-6 lg:p-7 2xl:p-9 2xl:text-xl font-extrabold tracking-wide"
             >
               <Link
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_COMPANY_WHATSAPP_NUMBER}`}
@@ -75,10 +75,10 @@ const WelcomeSection = () => {
             data-aos-anchor-placement="center-bottom"
           >
             <MainButton
-              style="primary"
+              style="secondary"
               variant="outline"
               asChild
-              className="mt-10 sm:mt-12 md:mt-10 lg:mt-0 lg:p-7 2xl:p-9 2xl:text-xl"
+              className="mt-7 p-6 w-64 bg-transparent border-(--secondary-color) text-(--secondary-color) sm:mt-12 md:mt-10 lg:mt-0 lg:p-7 2xl:p-9 2xl:text-xl font-extrabold tracking-wide"
               sectionToScroll="exclusive-models"
             >
               <Link href={"#exclusive-models"}>Conferir catálogo</Link>
@@ -96,7 +96,7 @@ const WelcomeSection = () => {
           className="cursor-default lg:ml-20 lg:flex lg:items-center lg:gap-2 2xl:ml-36"
         >
           <span>★★★★★</span>
-          <p className="mt-3 text-xs text-(--secondary-color) uppercase lg:mt-0 2xl:text-base">
+          <p className="mt-3 text-xs text-(--secondary-color) uppercase lg:mt-0 2xl:text-base tracking-wide">
             Qualidade excepcional <br className="lg:hidden" /> e design
             exclusivo
           </p>

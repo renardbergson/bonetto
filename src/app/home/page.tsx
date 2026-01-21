@@ -2,13 +2,14 @@ import {
   WelcomeSection,
   WhyChooseSection,
   ExclusiveModelsSection,
-  StrategicSolutionsSection,
+  WhyAHatSection,
   TransformYourBrandSection,
   ReviewsSection,
   DeliveryTimeSection,
   BudgetSection,
   FAQSection,
 } from "./sections";
+import FloatingScrollButton from "./components/floatingScrollButton";
 
 const Home = () => {
   const aosParams = {
@@ -21,6 +22,9 @@ const Home = () => {
 
   return (
     <div className="space-y-16 bg-(--secondary-color) pb-14 sm:space-y-18">
+      {/* Floating Button */}
+      <FloatingScrollButton />
+
       {/* Welcome */}
       <WelcomeSection />
 
@@ -31,7 +35,7 @@ const Home = () => {
       <ExclusiveModelsSection aosParams={aosParams} />
 
       {/* Soluções estratégicas */}
-      <StrategicSolutionsSection aosParams={aosParams} />
+      <WhyAHatSection aosParams={aosParams} />
 
       {/* Transforme a sua marca */}
       <TransformYourBrandSection aosParams={aosParams} />

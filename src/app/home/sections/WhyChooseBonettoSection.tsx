@@ -61,7 +61,7 @@ const WhyChooseBonettoSection = ({ aosParams }: Props) => {
   );
 
   return (
-    <Section variant="secondary">
+    <Section id="why-choose-section" variant="secondary">
       <Article>
         <TitleComponent title="Por que escolher a Bonetto?" {...aosParams} />
 

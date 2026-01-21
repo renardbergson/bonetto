@@ -1,7 +1,7 @@
 export { default as WelcomeSection } from "./WelcomeSection";
 export { default as WhyChooseSection } from "./WhyChooseBonettoSection";
 export { default as ExclusiveModelsSection } from "./ExclusiveModelsSection";
-export { default as StrategicSolutionsSection } from "./StrategicSolutionsSection";
+export { default as WhyAHatSection } from "./WhyAHatSection";
 export { default as TransformYourBrandSection } from "./TransformYourBrand";
 export { default as ReviewsSection } from "./ReviewsSection";
 export { default as DeliveryTimeSection } from "./DeliveryTimeSection";

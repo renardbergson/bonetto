@@ -48,10 +48,10 @@ type Props = {
   aosParams?: Record<string, string>;
 };
 
-const StrategicSolutionsSection = ({ aosParams }: Props) => {
+const WhyAHatSection = ({ aosParams }: Props) => {
   const paragraphContent = (
     <p {...aosParams}>
-      Um boné personalizado é uma ferramenta estratégica, seja em eventos,
+      É uma excelente ferramenta estratégica, seja em eventos,
       uniformes ou brindes. Ele expõe sua identidade de forma recorrente,
       transformando clientes e colaboradores em embaixadores do seu negócio. O
       uso desse item gera reconhecimento, reforça profissionalismo e cria
@@ -62,7 +62,7 @@ const StrategicSolutionsSection = ({ aosParams }: Props) => {
   return (
     <Section variant="secondary">
       <Article>
-        <TitleComponent title="Soluções Estratégicas" {...aosParams} />
+        <TitleComponent title="Por que usar um boné personalizado?" {...aosParams} />
 
         <Paragraph>{paragraphContent}</Paragraph>
 
@@ -109,4 +109,4 @@ const StrategicSolutionsSection = ({ aosParams }: Props) => {
   );
 };
 
-export default StrategicSolutionsSection;
+export default WhyAHatSection;
